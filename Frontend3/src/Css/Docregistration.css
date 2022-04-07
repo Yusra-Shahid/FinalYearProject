@@ -1,0 +1,120 @@
+.margin{
+    width: 100%;
+    height: 15vh;
+    
+}
+.formmain{
+    /* background-image: url('../Images/formImage.jpg'); */
+    background-color: white;
+    background-size: cover;
+    height: 65vh;
+    width: 70%;
+    display:flex;
+margin-left: 28vh;
+margin-top: 8vh;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    border-radius: 2vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.RegisContainer{
+    background-color:#176cbb;
+    box-shadow: 6px 6px 6px 6px rgba(0.3, 0.3, 0.3, 0.3);
+    height: 83vh;
+    width: 50%;
+    margin-left: 5vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1vh;
+}
+.docImg{
+    width: 55vh;
+    height: 40vh;
+   background-color: transparent;
+}
+.inputContainer
+{
+     height: 5.3vh;
+     width: 70%; 
+     border-bottom: 0.4vh solid rgb(241, 230, 230);
+     margin-bottom: 6%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+.emailinput
+{
+    background-color:#176cbb;
+    width: 85%;
+    height: 5vh;
+    font-size: 2vh;
+    border: 0;
+    outline: none;
+    color: #37352f;
+    text-indent: 2%;
+}
+.contactinput{
+    background-color:#176cbb;
+    width: 85%;
+    height: 5vh;
+    font-size: 2vh;
+    border: 0;
+    outline: none;
+    color: #37352f;
+    text-indent: 2%;
+}
+.nameinput
+{
+background-color:#176cbb;
+width: 85%;
+height: 5vh;
+font-size: 2vh;
+border: 0;
+outline: none;
+color: #37352f;
+text-indent: 2%;}
+.ageinput
+{
+background-color:#176cbb;
+width: 85%;
+height: 5vh;
+font-size: 2vh;
+border: 0;
+outline: none;
+color: #37352f;
+text-indent: 2%;}
+.specailityinput
+{
+background-color:#176cbb;
+width: 85%;
+height: 5vh;
+font-size: 2vh;
+border: 0;
+outline: none;
+color: #37352f;
+text-indent: 2%;
+}
+.Exprienceinput{
+background-color:#176cbb;
+width: 85%;
+height: 5vh;
+font-size: 2vh;
+border: 0;
+outline: none;
+color: #37352f;
+text-indent: 2%;
+}
+.registerButton{
+    background-color: #fff;
+    color:#176cbb;
+    height: 6.5vh;
+    width: 35%;
+    border-radius: 4vh;
+    outline: 0;
+    cursor:pointer;
+    font-weight: bold;
+    border: #6f9dc9;
+}

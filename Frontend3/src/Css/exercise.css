@@ -1,0 +1,51 @@
+.ExMainContainer{
+    background-image: url('https://media-s3-us-east-1.ceros.com/rad-intelligence/images/2021/08/09/21045ce0546351c8bca7fe8bce0a8e36/pngkey-com-polygon-png-1220320.png');
+    background-color: #b4cee6ab;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+    justify-content:flex-end;
+    align-items:center;
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+  }
+
+.fazul{
+    width: 30px;
+    height: 25px;
+    background-color: #131414ab;
+}
+.rightbuttons{
+    width: 50%;
+    height: 70%;
+    /* background-color: antiquewhite; */
+    margin-right: 50px;
+    margin-bottom: 120px;
+    padding-top: 130px;
+
+}
+.leftbuttons{
+    width: 50%;
+    height: 70%;
+    /* background-color: antiquewhite; */
+    margin-bottom: 120px;
+    margin-left: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* padding-top: 40vh; */
+}
+.leftbuttons h21{
+    font-size: 40px;
+    font-weight: bold;
+}
+.leftbuttons p{
+    font-size: larger;
+    font-weight:400;
+}
+.leftbuttons button:hover{
+    background: linear-gradient(165deg, #80b1d1, #f1f4f7);
+}
+
+

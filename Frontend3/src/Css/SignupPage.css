@@ -1,0 +1,128 @@
+.loginMainContainer{
+    background-image: url('https://media-s3-us-east-1.ceros.com/rad-intelligence/images/2021/08/09/21045ce0546351c8bca7fe8bce0a8e36/pngkey-com-polygon-png-1220320.png');
+    background-color: #b4cee6ab;
+    background-size: cover;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height:100vh;
+    width: 100%;
+    position:fixed;
+}
+.loginFormContainer{
+   background-color: #176cbb;
+    background-size: cover;
+    height: 65vh;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    border-radius: 2vh;
+    box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.loginBox{
+    background-color:white;
+    box-shadow: 6px 6px 6px 6px rgba(0.3, 0.3, 0.3, 0.3);
+    height: 87vh;
+    width: 50%;
+    margin-left: 8%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1vh;
+}
+.loginImage{
+    background-image: url('../Images/formImage.jpg');
+    background: none;
+    width: 50%;
+    border-top-right-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logoImage{
+    height: 15vh;
+    width: 60;
+    border-top-right-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+}
+.inputContainer
+{
+     height: 5vh;
+     width: 70%; 
+     border-bottom: 0.4vh solid #176cbb;
+     margin-bottom: 6%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+.input
+{
+    background-color:white;
+    width: 85%;
+    height: 5vh;
+    font-size: 2vh;
+    border: 0;
+    outline: none;
+    border-bottom: 0.3vh solid#176cbb;
+    color:black;
+    text-indent: 5%;
+}
+.loginButton{
+    background-color:#176cbb;
+    color:white;
+    height: 6.5vh;
+    width: 35%;
+    border-radius: 4vh;
+    outline: 0;
+    cursor:pointer;
+    font-weight: bold;
+    border: #fff;
+}
+.signupDropdownBox{
+    height:5.6vh;
+    width: 70%; 
+    border-bottom: 0.4vh solid #176cbb;
+    margin-bottom: 2.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    outline: none;
+  }
+  .sgn-dropdown-Layout{
+      width: 312px;
+      border: none;
+      margin-left: 5px;
+  }
+  .myClassName{
+   height: 5.1vh;
+   width:100%;
+   /* border: none; */
+   outline: none;
+   border-style:none;
+  }
+  
+  .myControlClassName{
+   height: 5.1vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   border-style: none;
+  }  
+  
+  .myMenuClassName{
+   height: 11vh;
+   width: 100%;
+   border: 0.vh solid black;
+   font-size: 2vh;
+   position: relative;
+   border-style: none;
+
+  }
+ 

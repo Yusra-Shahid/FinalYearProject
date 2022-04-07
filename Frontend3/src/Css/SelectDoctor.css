@@ -1,0 +1,385 @@
+
+.menubar{
+    width: 99%;
+    height: 50px;
+    background-color: aqua;
+}
+.search-box{
+    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.searchtext{
+    width: 20rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    transition: all 0.2s linear;
+    background-color: rgb(172, 168, 175);
+    margin-left: 70%;
+}
+.DOCmargin{
+    width: 100%;
+    height: 11vh;
+}
+.searchbtn{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+.cardcontainer{
+    position: relative;
+    margin-left: 10vh;
+    margin-top: 15vh;
+    width: 280px;
+    height: 187px;
+    border-radius: 10px;
+   background-color: rgb(103, 169, 223);
+   padding: 30px 50px;
+   transition: 0.3s;
+   cursor: pointer;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+.cardcontainer1{
+    position: relative;
+    margin-left: 75vh;
+    margin-top :-41vh; 
+     width: 280px;
+    height: 250px;
+    border-radius: 10px;
+   background-color: rgb(103, 169, 223);
+   padding: 30px 50px;
+   transition: 0.3s;
+   cursor: pointer;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.cardcontainer1:hover {
+    height: 500px;
+}
+.cardcontainer1:hover > .content{
+    opacity: 1;
+    transform: translateY(-80px);
+    justify-content: center;
+}
+
+.cardcontainer2{
+    position: relative;
+    margin-left: 140vh;
+    margin-top :-41vh; 
+     width: 280px;
+    height: 250px;
+    border-radius: 10px;
+   background-color: rgb(103, 169, 223);
+   padding: 30px 50px;
+   transition: 0.3s;
+   cursor: pointer;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.cardcontainer2:hover {
+    height: 300px;
+}
+.cardcontainer2:hover > .content{
+    opacity: 1;
+    transform: translateY(-105px);
+}
+
+.cardcontainer:hover {
+    height: 300px;
+}
+.cardcontainer:hover > .content{
+    opacity: 1;
+    transform: translateY(-105px);
+
+}
+.content h2{
+    position: absolute;
+   justify-content: center;   
+   margin-left: 70px;
+   color: white;
+}
+
+.docimg{ 
+   margin-left: 12px;
+    width: 90%;
+    height: 84%;
+    position: relative;
+    transform: translateY(-80px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* z-index: 99; */
+}
+img{
+width: 100%;
+border-radius: 10px;
+}
+.content{
+    padding: 10px 20px;
+    justify-content: center;
+    text-align:center;
+    transform: translateY(-340spx);
+    opacity: 0;
+    transition: 0.3s;
+}
+.content p{
+ color: rgb(253, 253, 253);
+ padding-top: 40px;
+ height: 1px;
+ 
+}
+/* .btn{
+
+    margin-bottom: 10px !important;
+    margin-top: 65px;
+    background-color: #fff;
+    border-radius: 20px;
+    
+} */
+.btn button{
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 43px;
+    font-weight: bold;
+    width: 245px;
+    border-radius: 20px;
+}
+.btn button:hover{
+    color: rgb(34, 34, 34);
+    background-color: rgb(245, 243, 243);
+    box-shadow: rgba(65, 65, 73, 0.678) 0px 13px 27px -5px, rgba(20, 92, 224, 0.863) 0px 8px 16px -8px;
+
+}
+.popup{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    position:absolute;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    justify-content: center;
+    transition: translate 300ms cubic-bezier(0.10, 0);
+}
+.popinfo{
+    width: 500px;
+    height: 660px;
+    background:#fff;
+    position: absolute;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: rgba(44, 73, 235, 0.781) 0px 4px 12px;
+  
+}
+.popdays{
+    width: 500px;
+    height: 180px;
+    background-color: rgba(160, 157, 152, 0.452);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: rgba(95, 97, 110, 0.781) 0px 4px 12px;
+}
+.docIcon{
+    width: 130px;
+    height: 130px;
+    background-color: bisque;
+    margin-left: 50px;
+    border-radius: 70px;
+}
+.docname{
+    width: 200px;
+    height: 70px;
+    background-color:transparent;
+margin-left: 200px;
+margin-top: -70px;
+}
+.docname h6{
+    color: rgb(77, 156, 230);
+}
+.docIcon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 70px;
+}
+.choosedays{
+    width: 500px;
+    height: 40px;
+  text-align: center;
+  color: rgb(74, 131, 236);
+}
+.dates{
+    width: 200px;
+    height: 30px;
+    margin-left: 150px;
+}
+.mordiv{
+    width: 500px;
+    height: 100px;
+    margin-top: 29px;
+}
+.mordiv p{
+margin-top: 10px;
+font-size: larger;
+color:rgb(55, 60, 70);
+font-weight: 100;
+}
+.mordiv button{
+    width: 50px;
+    height: 25px;
+    margin-right: 300px;
+    box-shadow: rgba(44, 73, 235, 0.781) 0px 2px 8px;
+}
+.yeee{
+    width: 60px;
+    height: 30px;
+    margin-left: 90px;
+}
+.subha{
+    width: 60px;
+    height: 30px;
+    margin-left: 170px;
+    margin-top: -30px;
+}
+.ki{
+    width: 60px;
+    height: 30px;
+    margin-left: 250px;
+    margin-top: -30px;
+}
+.timing{
+    width: 60px;
+    height: 30px;
+    margin-left: 330px;
+    margin-top: -30px; 
+}
+.afternoon{
+    width: 100%;
+    height: 100px;
+    margin-top: -20px;
+}
+.afternoon p{
+    margin-top: 10px;
+    font-size: larger;
+    color:rgb(55, 60, 70);
+    font-weight: 100;
+    }
+.afternoon button{
+    width: 50px;
+    height: 25px;
+    margin-right: 300px;
+    box-shadow: rgba(44, 73, 235, 0.781) 0px 2px 8px;
+}
+
+.ooho{
+    width: 60px;
+    height: 30px;
+    margin-left: 90px;
+
+}
+.duphr{
+    width: 60px;
+    height: 30px;
+    margin-left: 170px;
+    margin-top: -28px;
+}
+.ka{
+    width: 60px;
+    height: 30px;
+    margin-left: 250px;
+    margin-top: -30px;
+}
+.waqt{
+    width: 60px;
+    height: 30px;
+    margin-left: 330px;
+    margin-top: -30px;
+}
+.evening{
+    width: 500px;
+    height: 100px;
+}
+.evening p{
+    margin-top: 10px;
+    font-size: larger;
+    color:rgb(55, 60, 70);
+    font-weight: 100;
+    }
+.evening button{
+    width: 50px;
+    height: 25px;
+    margin-right: 300px;
+    box-shadow: rgba(44, 73, 235, 0.781) 0px 2px 8px;
+}
+
+.wow{
+    width: 60px;
+    height: 30px;
+    margin-left: 90px;
+
+}
+.shaam{
+    width: 60px;
+    height: 30px;
+    margin-left: 170px;
+    margin-top: -28px;
+}
+.k{
+    width: 60px;
+    height: 30px;
+    margin-left: 250px;
+    margin-top: -30px;
+}
+.khilta-waqt{
+    width: 60px;
+    height: 30px;
+    margin-left: 330px;
+    margin-top: -30px;
+}
+
+.pay_btn button{
+width: 100px;
+height: 35px;
+border-radius: 20px;
+border-radius: 20px;
+font-weight: bold;
+  border: #176cbb;
+  box-shadow: rgba(73, 73, 219, 0.589) 0px 13px 27px -5px, rgba(20, 92, 224, 0.863) 0px 8px 16px -8px;
+border: none;
+}
+.pay_btn{
+    margin-left: 27vh;
+    margin-top: -35px; 
+}
+.Con_btn{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.Con_btn button {
+    width: 100px;
+height: 35px;
+border-radius: 20px;
+margin-right: 30vh;
+border-radius: 20px;
+font-weight: bold;
+  border: #176cbb;
+  box-shadow: rgba(73, 73, 219, 0.589) 0px 13px 27px -5px, rgba(20, 92, 224, 0.863) 0px 8px 16px -8px;
+}
+.Con_btn button:hover{
+    background-color: #377adf;
+    color: aliceblue;
+    font-weight:bolder;
+    box-shadow: rgba(50, 50, 93, 0.726) 0px 13px 27px -5px, rgba(0, 0, 0, 0.479) 0px 8px 16px -8px;
+}
+.pay_btn button:hover{
+    background-color: #377adf;
+    color: aliceblue;
+    font-weight:bolder;
+    box-shadow: rgba(50, 50, 93, 0.726) 0px 13px 27px -5px, rgba(0, 0, 0, 0.479) 0px 8px 16px -8px;
+}

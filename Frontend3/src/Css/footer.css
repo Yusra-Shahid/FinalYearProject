@@ -1,0 +1,10 @@
+.footer-styling{
+    height: 50px;
+    color: rgb(247, 242, 242);
+    border-radius: 0%;
+    background-color: #176cbb;
+    /* align-items:center !important; */
+    padding-left: 37%;
+    padding-top: 12px;
+    margin-top: 2vh;
+}

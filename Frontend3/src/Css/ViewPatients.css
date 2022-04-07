@@ -1,0 +1,106 @@
+.Viewsection{
+    height: 75px;
+    width: 100%;
+}
+.view_patient{
+    width: 100%;
+    height: 680px;
+    background-image: url('https://media-s3-us-east-1.ceros.com/rad-intelligence/images/2021/08/09/21045ce0546351c8bca7fe8bce0a8e36/pngkey-com-polygon-png-1220320.png');
+    background-color: #b4cee6ab;
+    background-size: cover;
+    display: flex;
+    margin-top: -30px;
+}
+.view_patient_text{
+    margin-left: 300px;
+    height: 100%;
+    font-size: 30px;
+}
+.viewleftside{
+    width: 20%;
+    position: absolute;
+    height: 650px;
+    background-color: whitesmoke;
+    border-top-right-radius:150px ;
+    border-bottom-right-radius:150px ;
+    box-shadow: rgba(92, 100, 212, 0.767) 6px 2px 16px 0px, rgb(252, 252, 252) -6px -2px 16px 0px;
+}
+.viewDays{
+    width: 70%;
+    height: 400px;
+    
+    margin-left: 40px;
+    margin-top:100px;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+}
+.viewWeekofday{
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 30px;
+
+}
+.viewrightpatient{
+    width: 95.5%;
+    height: 680px;
+    margin-left: 60px;
+    border-radius: 25px;
+    justify-content: center;
+    display: flex;
+}
+.viewrightside{
+    width: 60%;
+    height: 80%;
+    margin-top: 85px;
+    margin-left: 200px;
+    overflow: scroll;
+    display: grid;
+    grid-template-rows: 2;
+    gap: 10px;
+    padding-left: 30px;
+    padding-top: 15px;
+    border: 0.5vh solid rgba(109, 150, 228, 0.815);
+    /* padding-bottom: 15px; */
+}
+.viewrightpatienttext{
+    width: 120px;
+    height: 50px;
+    /* background-color: slategray; */
+}
+.viewcard{
+    width: 98%;
+    margin-bottom: 15px;
+    height: 180px;
+    /* background-color: whitesmoke; */
+    border-top-left-radius: 30px; 
+    border-bottom-right-radius: 30px;
+    box-shadow: rgba(32, 28, 238, 0.548) 6px 2px 16px 0px, rgba(128, 125, 125, 0.486) -6px -2px 16px 0px;
+}
+.viewPatientName{
+    width: 800px;
+    height: 100px;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.viewPatientName h12{
+    font-size: 20px;
+}
+.viewPatientName p{
+    font-size: larger;
+}
+.contained{
+    margin-left: 60px;
+    margin-right: 50px;
+}
+.viewPatientName button:hover{
+    box-shadow: 0 12px 16px 0 rgba(89, 83, 90, 0.658), 0 5px 30px 0 rgba(0,0,0,0.19);
+}
+.viewcross{
+margin-top: -37px;
+margin-left: 430px;
+}
