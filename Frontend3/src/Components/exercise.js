@@ -12,7 +12,7 @@ export class exercise extends Component {
     render() {
         return (<Layout>
             <Navbar />
-            <div className="fazul"></div>
+            {/* <div className="fazul"></div> */}
             <div className={"ExMainContainer"}>
                 <div className="leftbuttons">
                     <h21>Work out at home for free</h21>

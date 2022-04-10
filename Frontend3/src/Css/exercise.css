@@ -14,11 +14,11 @@
 
 .fazul{
     width: 30px;
-    height: 25px;
+    height: 25px !important;
     background-color: #131414ab;
 }
 .rightbuttons{
-    width: 50%;
+    width: 60%;
     height: 70%;
     /* background-color: antiquewhite; */
     margin-right: 50px;

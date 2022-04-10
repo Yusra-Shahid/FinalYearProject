@@ -119,7 +119,7 @@ export default function ButtonBases() {
   }
 
   function handlebtn2() {
-    history.push('/Doctors');
+    history.push('/exercise');
 
   }
 
