@@ -217,12 +217,14 @@ video{
   padding-top: 75px;
 }
 .writingleftbox{
-  /* background-color: aliceblue; */
+  background-color: aliceblue;
   width: 50vh;
   height: 65vh;
   /* background-color: transparent; */
   align-content: center;
   padding-left: 40px;
+}
+.writingleftbox { background-color: aqua;
 }
 .writingleftbox h19{
   font-size: 25px;

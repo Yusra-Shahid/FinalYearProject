@@ -23,6 +23,7 @@ router.get('/getDoctor/:email', async (req, res) => {
 })
 
 router.put('/update_doctor', async (req, res) => {
+    console.log(req.body)
     try {
         const user = await Doctor.findByIdAndUpdate(req.body._id, {
             $set: {
@@ -34,7 +35,8 @@ router.put('/update_doctor', async (req, res) => {
                 exprience: req.body.exprience,
                 fee: req.body.fee,
                 account: req.body.account,
-                timeslote: req.body.timeslote
+                timeslote: req.body.timeslote,
+                imgurl: req.body.imgurl
             }
         }, { new: true })
         res.send("update");

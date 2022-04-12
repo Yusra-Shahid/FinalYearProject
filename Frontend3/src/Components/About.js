@@ -66,15 +66,20 @@ export class About extends Component {
             <div className="colorbox">
             <div className="onlinebox">
             <div className="writingleftbox">
-            <FcHome style={{ height: 60, width: 60 }}/>
-            <h19>Stay Home Stay Fit</h19>
+                <div className="FChomeicon">
+                <FcHome style={{ height: 60, width: 60 }}/> 
+                </div>
+        
+                <h19>Stay Home Stay Fit</h19>
             <br/>
             <p> Our site hepls you to make yourself fit by provide Fitness tips and exercises </p>
             </div>
             </div>
             <div className="leftbox">
                 <div className="writingrightbox">
-                    <FcServices style={{ height: 60, width: 60 }}/>
+                    <div className="FCicon">
+                    <FcServices style={{ height: 60, width: 60 }}/></div>
+                    
                     <h17>Services</h17>
                     <br/>
                     <p>We are provide multiple field online consultation that are </p>

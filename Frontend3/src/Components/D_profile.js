@@ -11,7 +11,8 @@ import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import Footer from './footer'
 import { Form, Row } from 'react-bootstrap';
-
+import { storage } from "../firebase/index";
+import { v4 as uuid } from 'uuid';
 
 const Morningoptions = ["Morning", "Afternoon", "Evening"];
 // const noonoptions = ["1:00PM", "1:30PM", "2:00PM", "2:30PM"];
@@ -28,7 +29,26 @@ const D_profile = () => {
     const [account, setAccount] = useState('');
     const [emails, setEmails] = useState('');
     const [name, setName] = useState('');
+    const [Img, setImg] = useState(false)
+    const [Imgurl, setImgurl] = useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png")
 
+
+    const handleChangeimage = async (e) => {
+        console.log(e.target.files[0])
+        setImg(e.target.files[0]);
+
+
+        const imageid = uuid();
+
+        await storage.ref(`dp/${imageid}`).put(Img);
+
+
+        const Url = await storage.ref(`dp`).child(imageid).getDownloadURL();
+        await setImgurl(Url)
+
+        console.log(Url)
+
+    }
 
 
 
@@ -50,6 +70,7 @@ const D_profile = () => {
             fee: fees || data.fee,
             account: account || data.account,
             timeslote: timeslote || data.timeslote,
+            imgurl : Imgurl
         })
             .then(function (response) {
                 console.log(response);
@@ -227,6 +248,10 @@ const D_profile = () => {
                                 </Form.Control>
                             </Form.Group>
                         </div>
+
+                        <input type="file" required='true' name='photo' id="photo" accept="image/*" onChange={handleChangeimage} />
+
+
                         {/* <div className={"inputContainer"}>
                         <AiFillFile
                             style={{ height: 20, width: 20, color: "176cbb" }}/>

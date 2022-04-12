@@ -13,7 +13,7 @@ export class ExMainPage extends Component {
             <div className="fazul"></div>
             <div className={"ExMainContainer"}>
 
-                <div class="card middle">
+                <div class="card2 middle">
                     <div class="front2">
                         {/* <img src="yoga2.jpg" alt="" /> */}
                     </div>
@@ -32,7 +32,7 @@ export class ExMainPage extends Component {
                     </div>
                 </div>
                 
-                <div class="card first">
+                <div class="card1 first">
                     <div class="front1">
                         {/* <img src="img.jpg" alt="" /> */}
                     </div>
@@ -51,7 +51,7 @@ export class ExMainPage extends Component {
                     </div>
                 </div>
 
-                <div class="card third">
+                <div class="card3 third">
                     <div class="front3">
                         {/* <img url="../Images/yoga2.jpg" alt="" /> */}
                     </div>

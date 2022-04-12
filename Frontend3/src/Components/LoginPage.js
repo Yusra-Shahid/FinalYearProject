@@ -6,6 +6,7 @@ import logo from '../Images/logo.png';
 import Password from "antd/lib/input/Password";
 import Navbar from './navbar';
 import axios from 'axios';
+import { message } from 'antd';
 
 
 function LoginPage() {
@@ -33,6 +34,7 @@ function LoginPage() {
 
             // history.push("/");
             if (response.data.userType==="patient"){
+              message.success('WELCOME '+response.data.name);
               history.push("/Viewdept")
             }
             if (response.data.userType==="doctor"){

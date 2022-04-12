@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { storage } from "../firebase/index";
 import Navbar from './navbar';
 import "../Css/Phistory.css";
-import {Image } from "antd";
+import { Image } from "antd";
 import Footer from './footer';
 import { BsPersonFill, BsFillEnvelopeFill, BsCameraFill } from "react-icons/bs";
 import ControlledAccordions from './ButtonComponent/accordin';
@@ -15,28 +15,28 @@ function Phistory() {
     const [profileupdate, setprofileupdate] = useState('false');
     const [Img, setImg] = useState(false)
     const [Imgurl, setImgurl] = useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png")
- 
+
 
     const handleChangeimage = async (e) => {
         console.log(e.target.files[0])
         setImg(e.target.files[0]);
-        
-    
+
+
         const imageid = uuid();
-       
+
         await storage.ref(`dp/${imageid}`).put(Img);
 
-       
-         const Url =  await storage.ref(`dp`).child(imageid).getDownloadURL();
-         await setImgurl(Url)
-    
-    console.log(Url)
-    
+
+        const Url = await storage.ref(`dp`).child(imageid).getDownloadURL();
+        await setImgurl(Url)
+
+        console.log(Url)
+
     }
 
 
 
-      
+
 
     return (
         <>
@@ -48,7 +48,7 @@ function Phistory() {
                     <img src={Imgurl} className="profileimage" />
 
 
-                   
+
 
 
                     <input type="file" required='true' name='photo' id="photo" accept="image/*" onChange={handleChangeimage} />
@@ -68,7 +68,7 @@ function Phistory() {
             <Navbar />
             <div className="Viewdeptpage">
 
-                <div className="margin"></div>
+                {/* <div className="margin"></div> */}
 
 
 

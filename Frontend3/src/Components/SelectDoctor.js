@@ -183,7 +183,9 @@ const SelectDoctor = (props) => {
                 <div className="cardcontainer">
                     <div className="docimg">
                         <img
-                            src="https://myupchar-banner.s3.ap-south-1.amazonaws.com/widget/avatar/doctor-avatar-male.png" />
+                        width='100%'
+                        height='100%'
+                            src={data.imgurl || "https://myupchar-banner.s3.ap-south-1.amazonaws.com/widget/avatar/doctor-avatar-male.png"} />
                     </div>
 
                     <div className=" content">

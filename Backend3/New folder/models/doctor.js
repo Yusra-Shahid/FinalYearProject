@@ -48,6 +48,9 @@ const userSchema = new mongoose.Schema({
     },
     timeslote: {
         type: String
+    },
+    imgurl:{
+        type: String
     }
     // m_time: {
     //     type: String,

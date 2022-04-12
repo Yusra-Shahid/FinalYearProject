@@ -14,6 +14,7 @@ import ViewPatients from "./Components/ViewPatients";
 import exercise from "./Components/exercise";
 import ExMainPage from "./Components/ExMainPage";
 import Payment from "./Components/Payment";
+
 //import Logout from './Components/logout';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route exact path="/exercise" component={exercise} />
         <Route exact path="/ExMainPage" component={ExMainPage} />
         <Route exact path= "/Payment" component={Payment}/>
+      
 
         
 
