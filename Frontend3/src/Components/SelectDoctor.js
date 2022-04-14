@@ -13,7 +13,7 @@ import { useLocation } from 'react-router-dom';
 import Payment from "./Payment";
 import axios from 'axios';
 import { Radio } from 'antd';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SelectDoctor = (props) => {
     const [active, setActive] = useState("fasle")
@@ -24,6 +24,7 @@ const SelectDoctor = (props) => {
     const [doctor_data, setDoctor_data] = useState('');
     const [date, setDate] = useState('');
     const [req, setReq] = useState('');
+    const [btnn, setbtnn] = useState(true);
     console.log(date)
     const history = useHistory();
     const patient = localStorage.getItem('p_name');
@@ -42,7 +43,7 @@ const SelectDoctor = (props) => {
     const hanldeSubmit = () => {
         alert("in")
         // setActive("fasle");
-
+        setbtnn(false)
         if (value !== '' && date !== '' && patient !== '') {
 
             axios.post('http://localhost:5000/request/new_req', {
@@ -153,12 +154,13 @@ const SelectDoctor = (props) => {
                                 </Radio.Group>
 
                             </div>
-                             <div className="Con_btn">
-                                    <button onClick={hanldeSubmit}>confirm</button>
-                                </div>
-                                <div className="pay_btn">
-                                    <Payment/>
-                                </div>
+                                 {btnn === true && <> <div className="Con_btn">
+                                <button onClick={hanldeSubmit}>confirm</button>
+                                       </div></>}
+                            {btnn === false && <>
+                                <div style={{margin:"5px"}}  className="pay_btn">
+                                    <Payment />
+                                </div></>}
                         </div>
 
                     </div>
@@ -167,7 +169,7 @@ const SelectDoctor = (props) => {
 
             <div className="DOCmargin"></div>
             <div className="Viewdeptpage">
-            {/* <div className="menubar">
+                {/* <div className="menubar">
                 <div className="search-box">
                     <input type="text" class="searchtext" placeholder="type for search . . ." />
                     <a href="#" class="searchbtn">
@@ -179,29 +181,29 @@ const SelectDoctor = (props) => {
                 </div>
             </div> */}
 
-            {data.map((data) => (
-                <div className="cardcontainer">
-                    <div className="docimg">
-                        <img
-                        width='100%'
-                        height='100%'
-                            src={data.imgurl || "https://myupchar-banner.s3.ap-south-1.amazonaws.com/widget/avatar/doctor-avatar-male.png"} />
-                    </div>
-
-                    <div className=" content">
-                        <h2>{data.name}</h2>
-                        <p>{data.contact}<br/>{data.email}
-                        </p>
-                        {/* <p>{data.email}</p> */}
-
-                        <div className="btn">
-                            <Button size="small" onClick={() => Handleclick(`${data.name}`)} >CONFIRMED DOCTOR</Button>
-                            
+                {data.map((data) => (
+                    <div className="cardcontainer">
+                        <div className="docimg">
+                            <img
+                                width='100%'
+                                height='100%'
+                                src={data.imgurl || "https://myupchar-banner.s3.ap-south-1.amazonaws.com/widget/avatar/doctor-avatar-male.png"} />
                         </div>
-                    </div>
-                </div>))}
-            {/* second cantainer */}
-            {/* <div className="cardcontainer1">
+
+                        <div className=" content">
+                            <h2>{data.name}</h2>
+                            <p>{data.contact}<br />{data.email}
+                            </p>
+                            {/* <p>{data.email}</p> */}
+
+                            <div className="btn">
+                                <Button size="small" onClick={() => Handleclick(`${data.name}`)} >CONFIRMED DOCTOR</Button>
+
+                            </div>
+                        </div>
+                    </div>))}
+                {/* second cantainer */}
+                {/* <div className="cardcontainer1">
                 <div className="docimg">
                     <img
                         src="https://www.livemed.com.ng/medfiles/med-users/pix/775743male.jpg" />
@@ -216,9 +218,9 @@ const SelectDoctor = (props) => {
                     </div>
                 </div>
             </div> */}
-            {/* third */}
+                {/* third */}
 
-            {/* <div className="cardcontainer2">
+                {/* <div className="cardcontainer2">
                 <div className="docimg">
                     <img
                         src="https://www.nanavatimaxhospital.org/controlpanel/uploadedfiles/gallery/1566555605_Dr.-Dummay_Female_310x310.jpg" />
@@ -234,7 +236,7 @@ const SelectDoctor = (props) => {
                 </div>
             </div> */}
 
-</div>
+            </div>
         </>
 
     );
