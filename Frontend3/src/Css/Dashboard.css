@@ -79,7 +79,7 @@
   .navigation p:hover{
     font-size: 2.5vh;
     text-decoration: underline;
-    color:rgb(17, 235, 235);
+    color:black;
 }
 .each-slide > div {
     display: flex;

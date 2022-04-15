@@ -5,8 +5,6 @@ import axios from "axios"
 
 import "../Css/ViewPatients.css";
 import Footer from './footer';
-import Button from '@mui/material/Button';
-import { AiOutlineCloseCircle } from "react-icons/ai";
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -44,18 +42,11 @@ const ViewPatients = () => {
             <div className="viewWeekofday">
               <p> Days of Week</p>
             </div>
-            <RadioGroup
-              aria-label="gender"
-              defaultValue="female"
-              name="radio-buttons-group"
-            >
-              <FormControlLabel value="Monday" control={<Radio />} label="Monday" />
-              <FormControlLabel value="Tuesday" control={<Radio />} label="Tuesday" />
-              <FormControlLabel value="Wednesday" control={<Radio />} label="Wednesday" />
-              <FormControlLabel value="Thursday" control={<Radio />} label="Thursday" />
-              <FormControlLabel value="Friday" control={<Radio />} label="Friday" />
-              <FormControlLabel value="saturday" control={<Radio />} label="Saturday" />
-              <FormControlLabel value="Sunday" control={<Radio />} label="Sunday" />
+            <RadioGroup>
+              <FormControlLabel value="Monday" control={<Radio />} label="Morning" />
+              <FormControlLabel value="Tuesday" control={<Radio />} label="afternoon" />
+              <FormControlLabel value="Wednesday" control={<Radio />} label="evening" />
+             
             </RadioGroup>
 
           </div>

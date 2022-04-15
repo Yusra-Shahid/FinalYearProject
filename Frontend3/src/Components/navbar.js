@@ -4,7 +4,7 @@ import { Header } from "antd/lib/layout/layout";
 import "react-slideshow-image/dist/styles.css";
 import { Link } from "react-router-dom";
 import logo from '../Images/logo.png';
-import { FaUserCircle } from "react-icons/fa";
+import { VideoCameraAddOutlined } from '@ant-design/icons';
 
 function Navbar() {
     const name = localStorage.getItem('p_name');
@@ -42,7 +42,7 @@ function Navbar() {
                         <Link
                             to="/Viewdept"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                            <p style={{ fontSize: "18px" }}>doctors</p>
+                            <p style={{ fontSize: "18px" }}>Doctors</p>
                         </Link>
                     </div>
                     
@@ -80,14 +80,14 @@ function Navbar() {
                         <Link
                             to="/Phistory"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                            <p style={{ fontSize: "18px" }}>laboratory</p>
+                            <p style={{ fontSize: "18px" }}>Laboratory</p>
                         </Link>
                     </div>
                     
                     
                     </>}
 
-                    {usertype == "doctor" && <>
+                    {/* {usertype == "doctor" && <>
                     
                     <div className={"navigation"}>
                         <Link
@@ -98,7 +98,7 @@ function Navbar() {
                     </div>
                     
                     
-                    </>}
+                    </>} */}
 
                     {usertype == "doctor" && <>
                     
@@ -106,7 +106,7 @@ function Navbar() {
                         <Link
                             to="/dprofile"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                            <p style={{ fontSize: "18px" }}>profile</p>
+                            <p style={{ fontSize: "18px" }}>Profile</p>
                         </Link>
                     </div>
                     
@@ -119,7 +119,7 @@ function Navbar() {
                         <Link
                             to="/Viewpatients"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                            <p style={{ fontSize: "18px" }}>appointments</p>
+                            <p style={{ fontSize: "18px" }}>Appointments</p>
                         </Link>
                     </div>
                     
@@ -131,16 +131,16 @@ function Navbar() {
 
                     <div className={"navigation"}>
                         <Link to="/about" style={{ textDecoration: 'none', color: 'rgb(247, 242, 242)' }}>
-                            <p style={{ fontSize: "18px" }}>ABOUT</p>
+                            <p style={{ fontSize: "18px" }}>About</p>
                         </Link>
                     </div>
                     {name ?
                         <div className={"navigation"}>
                             <Link
                                 to="/logout"
-                                style={{ textDecoration: "none", color: "#553d82" }}
+                                style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}
                             >
-                                <p style={{ fontSize: "18px" }}>LOGOUT</p>
+                                <p style={{ fontSize: "18px" }}>Logout</p>
                             </Link>
                         </div>
 
@@ -170,10 +170,10 @@ function Navbar() {
                             to="/updateprofile"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
                             <p style={{ fontSize: "40px" }}>
-                                <FaUserCircle /></p>
+                                <VideoCameraAddOutlined /> </p>
                         </Link>
                     </div>
-                    {/* } */}
+                    
 
                 </div>
             </Header>
