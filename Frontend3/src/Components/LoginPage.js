@@ -12,7 +12,16 @@ import { message } from 'antd';
 function LoginPage() {
 
   const [email, setEmail] = useState('');
+  const [OPT, setOTP] = useState('');
+  const [emailforotp, setEmailforotp] = useState('');
   const [password, setPasword] = useState('');
+  const [fpassword, setfPasword] = useState('');
+  const [fcpassword, setfcPasword] = useState('');
+  const [login, setlogin] = useState(true);
+  const [forgetpassword, setforgetpassword] = useState(false);
+  const [forgetpasswordemail, setforgetpasswordemail] = useState(false);
+  const [forgetpasswordotp, setforgetpasswordotp] = useState(false);
+  const [forgetpasswordchange, setforgetpasswordchange] = useState(false);
   const history = useHistory();
 
 
@@ -67,6 +76,8 @@ function LoginPage() {
           <div className={"loginForm"}>
             <h1 style={{ color: "#176cbb" }}>Login</h1>
 
+
+{login === true && <>
             <div className={"inputContainer"}>
               <BsFillEnvelopeFill
                 style={{ height: 20, width: 20, color: "#176cbb" }}
@@ -94,7 +105,8 @@ function LoginPage() {
             </div>
 
             <div className={"forgetPassword"}>
-              <p style={{ fontStyle: "italic" }}>Forget Password?</p>
+              <Link style={{ fontStyle: "italic" }} onClick={()=>{setlogin(false)
+                 setforgetpassword(true)}}>Forget Password?</Link>
             </div>
 
             <button className={"loginButton"} type="submit" onClick={submit}>
@@ -110,6 +122,184 @@ function LoginPage() {
                 <p className={"signup"}>Sign Up</p>
               </Link>
             </div>
+
+            </>}
+
+{forgetpassword === true && <>
+
+  <div className={"inputContainer"}>
+              <BsFillEnvelopeFill
+                style={{ height: 20, width: 20, color: "#176cbb" }}
+              />
+              <input
+                className={"input"}
+                type={"text"}
+                placeholder={"please enter your Email for OTP"}
+                name={"email"}
+               value={emailforotp}
+             onChange={e => setEmailforotp(e.target.value)}
+              />
+            </div>
+
+            <button className={"loginButton"}
+            // type="submit"
+            onClick={(e)=>{
+              
+
+
+                axios.post('http://localhost:5000/user/forgetpassword', {
+                  email: emailforotp,
+                
+                })
+                  .then(function (response){console.log(response.data)
+                  if (response.data === "Request Done"){    
+                    alert("otp has been sent")
+                      setforgetpassword(false)
+                setforgetpasswordemail(true)
+
+                  
+                  }else {
+                    alert("user not found")
+                    setforgetpassword(false)
+                    setlogin(true)
+                  }
+                })
+
+                
+
+              }
+            }
+           >
+              sent OTP
+            </button>
+
+
+
+</>}
+
+{forgetpasswordemail === true && <>
+
+  <div className={"inputContainer"}>
+              <BsFillEnvelopeFill
+                style={{ height: 20, width: 20, color: "#176cbb" }}
+              />
+              <input
+                className={"input"}
+                type={"text"}
+                placeholder={"please enter OPT that has been sent on your email"}
+               // name={"email"}
+               value={OPT}
+               onChange={e => setOTP(e.target.value)}
+              />
+            </div>
+
+            <button className={"loginButton"}
+            // type="submit"
+            onClick={(e)=>{
+               
+
+
+                axios.post('http://localhost:5000/user/forgetpasswordotp', {
+                  otp: OPT,
+                  email: emailforotp
+                
+                })
+                  .then(function (response){console.log(response.data)
+                  if (response.data === "Request Done"){    
+              
+                    setforgetpasswordemail(false)
+                    setforgetpasswordotp(true)
+  
+                  
+                  }else {
+                    alert("wrong OTP")
+                    setforgetpasswordemail(false)
+                    setlogin(true)
+                  }
+                })
+
+
+
+              }
+            }
+           >
+              submit
+            </button>
+
+</>}
+
+{forgetpasswordotp === true && <>
+
+  <div className={"inputContainer1"}>
+              <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
+              <input
+                className={"input1"}
+                type={"password"}
+                placeholder={"enter your new Password"}
+                // name={"password"}
+                value={fpassword}
+                onChange={e => setfPasword(e.target.value)}
+              />
+            </div>
+            <div style={{margin:"5px"}}></div>
+            <div className={"inputContainer1"}>
+              <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
+              <input
+                className={"input1"}
+                type={"password"}
+                placeholder={"confirm Password"}
+                // name={"password"}
+                value={fcpassword}
+                onChange={e => setfcPasword(e.target.value)}
+              />
+            </div>
+            <div style={{margin:"5px"}}></div>
+
+            <button className={"loginButton"}
+            // type="submit"
+            onClick={(e)=>{
+            
+if (fpassword === fcpassword ) {
+
+
+                axios.post('http://localhost:5000/user/forgetpasswordchange', {
+                 password: fcpassword,
+                  email: emailforotp
+                
+                })
+                  .then(function (response){console.log(response.data)
+                  if (response.data === "Request Done"){    
+                    alert("Password has been changed")
+                    setforgetpasswordotp(false)
+                    setlogin(true)
+  
+                  
+                  }else {
+                    alert("something wrong")
+                    setforgetpasswordotp(false)
+                    setlogin(true)
+                  }
+                })
+
+
+
+              }else {alert("confirm password is wrong")}
+
+
+
+
+
+
+              }
+            }
+           >
+              submit
+            </button>
+
+</>}
+
+
+
           </div>
           <div className={"loginImage"}>
             <div
@@ -117,6 +307,7 @@ function LoginPage() {
               <img src="https://www.yuvaacademy.in/assets/images/login.png" width={400}/>
             </div>
           </div>
+          
         </div>
       </div>
     </div>

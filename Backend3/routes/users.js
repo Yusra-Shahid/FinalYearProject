@@ -5,6 +5,8 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const Cryptr = require('cryptr');
 const jwt = require('jsonwebtoken');
+const nodemailer = require('nodemailer');
+const objectId = require('mongodb').ObjectID;
 const _ = require('lodash');
 //const uuid = require("uuid/v4");
 const Stripe = require("stripe")("sk_test_51KbrNJKimnUFu9LYr3mkPxBo2yxzNWJKdVd2WvsqMgmegj16xIUJGtKhuqvU5QKGhe1nXLT1y1Lp0HJHOmAOdmws00hFewmYOG ");
@@ -85,7 +87,7 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ email: req.body.email });//user patient
     if (!user) {
         const doctor = await Doctor.findOne({ email: req.body.email })
-       
+
         if (!doctor) {
             return res.status(404).send({ "message": "User not found " });
 
@@ -93,7 +95,7 @@ router.post('/login', async (req, res) => {
         else {
             const pass = await bcrypt.compare(req.body.password, doctor.password);//compare the hash value 
             if (pass) {
-                
+
                 return res.status(200).send(doctor);
             }
             else {
@@ -101,9 +103,9 @@ router.post('/login', async (req, res) => {
             }
         }
     }
-    
-    
-    
+
+
+
     else {
         const pass = await bcrypt.compare(req.body.password, user.password);
         if (pass) {
@@ -139,5 +141,174 @@ router.post('/payment', (req, res) => {
     })
         .then(result => res.status(200).json(result))
         .catch(er => console.log(err))
+})
+module.exports = router;
+
+
+
+
+router.post('/forgetpassword', async (req, res) => {
+    console.log(req.body)
+
+    let user = await User.findOne({ email: req.body.email });
+    if (user) {
+
+
+        var otp = Math.floor(Math.random() * 100000) + 1;
+
+        let aaa = await User.updateOne({ email: req.body.email }, { $set: { otp: otp } });
+        console.log(aaa);
+
+
+
+        // const transporter = nodemailer.createTransport({
+        //     service: "gmail",
+        //     auth: {
+        //         user: "yusrashahid2019@gmail.com",
+        //         pass: "yusrakhan#1"
+        //     }
+        // });
+
+        // const data = {
+        //     from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+        //     to: req.body.email,
+        //     subject: "OTP for I-MEDCARE",
+
+        //     html: `
+        //     <h3>here is your OTP "${otp}" to reset your Password</h3>
+        //     `
+        // }
+        // transporter.sendMail(data, function (error, info) {
+        //     if (error) {
+        //         console.log(error);
+
+        //     } else {
+        //         console.log('Email sent ' + info.response)
+        //         res.send("successfully send")
+        //     }
+        // })
+
+        res.send('Request Done');
+
+
+
+
+
+
+    } else {
+        let duser = await Doctor.findOne({ email: req.body.email });
+        if (duser) {
+
+
+            var otp = Math.floor(Math.random() * 100000) + 1;
+
+            let aaa = await Doctor.updateOne({ email: req.body.email }, { $set: { otp: otp } });
+            console.log(aaa);
+
+
+
+            // const transporter = nodemailer.createTransport({
+            //     service: "gmail",
+            //     auth: {
+            //         user: "yusrashahid2019@gmail.com",
+            //         pass: "yusrakhan#1"
+            //     }
+            // });
+
+            // const data = {
+            //     from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+            //     to: req.body.email,
+            //     subject: "OTP for I-MEDCARE",
+
+            //     html: `
+            //     <h3>here is your OTP "${otp}" to reset your Password</h3>
+            //     `
+            // }
+            // transporter.sendMail(data, function (error, info) {
+            //     if (error) {
+            //         console.log(error);
+
+            //     } else {
+            //         console.log('Email sent ' + info.response)
+            //         res.send("successfully send")
+            //     }
+            // })
+
+            res.send('Request Done');
+
+        } else { res.send('user not found'); }
+    }
+
+
+    //else {res.send('user not found');}
+
+})
+module.exports = router;
+
+
+router.post('/forgetpasswordotp', async (req, res) => {
+    console.log(req.body)
+
+    let puser = await User.findOne({ email: req.body.email });
+    if (puser) {
+        let matchotp1 = puser.otp;
+        if (matchotp1 == req.body.otp) {
+
+
+            res.send('Request Done');
+
+        } else { res.send('wrong otp'); }
+    } else {
+
+
+       let  user = await Doctor.findOne({ email: req.body.email });
+        let matchotp = user.otp;
+        if (matchotp == req.body.otp) {
+
+            res.send('Request Done');
+
+
+        } else { res.send('wrong otp'); }
+    }
+
+
+   
+
+   
+
+})
+module.exports = router;
+
+
+router.post('/forgetpasswordchange', async (req, res) => {
+    console.log(req.body)
+
+
+
+
+
+    const salt = await bcrypt.genSalt(10);//generate a key 
+    req.body.password = await bcrypt.hash(req.body.password, salt);
+    console.log(req.body.password)
+
+
+
+    let puser = await User.findOne({ email: req.body.email });
+    if (puser) { await User.updateOne({ email: req.body.email }, { $set: { password: req.body.password } }); } else {
+
+
+        await Doctor.updateOne({ email: req.body.email }, { $set: { password: req.body.password } });
+    }
+
+
+
+
+
+
+    res.send('Request Done');
+
+
+
+
 })
 module.exports = router;

@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const appointment = require('./routes/appointments');
 const doctor = require('./routes/doctors');
 const user = require("./routes/users");
+
 const cors = require('cors');//intergation not found
 const request = require("./routes/requests");
 const fileupload = require("express-fileupload");
@@ -48,6 +49,8 @@ app.post('/', upload, (req, res) => {
 })
 app.use('/user', user);
 app.use('/doctor', doctor)
+
+
 app.use('/appointment', appointment);
 app.use('/request', request)
 app.get('/', (req, res) => {

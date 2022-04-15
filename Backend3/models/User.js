@@ -31,6 +31,10 @@ const userSchema = new mongoose.Schema({
     imgurl: {
         type: String,
      
+    },
+
+    otp:{
+        type: String,
     }
 
 })

@@ -51,6 +51,9 @@ const userSchema = new mongoose.Schema({
     },
     imgurl:{
         type: String
+    },
+    otp:{
+        type: String,
     }
     // m_time: {
     //     type: String,
