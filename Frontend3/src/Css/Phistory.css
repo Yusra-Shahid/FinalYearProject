@@ -165,10 +165,29 @@ padding-top: 25px;
  margin-top: 150px;
  border-bottom-left-radius: 50px;
  border-top-right-radius:50px;
- position:absolute;
+ position:relative;
+ align-items: center;
  text-align: center;
  color: white;
+ display: flex;
+ flex-direction: column;
  font-weight: bold;
  font-size: 25px;
 padding-top: 25px;
+}
+.appDetails{
+    width: 90%;
+    height: 100px;
+    background-color: rgb(231, 235, 235);
+    margin-top: 20px;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    border-top-right-radius:150px ;
+    border-bottom-right-radius:150px ;
+    box-shadow: rgba(92, 100, 212, 0.767) 6px 2px 16px 0px, rgb(252, 252, 252) -6px -2px 3px 0px;
+}
+.appDetails a{
+    font-size: medium;
+    color: black;
 }

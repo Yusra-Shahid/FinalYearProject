@@ -14,7 +14,7 @@ import ViewPatients from "./Components/ViewPatients";
 import exercise from "./Components/exercise";
 import ExMainPage from "./Components/ExMainPage";
 import Payment from "./Components/Payment"
-import { Comment } from "./Components/Comment";
+// import { Comment } from "./Components/Comment";
 
 //import Logout from './Components/logout';
 
@@ -36,8 +36,8 @@ function App() {
         <Route exact path="/exercise" component={exercise} />
         <Route exact path="/ExMainPage" component={ExMainPage} />
         <Route exact path= "/Payment" component={Payment}/>
-        <Route exact path= "/Comment" component={Comment}/>
-      
+        {/* <Route exact path= "/Comment" component={Comment}/>
+       */}
     
 
         

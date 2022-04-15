@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Navbar from './navbar';
 import axios from "axios"
-
+import Button from '@mui/material/Button';
 import "../Css/ViewPatients.css";
 import Footer from './footer';
 import Radio from '@mui/material/Radio';
@@ -54,21 +54,21 @@ const ViewPatients = () => {
 
         <div className="viewrightpatient">
           <div className="viewrightside">
-            {/* {data.map((data) => (
+            {/* {data.map((data) => ( */}
               <div className="viewcard">
 
                 <div className="viewPatientName">
-                  <h12> Patient Name : {data.patient}</h12>
-                  <p>appointment timing : {data.Time}</p>
+                  <h12> Patient Name : bht bimar{data.patient}</h12>
+                  <p>appointment timing : 4/12/23 {data.Time}</p>
                 </div>
                 <Button className="contained">Call Patient</Button>
-                <Button variant="contained">Re-Scheduling</Button>
-                <div className="viewcross">
+                <Button variant="contained">appointment done</Button>
+                {/* <div className="viewcross">
                   <AiOutlineCloseCircle onClick
                     style={{ height: 40, width: 40, color: "red" }} />
-                </div>
+                </div> */}
 
-              </div>))} */}
+              </div>
             {/* <div className="viewcard"></div>
             <div className="viewcard"></div>
             <div className="viewcard"></div>

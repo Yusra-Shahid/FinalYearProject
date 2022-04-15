@@ -4,9 +4,10 @@ import Navbar from './navbar';
 import "../Css/Phistory.css";
 import { Image } from "antd";
 import Footer from './footer';
+import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
 import { BsPersonFill, BsFillEnvelopeFill, BsCameraFill } from "react-icons/bs";
 import ControlledAccordions from './ButtonComponent/accordin';
-
+import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { v4 as uuid } from 'uuid';
 
 
@@ -56,7 +57,7 @@ function Phistory() {
 
                     <div>
 
-                        <button onClick={() => { setprofileupdate("falses") }}>cencle</button>
+                        <button onClick={() => { setprofileupdate("falses") }}>cancle</button>
 
                         <button onClick={() => { setprofileupdate("falses") }}>update</button>
                     </div>
@@ -106,6 +107,22 @@ function Phistory() {
 
                 <div className="leftcard">
                     Up Coming Appointment
+                    <div className="appDetails">
+                        <a>
+                        Doctor Name: 
+                        <br></br>
+                        Date:
+                        timing:
+                        </a>
+                        <div>
+                        <AutorenewIcon  style={{ height: 30, width:30 , color: "#176cbb" }}/>
+                        <DisabledByDefaultIcon style={{ height: 30, width:30 , color: "#176cbb" }}/>
+                       
+                        </div>
+   
+                    
+
+                    </div>
                 </div>
 
             </div>
