@@ -9,6 +9,8 @@ import { BsPersonFill, BsFillEnvelopeFill, BsCameraFill } from "react-icons/bs";
 import ControlledAccordions from './ButtonComponent/accordin';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { v4 as uuid } from 'uuid';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import Button from '@mui/material/Button';
 
 
 
@@ -77,12 +79,43 @@ function Phistory() {
 
 
                 <div className="userpro"><div>User Profile</div>
-                    <div className="circle">
+                    {/* <div className="circle">
                         <BsCameraFill onClick={() => { setprofileupdate("true") }} type="file" style={{ height: 20, width: 20, color: "#176cbb" }} />
 
+                    </div> */}
+
+
+                    <div class="cardEX physical">
+                        <div class="frontEX">
+                             <img src="https://i0.wp.com/www.yogabasics.com/yogabasics2017/wp-content/uploads/2014/11/6130270001_e4bbc718f5_b.jpg?w=900&ssl=1" />
+                        </div>
+                        <div class="backEX">
+                            <div class="backEX-content physical">
+
+                                <div className="usercard">
+                                    <div className={"userinput"}>
+                                        <BsPersonFill
+                                            style={{ height: 20, width: 20, color: "#176cbb" }} />
+                                        <input className="Naaminput" style={{ width: 30, height: 30, color: "black" }} />
+                                    </div>
+
+
+                                    <div className={"userEmail"}>
+                                        <BsFillEnvelopeFill style={{ height: 20, width: 20, color: "#176cbb" }} />
+                                        <input className="Emailinput" style={{ width: 30, height: 30, color: "black" }} />
+                                    </div>
+
+                                    <div className={"userImg"}>
+                                        <AddPhotoAlternateIcon onClick={() => { setprofileupdate("true") }} type="file" style={{ height: 30, width: 30, color: "#176cbb" }} />
+                                        <input className="Imginput" style={{ width: 30, height: 30, color: "black" }} />
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="usercard">
+                    {/* <div className="usercard">
                         <div className={"userinput"}>
                             <BsPersonFill
                                 style={{ height: 20, width: 20, color: "#176cbb" }} />
@@ -94,7 +127,7 @@ function Phistory() {
                             <BsFillEnvelopeFill style={{ height: 20, width: 20, color: "#176cbb" }} />
                             <input className="Emailinput" style={{ width: 30, height: 30, color: "black" }} />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* <div className="circle">
@@ -109,18 +142,18 @@ function Phistory() {
                     Up Coming Appointment
                     <div className="appDetails">
                         <a>
-                        Doctor Name: 
-                        <br></br>
-                        Date:
-                        timing:
+                            Doctor Name:
+                            <br></br>
+                            Date:
+                            timing:
                         </a>
                         <div>
-                        <AutorenewIcon  style={{ height: 30, width:30 , color: "#176cbb" }}/>
-                        <DisabledByDefaultIcon style={{ height: 30, width:30 , color: "#176cbb" }}/>
-                       
+                            <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
+                            <DisabledByDefaultIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
+
                         </div>
-   
-                    
+
+
 
                     </div>
                 </div>

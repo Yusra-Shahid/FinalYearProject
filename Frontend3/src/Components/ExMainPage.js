@@ -13,34 +13,16 @@ export class ExMainPage extends Component {
             <div className="fazul"></div>
             <div className={"ExMainContainer"}>
 
-                <div class="card2 middle">
-                    <div class="front2">
-                        {/* <img src="yoga2.jpg" alt="" /> */}
-                    </div>
-                    <div class="back2">
-                        <div class="back-content middle">
-                            <h2>DarkCode</h2>
-                            <span>Youtube Channel</span>
-                            <Button size="small" >more for you</Button>
-                            <div class="sm">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+
                 <div class="card1 first">
                     <div class="front1">
-                        {/* <img src="img.jpg" alt="" /> */}
+                        <img src="https://www.shutterstock.com/image-photo/yoga-poses-strait-natural-park-tarifa-1116636086" width={400} />
+                        {/* <img src="img.jpg" alt=""> */}
                     </div>
                     <div class="back1">
-                        <div class="back-content middle">
+                        <div class="back1-content first">
                             <h2>DarkCode</h2>
                             <span>Youtube Channel</span>
-                            <Button size="small" >more for you</Button>
                             <div class="sm">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -51,15 +33,35 @@ export class ExMainPage extends Component {
                     </div>
                 </div>
 
-                <div class="card3 third">
-                    <div class="front3">
-                        {/* <img url="../Images/yoga2.jpg" alt="" /> */}
+
+                 <div class="card11 middle">
+                    <div class="front11">
+                        <img src="https://www.shutterstock.com/image-photo/yoga-poses-strait-natural-park-tarifa-1116636086" width={400} />
+                       
                     </div>
-                    <div class="back3">
-                        <div class="back3-content middle">
+                    <div class="back11">
+                        <div class="back11-content middle">
                             <h2>DarkCode</h2>
                             <span>Youtube Channel</span>
-                            <Button size="small" >more for you</Button>
+                            <div class="sm">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card3 third">
+                    <div class="front3">
+                        <img src="https://www.shutterstock.com/image-photo/yoga-poses-strait-natural-park-tarifa-1116636086" width={400} />
+                    </div>
+                    <div class="back3">
+                        <div class="back3-content third">
+                            <h2>DarkCode</h2>
+                            <span>Youtube Channel</span>
                             <div class="sm">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
