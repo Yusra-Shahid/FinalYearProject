@@ -33,6 +33,8 @@
     overflow: hidden;
     backface-visibility: hidden;
     position: absolute;
+    justify-content: center;
+    align-items: center;
     transition: transform .6s linear;
   }
   .front1 img{
@@ -40,6 +42,7 @@
   }
   .front1{
     transform: perspective(600px) rotateY(0deg);
+    
   }
   .back1{
     background: #f1f1f1;
@@ -47,15 +50,17 @@
   }
   .back1-content{
     color: #2c3e50;
-    text-align: center;
+    text-align: center !important;
     width: 100%;
+  
   }
   .sm{
     margin: 20px 0;
+    margin-left: 20px;
   }
   .sm a{
     display: inline-flex;
-    width: 40px;
+    width: 110;
     height: 40px;
     justify-content: center;
     align-items: center;
@@ -108,13 +113,14 @@
     color: #2c3e50;
     text-align: center;
     width: 100%;
+    margin-left: 75px;
   }
   .sm{
     margin: 20px 0;
   }
   .sm a{
     display: inline-flex;
-    width: 40px;
+    width: 110px;
     height: 40px;
     justify-content: center;
     align-items: center;
@@ -168,25 +174,26 @@
     color: #2c3e50;
     text-align: center;
     width: 100%;
+    margin-left: -100px;
   }
   .sm{
     margin: 20px 0;
   }
   .sm a{
     display: inline-flex;
-    width: 40px;
+    width: 110px;
     height: 40px;
     justify-content: center;
     align-items: center;
     color: #2c3e50;
     font-size: 18px;
-    transition: 0.4s;
+    transition: 0.5s;
     border-radius: 50%
   }
-  .sm a:hover{
+  /* .sm a:hover{
     background: #2c3e50;
     color: white;
-  }
+  } */
   .card3:hover > .front3{
     transform: perspective(600px) rotateY(-180deg);
   }

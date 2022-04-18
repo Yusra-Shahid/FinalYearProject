@@ -13,6 +13,7 @@ import Footer from './footer'
 import { Form, Row } from 'react-bootstrap';
 import { storage } from "../firebase/index";
 import { v4 as uuid } from 'uuid';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 
 const Morningoptions = ["Morning", "Afternoon", "Evening"];
 // const noonoptions = ["1:00PM", "1:30PM", "2:00PM", "2:30PM"];
@@ -233,7 +234,7 @@ const D_profile = () => {
                             <BsPersonFill
                                 style={{ height: 20, width: 20,marginBottom:40, color: "#176cbb" }}
                             />
-                            <Form.Group className="sgn-dropdown-Layout"
+                            <Form.Group className="Doc-dropdown-Layout"
                                 value={timeslote}
                                 required="true"
 
@@ -248,8 +249,19 @@ const D_profile = () => {
                                 </Form.Control>
                             </Form.Group>
                         </div>
-
-                        <input type="file" required='true' name='photo' id="photo" accept="image/*" onChange={handleChangeimage} />
+                        <div className={"D_inputContainer"}>
+                            <AddPhotoAlternateIcon
+                                style={{ height: 20, width: 20, color: "176cbb" }} />
+                            
+                            <input 
+                            type="file" 
+                            required='true'
+                            name='photo'
+                            id="photo" 
+                            accept="image/*" 
+                            onChange={handleChangeimage} />
+                        </div>
+                     
 
 
                         {/* <div className={"inputContainer"}>

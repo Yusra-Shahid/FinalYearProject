@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../Css/ExMainPage.css";
 import { Layout } from "antd";
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 import { Footer } from "antd/lib/layout/layout";
 import Navbar from "./navbar";
 
@@ -16,38 +17,36 @@ export class ExMainPage extends Component {
 
                 <div class="card1 first">
                     <div class="front1">
-                        <img src="https://www.shutterstock.com/image-photo/yoga-poses-strait-natural-park-tarifa-1116636086" width={400} />
+                        <img src="../Images/p-d1.jpg" width={400} />
                         {/* <img src="img.jpg" alt=""> */}
                     </div>
                     <div class="back1">
                         <div class="back1-content first">
-                            <h2>DarkCode</h2>
+                            <h2>Aerobic Exersice</h2>
                             <span>Youtube Channel</span>
                             <div class="sm">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <div className="uploaded">
+                                    <button>View</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-                 <div class="card11 middle">
+                <div class="card11 middle">
                     <div class="front11">
                         <img src="https://www.shutterstock.com/image-photo/yoga-poses-strait-natural-park-tarifa-1116636086" width={400} />
-                       
+
                     </div>
                     <div class="back11">
                         <div class="back11-content middle">
-                            <h2>DarkCode</h2>
+                            <h2>Strength Exersice</h2>
                             <span>Youtube Channel</span>
                             <div class="sm">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <div className="uploaded">
+                                    <button>View</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -60,13 +59,14 @@ export class ExMainPage extends Component {
                     </div>
                     <div class="back3">
                         <div class="back3-content third">
-                            <h2>DarkCode</h2>
+                            <h2>Stretching Exersice</h2>
                             <span>Youtube Channel</span>
                             <div class="sm">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <div className="uploaded">
+                                    <Link to="/Stretching">
+                                        <button>View</button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
