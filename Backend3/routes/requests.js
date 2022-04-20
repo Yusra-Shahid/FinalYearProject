@@ -5,8 +5,33 @@ const nodemailer = require('nodemailer');
 const router = express.Router();
 
 
+
+router.post('/appp', async (req, res) => {
+
+    console.log(req.body)
+    let user = await Request.find({ email : req.body.email });
+res.send(user)
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 router.post('/new_req', async (req, res) => {
-    let user = await Request.findOne({ patient: req.body.patient, doctor: req.body.doctor, Date: req.body.date, Time: req.body.time, statu: "pending" });
+
+console.log(req.body)
+    let user = await Request.findOne({ patient: req.body.patient, doctor: req.body.doctor, Date: req.body.date, Time: req.body.time, statu: "pending" , email : req.body.email });
     if (user) {
         return res.status(400).send('Request Already Done');
     }
@@ -16,7 +41,8 @@ router.post('/new_req', async (req, res) => {
         doctor: req.body.doctor,
         Date: req.body.date,
         Time: req.body.time,
-        status: "pending"
+        status: "pending",
+        email: req.body.email
     });
 
     result = await user.save();

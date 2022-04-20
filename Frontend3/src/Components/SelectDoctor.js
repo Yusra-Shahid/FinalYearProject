@@ -19,6 +19,7 @@ const SelectDoctor = (props) => {
     const [active, setActive] = useState("fasle")
     const [active1, setActive1] = useState("fasle")
     const [dname, setDname] = useState('');
+    const [demail, setDemail] = useState('');
     const [value, setValue] = useState('');
     console.log(value);
     const [doctor_data, setDoctor_data] = useState('');
@@ -31,7 +32,9 @@ const SelectDoctor = (props) => {
     const email = localStorage.getItem('email');
 
     console.log(patient)
-    const Handleclick = (name) => {
+    const Handleclick = (email,name) => {
+        console.log("dscs" + email )
+        console.log("name " +name )
 
         setDname(name); setActive("True");
     }
@@ -41,8 +44,8 @@ const SelectDoctor = (props) => {
         history.push("/loginpage")
     }
     const hanldeSubmit = () => {
-        alert("in")
-        // setActive("fasle");
+        // alert("in")
+       
         setbtnn(false)
         if (value !== '' && date !== '' && patient !== '') {
 
@@ -50,6 +53,7 @@ const SelectDoctor = (props) => {
 
                 patient: patient,
                 doctor: dname,
+                doctoremail:demail,
                 date: date,
                 time: value,
                 status: "pending",
@@ -58,7 +62,7 @@ const SelectDoctor = (props) => {
                 .then(function (response) {
                     console.log(response);
                     alert("Your request is submited you will soon got email of confirmation");
-                    history.push("/");
+                   
                 })
                 .catch(function (error) {
 
@@ -197,7 +201,7 @@ const SelectDoctor = (props) => {
                             {/* <p>{data.email}</p> */}
 
                             <div className="btn">
-                                <Button size="small" onClick={() => Handleclick(`${data.name}`)} >CONFIRMED DOCTOR</Button>
+                                <Button size="small" onClick={() => Handleclick(`${data.email}`)} >CONFIRMED DOCTOR</Button>
 
                             </div>
                         </div>

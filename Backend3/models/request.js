@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: 'pending'
     },
+    email: {
+        type: String,
+        require: true
+    },
 
 })
 

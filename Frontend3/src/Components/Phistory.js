@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { storage } from "../firebase/index";
 import Navbar from './navbar';
+import axios from 'axios'; 
 import "../Css/Phistory.css";
 import { Image } from "antd";
 import Footer from './footer';
@@ -17,6 +18,8 @@ import Button from '@mui/material/Button';
 function Phistory() {
     const [profileupdate, setprofileupdate] = useState('false');
     const [Img, setImg] = useState(false)
+    const [Appointment, setAppointment] = useState([])
+  
     const [Imgurl, setImgurl] = useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png")
 
 
@@ -37,7 +40,33 @@ function Phistory() {
 
     }
 
+    useEffect(async () => {
 
+        axios.post('http://localhost:5000/request/appp', {
+
+            email : localStorage.getItem("email"),
+           
+        }).then(function (response) {
+            setAppointment(response.data);
+            console.log(response.status);
+            console.log(response.statusText);
+            console.log(response.headers);
+            console.log(response.config);
+          
+           
+        })
+
+    //     .then(res => res.json()
+    //     // console.log(res)
+    //   )
+    //   .then(result => setMessegee(result))
+
+    //   .catch(error => console.log('error', error));
+
+        console.log(Appointment)
+       
+        
+  }, 10000000)
 
 
 
@@ -140,9 +169,12 @@ function Phistory() {
 
                 <div className="leftcard">
                     Up Coming Appointment
+                 
+                    {Appointment.map((data) => (
+                 
                     <div className="appDetails">
                         <a>
-                            Doctor Name:
+                            Doctor Name: data
                             <br></br>
                             Date:
                             timing:
@@ -156,6 +188,7 @@ function Phistory() {
 
 
                     </div>
+                   ))}
                 </div>
 
             </div>
