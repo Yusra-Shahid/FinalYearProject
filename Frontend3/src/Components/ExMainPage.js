@@ -13,8 +13,12 @@ export class ExMainPage extends Component {
             <Navbar />
             <div className="fazul"></div>
             <div className={"ExMainContainer"}>
-
-
+            <div className="MainPageContext">THE I-MedCare Web
+                <br></br>
+                    Find your new favorite workout</div>
+                
+                
+                
                 <div class="card1 first">
                     <div class="front1">
                         <img src="../Images/p-d1.jpg" width={400} />
