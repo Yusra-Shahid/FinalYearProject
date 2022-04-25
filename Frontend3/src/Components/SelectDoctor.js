@@ -21,20 +21,20 @@ const SelectDoctor = (props) => {
     const [dname, setDname] = useState('');
     const [demail, setDemail] = useState('');
     const [value, setValue] = useState('');
-    console.log(value);
+
     const [doctor_data, setDoctor_data] = useState('');
     const [date, setDate] = useState('');
     const [req, setReq] = useState('');
     const [btnn, setbtnn] = useState(true);
-    console.log(date)
+ 
     const history = useHistory();
     const patient = localStorage.getItem('p_name');
     const email = localStorage.getItem('email');
 
-    console.log(patient)
-    const Handleclick = (email,name) => {
-        console.log("dscs" + email )
-        console.log("name " +name )
+    
+    const Handleclick = (name) => {
+        console.log("dscs" + name )
+        // console.log("name " +name )
 
         setDname(name); setActive("True");
     }
@@ -77,14 +77,13 @@ const SelectDoctor = (props) => {
     const [data, setData] = useState([]);
 
 
-    console.log(dname)
 
 
     const location = useLocation();
 
     // console.log(location.state.name);
     const spe = props.location.state.state.name;
-    console.log(spe)
+    
     useEffect(() => {
         axios.get(`http://localhost:5000/doctor/getspecialist/${spe}`)
             .then((Response) => {
@@ -201,7 +200,13 @@ const SelectDoctor = (props) => {
                             {/* <p>{data.email}</p> */}
 
                             <div className="btn">
-                                <Button size="small" onClick={() => Handleclick(`${data.email}`)} >CONFIRMED DOCTOR</Button>
+                                <Button size="small" onClick={() => {
+                                 setDname(data.name)
+                                    setDemail(data.email)
+                                    setActive("True")
+                                } }
+                                    
+                                    >CONFIRMED DOCTOR</Button>
 
                             </div>
                         </div>

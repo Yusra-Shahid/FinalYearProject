@@ -28,6 +28,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    doctoremail:{
+        type: String,
+        require: true
+    },
 
 })
 

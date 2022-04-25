@@ -14,24 +14,50 @@ const ViewPatients = () => {
   const name = localStorage.getItem('p_name')
   console.log(name);
   const [data, setData] = useState('');
-  useEffect(async() => {
-    await axios.get(`http://localhost:5000/request/getrequest/${name}`)
-      .then((Response) => {
-        setData(Response.data)
-        console.log(Response.data)
-        if (Response.data.length === 0) {
-          alert("No REcord Found");
-          // history.push("/");
-        }
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }, []);
+  // useEffect(async() => {
+  //   await axios.get(`http://localhost:5000/request/getrequest/${name}`)
+  //     .then((Response) => {
+  //       setData(Response.data)
+  //       console.log(Response.data)
+  //       if (Response.data.length === 0) {
+  //         alert("No REcord Found");
+  //         // history.push("/");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error)
+  //     })
+  // }, []);
+
+  const [Appointment, setAppointment] = useState([])
+
+  useEffect(async () => {
+
+    await axios.post('http://localhost:5000/request/dappp', {
+
+      email: localStorage.getItem("email"),
+
+    }).then(function (response) {
+      setAppointment(response.data);
+
+
+    })
+
+    //     .then(res => res.json()
+    //     // console.log(res)
+    //   )
+    //   .then(result => setMessegee(result))
+
+    //   .catch(error => console.log('error', error));
+
+    await console.log(Appointment)
+
+
+  }, 10000000)
 
   console.log(data);
   return (
-    
+
     <>
       <Navbar />
       <div className="Viewsection"></div>
@@ -46,34 +72,32 @@ const ViewPatients = () => {
               <FormControlLabel value="Monday" control={<Radio />} label="Morning" />
               <FormControlLabel value="Tuesday" control={<Radio />} label="afternoon" />
               <FormControlLabel value="Wednesday" control={<Radio />} label="evening" />
-             
+
             </RadioGroup>
 
           </div>
         </div>
 
         <div className="viewrightpatient">
-          <div className="viewrightside">
-            {/* {data.map((data) => ( */}
-              <div className="viewcard">
+        {Appointment.map((data) => ( <div className="viewrightside">
 
-                <div className="viewPatientName">
-                  <h12> Patient Name : bht bimar{data.patient}</h12>
-                  <p>appointment timing : 4/12/23 {data.Time}</p>
-                </div>
-                <Button className="contained">Call Patient</Button>
-                <Button variant="contained">appointment done</Button>
-                {/* <div className="viewcross">
+            <div className="viewcard">
+
+              <div className="viewPatientName">
+                <h12> Patient Name : {data.patient}</h12>
+                <p>appointment date :  {data.Date}<br></br>
+                appointment timing : {data.Time}</p>
+              </div>
+              <Button className="contained">Call Patient</Button>
+              <Button variant="contained">appointment done</Button>
+              {/* <div className="viewcross">
                   <AiOutlineCloseCircle onClick
                     style={{ height: 40, width: 40, color: "red" }} />
                 </div> */}
 
-              </div>
-            {/* <div className="viewcard"></div>
-            <div className="viewcard"></div>
-            <div className="viewcard"></div>
-            <div className="viewcard"></div> */}
-          </div>
+            </div>
+
+          </div>))}
         </div>
       </div>
 

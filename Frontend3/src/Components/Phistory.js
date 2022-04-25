@@ -174,10 +174,11 @@ function Phistory() {
                  
                     <div className="appDetails">
                         <a>
-                            Doctor Name: data
+                            Doctor Name: {data.doctor}
                             <br></br>
-                            Date:
-                            timing:
+                            Date: {data.Date}
+                            <br></br>
+                            timing: {data.Time}
                         </a>
                         <div>
                             <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} />

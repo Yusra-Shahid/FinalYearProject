@@ -15,13 +15,17 @@ import ImgMediaCard from "./ButtonComponent/View"
 
 
 export class Stretching extends Component {
+   
+   
     render() {
-        return (<Layout>
+        return ( <><Layout>
             <Navbar />
 
             <div className="fazul">yugyukg</div>
-            <div className={"stretch_ExContainer"}>jkii
-                <div className="check">nmj</div>
+         
+         
+            {/* <div className={"stretch_ExContainer"}>jkii */}
+                {/* <div className="check">nmj</div> */}
 
             <div className="fazul"></div>
             <div className={"stretch_ExContainer"}>
@@ -84,8 +88,14 @@ export class Stretching extends Component {
             <Footer>
                 <p>Copyright © 2021 I-MedCare. All Rights Reserved</p>
             </Footer>
-        </Layout>
-
+          
+            
+            
+          
+          
+          
+            </Layout>
+      </>
 
         );
 
