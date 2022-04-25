@@ -13,9 +13,9 @@ export class Stretching extends Component {
         return (<Layout>
             <Navbar />
 
-            <div className="fazul"></div>
-            <div className={"stretch_ExContainer"}>
-                <div className="check"></div>
+            <div className="fazul">yugyukg</div>
+            <div className={"stretch_ExContainer"}>jkii
+                <div className="check">nmj</div>
                 </div>
 
             <Footer>
