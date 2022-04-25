@@ -9,11 +9,11 @@ import Typography from '@mui/material/Typography';
 export default function ImgMediaCard() {
   return (
     <div className='card'>
-    <Card sx={{ maxWidth: 280 }}>
+    <Card sx={{ maxWidth: 300 }}>
       <CardMedia
         component="img"
         alt="green iguana"
-        height="150"
+        height="180"
         image="https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808__340.jpg"
       />
       <CardContent>
@@ -23,10 +23,10 @@ export default function ImgMediaCard() {
         <Typography variant="body2" color="text.secondary"> across all continents except Antarctica
         </Typography>
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
     </div>
   );
