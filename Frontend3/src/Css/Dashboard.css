@@ -72,6 +72,7 @@
       justify-content: center;
       align-items: center;
   }
+
   .navigation p{
       font-weight:500;
       /* font-style: italic; */
@@ -81,6 +82,47 @@
     text-decoration: underline;
     color:black;
 }
+
+
+.navigationlab{
+  height: 8vh;
+  width: 30%;
+
+
+ 
+
+
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.navigationlab p{
+  font-weight:500;
+  /* font-style: italic; */
+}
+.navigationlab  p div{
+ display: none;
+}
+
+ .navigationlab p div:hover{
+  display: flex;
+ }
+.navigationlab p:hover{
+font-size: 2.5vh;
+display: flex;
+
+text-decoration: underline;
+color:black;
+height: 400px;
+background-color:  #176cbb;
+
+
+}
+
+
+
 .each-slide > div {
     display: flex;
     align-items: center;

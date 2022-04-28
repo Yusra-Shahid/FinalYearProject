@@ -7,7 +7,7 @@
     margin:0 auto;
     justify-content:flex-end;
     align-items:center;
-    flex-direction: row;
+    flex-direction:row;
     display: flex;
     gap: 10px;
   }
@@ -18,20 +18,19 @@
     background-color: #131414ab;
 }
 .rightbuttons{
-    width: 60%;
-    height: 70%;
-    /* background-color: antiquewhite; */
-    margin-right: 50px;
-    margin-bottom: 120px;
-    padding-top: 130px;
-
+    width: 40%;
+    height: 50%;
+    margin-right: 13%;
+    margin-bottom:20%;
+    padding-top: 20%;
+    background-color: #80b1d1;
 }
 .leftbuttons{
     width: 50%;
     height: 70%;
-    /* background-color: antiquewhite; */
-    margin-bottom: 120px;
-    margin-left: 80px;
+    background-color: antiquewhite;
+    margin-bottom: 20%;
+    margin-left: 5%;
     padding-left: 40px;
     padding-right: 40px;
     /* padding-top: 40vh; */

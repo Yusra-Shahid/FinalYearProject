@@ -21,14 +21,14 @@ export default function ControlledAccordions() {
           id="panel1bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            General settings
+            Doctor name
           </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>Appointment date that was done </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-            Aliquam eget maximus est, id dignissim quam.
+            doctor email:
+            prescription in document form that can be open
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -38,16 +38,16 @@ export default function ControlledAccordions() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}> Doctor name</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            You are currently not an owner
+          Appointment date that was done
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-            varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-            laoreet.
+          
+          doctor email:
+            prescription in document form that can be open
           </Typography>
         </AccordionDetails>
       </Accordion>

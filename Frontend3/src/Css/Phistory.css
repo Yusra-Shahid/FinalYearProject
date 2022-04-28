@@ -176,31 +176,50 @@ padding-top: 25px;
     width: 61vh;
     height: 65vh;
     background-color:#176cbb;
-    margin-left:144vh;
+    margin-left:140vh;
  margin-top: 150px;
  border-bottom-left-radius: 50px;
  border-top-right-radius:50px;
  position:relative;
  align-items: center;
  text-align: center;
- color: white;
  display: flex;
  flex-direction: column;
- font-weight: bold;
+
+}
+.leftcard-heading{
+  font-weight: bold;
  font-size: 25px;
-padding-top: 25px;
+padding-top: 3%;
+padding-bottom: 3%; 
+color: aliceblue;
+}
+.leftcard-scroll{
+  width: 99%;
+  height: 80%;
+  border-bottom-left-radius: 50px;
+  position:relative;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+scroll-margin:2px !important;
+padding-top: 2%;
+padding-bottom: 3%;
+background-color: aliceblue;
 }
 .appDetails{
     width: 90%;
     height: 100px;
-    background-color: rgb(231, 235, 235);
+    background-color:#a2bfdb;
     margin-top: 20px;
     display: flex;
     align-content: flex-start;
     flex-direction: column;
     border-top-right-radius:150px ;
     border-bottom-right-radius:150px ;
-    box-shadow: rgba(92, 100, 212, 0.767) 6px 2px 16px 0px, rgb(252, 252, 252) -6px -2px 3px 0px;
+    
 }
 .appDetails a{
     font-size: medium;

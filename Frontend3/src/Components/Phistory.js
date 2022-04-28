@@ -12,6 +12,7 @@ import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { v4 as uuid } from 'uuid';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import Button from '@mui/material/Button';
+import { FaPaperclip } from "react-icons/fa";
 
 
 
@@ -168,7 +169,12 @@ function Phistory() {
                 </div>
 
                 <div className="leftcard">
+                    <div className="leftcard-heading">
                     Up Coming Appointment
+                    </div>
+
+                    <div className="leftcard-scroll">
+
                  
                     {Appointment.map((data) => (
                  
@@ -190,6 +196,7 @@ function Phistory() {
 
                     </div>
                    ))}
+                   </div>
                 </div>
 
             </div>

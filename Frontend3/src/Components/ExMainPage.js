@@ -12,7 +12,7 @@ export class ExMainPage extends Component {
         return (<Layout>
             <Navbar />
             <div className="fazul"></div>
-            <div className={"ExMainContainer"}>
+            <div className={"ExSECContainer"}>
             <div className="MainPageContext">THE I-MedCare Web
                 <br></br>
                     Find your new favorite workout</div>
