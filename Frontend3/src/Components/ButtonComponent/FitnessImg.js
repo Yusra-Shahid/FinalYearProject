@@ -5,7 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 export default function MasonryImageList() {
   return (
-    <Box sx={{ width: 750, height: 650, overflowY: 'hidden' }}>
+    <Box sx={{ width: 650, height: 650, overflowY: 'hidden' }}>
       <ImageList variant="masonry" cols={3} gap={10}>
         {itemData.map((item ) => (
           <ImageListItem key={item.img}>
@@ -37,7 +37,7 @@ const itemData = [
     title: 'Chairs',
   },
   {
-    img: 'https://img.freepik.com/free-photo/strong-man-training-gym_1303-23876.jpg',
+    img: 'https://images.unsplash.com/photo-1562088287-bde35a1ea917?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80',
     title: 'Laptop',
   },
   {
@@ -57,4 +57,5 @@ const itemData = [
     img: 'https://i.insider.com/5aeb223619ee861c008b4903?width=700&format=jpeg&auto=webp',
     title: 'Coffee table',
   },
+
 ];

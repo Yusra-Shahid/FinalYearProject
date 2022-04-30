@@ -12,24 +12,23 @@
     gap: 10px;
   }
 
-.fazul{
-    width: 30px;
-    height: 25px !important;
+.EXfazul{
+   
+    height: 85px !important;
     background-color: #131414ab;
 }
 .rightbuttons{
     width: 40%;
-    height: 50%;
-    margin-right: 13%;
-    margin-bottom:20%;
-    padding-top: 20%;
-    background-color: #80b1d1;
+    height: 20%;
+    margin-right: 5%;
+    margin-bottom:5%;
+    margin-top: 5%;
+
 }
 .leftbuttons{
     width: 50%;
     height: 70%;
-    background-color: antiquewhite;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     margin-left: 5%;
     padding-left: 40px;
     padding-right: 40px;

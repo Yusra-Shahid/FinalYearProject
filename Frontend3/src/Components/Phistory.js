@@ -117,7 +117,7 @@ function Phistory() {
 
                     <div class="cardEX physical">
                         <div class="frontEX">
-                             <img src="https://i0.wp.com/www.yogabasics.com/yogabasics2017/wp-content/uploads/2014/11/6130270001_e4bbc718f5_b.jpg?w=900&ssl=1" />
+                             <img src="https://cdn5.vectorstock.com/i/1000x1000/20/74/woman-avatar-profile-vector-21372074.jpg" />
                         </div>
                         <div class="backEX">
                             <div class="backEX-content physical">

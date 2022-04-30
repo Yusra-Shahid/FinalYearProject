@@ -21,7 +21,7 @@ export class ExMainPage extends Component {
                 
                 <div class="card1 first">
                     <div class="front1">
-                        <img src="../Images/p-d1.jpg" width={400} />
+                    <img src="https://media.self.com/photos/57b48c68e23186493e317374/master/w_320%2Cc_limit/chair-band-jumps.gif" />
                         {/* <img src="img.jpg" alt=""> */}
                     </div>
                     <div class="back1">
@@ -40,7 +40,7 @@ export class ExMainPage extends Component {
 
                 <div class="card11 middle">
                     <div class="front11">
-                        <img src="https://www.shutterstock.com/image-photo/yoga-poses-strait-natural-park-tarifa-1116636086" width={400} />
+                        <img src="https://thumbs.gfycat.com/ContentVacantFreshwatereel-max-1mb.gif"  />
 
                     </div>
                     <div class="back11">
@@ -59,7 +59,7 @@ export class ExMainPage extends Component {
 
                 <div class="card3 third">
                     <div class="front3">
-                        <img src="https://www.shutterstock.com/image-photo/yoga-poses-strait-natural-park-tarifa-1116636086" width={400} />
+                        <img src="http://newlife.com.cy/wp-content/uploads/2019/11/23681301-Split-Squats_Thighs_360.gif" width={400} />
                     </div>
                     <div class="back3">
                         <div class="back3-content third">

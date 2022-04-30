@@ -11,30 +11,31 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ExMainPage from "./ExMainPage";
-import ImgMediaCard from "./ButtonComponent/View"
+import ImgMediaCard from "./ButtonComponent/View";
+// import videoBg from '../Images/videoBg';
 
 
 export class Stretching extends Component {
-   
-   
+
+
     render() {
-        return ( <><Layout>
+        return (<><Layout>
             <Navbar />
 
-            <div className="fazul">yugyukg</div>
-         
-         
-            {/* <div className={"stretch_ExContainer"}>jkii */}
-                {/* <div className="check">nmj</div> */}
+            <div className=" Stretch-fazul"></div>
 
-            <div className="fazul"></div>
+
+            {/* <div className={"stretch_ExContainer"}>jkii */}
+            {/* <div className="check">nmj</div> */}
             <div className={"stretch_ExContainer"}>
 
                 <div className="Main-Context">
-               
+
                 </div>
                 <div className="Main-GIF">
-                    {/* <VideoPlaybackQuality src={""} Type="Video/mp4"></VideoPlaybackQuality> */}
+                    {/* <video autoPlay muted loop>
+                        <source src="Images\videoBg.mp4" type="video.mp4"/>
+                        </video> */}
                 </div>
                 <diV className="Sec-Context">Discover workouts that will fit your mood, goals, fitness level, music taste & schedule</diV>
                 <div className="Gendercard">
@@ -71,12 +72,12 @@ export class Stretching extends Component {
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
-                                    Female Exersice
+                                        Female Exersice
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary"> across all continents except Antarctica
                                     </Typography>
                                 </CardContent>
-                           
+
                             </Card>
                         </div>
                     </div>
@@ -88,14 +89,14 @@ export class Stretching extends Component {
             <Footer>
                 <p>Copyright © 2021 I-MedCare. All Rights Reserved</p>
             </Footer>
-          
-            
-            
-          
-          
-          
-            </Layout>
-      </>
+
+
+
+
+
+
+        </Layout>
+        </>
 
         );
 

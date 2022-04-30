@@ -38,7 +38,7 @@ export default function ControlledAccordions() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}> Doctor name</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}> Doctor name:DR.john</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
           Appointment date that was done
           </Typography>
@@ -58,16 +58,15 @@ export default function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Advanced settings
+          Doctor name:Dr.Ali
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Filtering has been entirely disabled for whole web server
+          prescription in document form that can be open
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
+           fyrther details
           </Typography>
         </AccordionDetails>
       </Accordion>
