@@ -16,6 +16,7 @@ import ExMainPage from "./Components/ExMainPage";
 import Payment from "./Components/Payment"
 // import { Comment } from "./Components/Comment";
 import Stretching from "./Components/Stretching";
+import Areobic from "./Components/Areobic;"
 
 //import Logout from './Components/logout';
 
@@ -38,7 +39,7 @@ function App() {
         <Route exact path="/ExMainPage" component={ExMainPage} />
         <Route exact path= "/Payment" component={Payment}/>
         <Route exact path="/Stretching" component={Stretching} />
-       
+        <Route exact path="/Areobic" component={Areobic} />
         {/* <Route exact path= "/Comment" component={Comment}/>
        */}
     

@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Button } from 'antd';
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
@@ -29,6 +30,16 @@ export default function ControlledAccordions() {
           <Typography>
             doctor email:
             prescription in document form that can be open
+            <Button
+            variant="contained"
+            component="label"
+          >
+            download File
+            <input
+              type="file"
+              hidden
+            />
+          </Button>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -48,6 +59,16 @@ export default function ControlledAccordions() {
           
           doctor email:
             prescription in document form that can be open
+            <Button
+            variant="contained"
+            component="label"
+          >
+             download File
+            <input
+              type="file"
+              hidden
+            />
+          </Button>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -62,11 +83,22 @@ export default function ControlledAccordions() {
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
           prescription in document form that can be open
+      
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-           fyrther details
+            your prescription
+          <Button
+            variant="contained"
+            component="label"
+          >
+           download File
+            <input
+              type="file"
+              hidden
+            />
+          </Button>
           </Typography>
         </AccordionDetails>
       </Accordion>

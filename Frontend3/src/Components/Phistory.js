@@ -12,7 +12,7 @@ import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { v4 as uuid } from 'uuid';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import Button from '@mui/material/Button';
-import { FaPaperclip } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 
 
 
@@ -20,7 +20,10 @@ function Phistory() {
     const [profileupdate, setprofileupdate] = useState('false');
     const [Img, setImg] = useState(false)
     const [Appointment, setAppointment] = useState([])
-  
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [contact, setContact] = useState('')
+    const [data, setData] = useState('');
     const [Imgurl, setImgurl] = useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png")
 
 
@@ -133,6 +136,13 @@ function Phistory() {
                                     <div className={"userEmail"}>
                                         <BsFillEnvelopeFill style={{ height: 20, width: 20, color: "#176cbb" }} />
                                         <input className="Emailinput" style={{ width: 30, height: 30, color: "black" }} />
+                                    </div>
+
+                                    <div className={"userImg"}>
+                                        <FaPhoneAlt style={{ height: 20, width: 20, color: "#176cbb" }} />
+                                        <input className="Imginput" style={{ width: 30, height: 30, color: "black" }} 
+                                         defaultValue={data.Contact}
+                                         onChange={e => { setContact(e.target.value) }}/>
                                     </div>
 
                                     <div className={"userImg"}>

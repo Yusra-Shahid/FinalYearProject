@@ -30,7 +30,9 @@ export class ExMainPage extends Component {
                             <span>Youtube Channel</span>
                             <div class="sm">
                                 <div className="uploaded">
-                                    <button>View</button>
+                                <Link to="/Areobic">
+                                        <button>View</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +51,9 @@ export class ExMainPage extends Component {
                             <span>Youtube Channel</span>
                             <div class="sm">
                                 <div className="uploaded">
-                                    <button>View</button>
+                                <Link to="/Stretching">
+                                        <button>View</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Css/Stretching.css";
+import "../Css/Areobic.css";
 import { Layout } from "antd";
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ import ImgMediaCard from "./ButtonComponent/View";
  
     const Videosrc = videoBg;
 
-export class Stretching extends Component {
+export class Areobic extends Component {
 
     
 
@@ -101,4 +101,4 @@ export class Stretching extends Component {
 
     }
 }
-export default Stretching;
+export default Areobic;
