@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "../Css/Areobic.css";
 import { Layout } from "antd";
-import Button from '@mui/material/Button';
-import { Link } from "react-router-dom";
 import { Footer } from "antd/lib/layout/layout";
 import Navbar from "./navbar";
 import Card from '@mui/material/Card';

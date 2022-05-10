@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { Footer } from "antd/lib/layout/layout";
 import Navbar from "./navbar";
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';

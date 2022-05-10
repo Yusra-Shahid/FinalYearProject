@@ -76,18 +76,18 @@ function Navbar() {
                     </>}
                     {usertype == "patient" && <>
                     
-                    <div className={"navigationlab"}>
+                    <div className={"navigation"}>
                         <Link
                             to="/Phistory"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                            <p style={{ fontSize: "18px" }}>Laboratory
-                          <div>  <p  style={{ fontSize: "18px" }}>Laboratory</p>
                             <p style={{ fontSize: "18px" }}>Laboratory</p>
-                            <p style={{ fontSize: "18px" }}>Laboratory</p>
-                            <p style={{ fontSize: "18px" }}>Laboratory</p>
-                            <p style={{ fontSize: "18px" }}>Laboratory</p></div></p>
+                           
+                          
                         </Link>
                     </div>
+
+
+                   
                     
                     
                     </>}
@@ -179,7 +179,7 @@ function Navbar() {
                         </Link>
                     </div>
                     
-
+                   
                 </div>
             </Header>
         </Layout>

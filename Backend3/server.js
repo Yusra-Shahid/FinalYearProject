@@ -15,9 +15,9 @@ app.options('*', cors());
 app.use(cors());
 
 // const url = 'mongodb://localhost:27017/i_medicare';
-// const url = 'mongodb+srv://jabbar:6MFOKZHhn5A4yzu2@cluster0.glxdr.mongodb.net/I-medicare?retryWrites=true&w=majority';
-//const url = 'mongodb+srv://Yusrakhan:fyp-1@cluster0.yqvex.mongodb.net/I-MedCare?retryWrites=true&w=majority';
-const url = 'mongodb+srv://yusrakhan:fyp-1@cluster0.ayerk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const url = 'mongodb+srv://ali:ali@cluster0.hpndy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+// const url = 'mongodb+srv://Yusrakhan:fyp-1@cluster0.yqvex.mongodb.net/I-MedCare?retryWrites=true&w=majority';
+// const url = 'mongodb+srv://yusrakhan:fyp-1@cluster0.ayerk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 //  const url ='mongodb+srv://Yusra:yusra@cluster0.bvoex.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose.connect(url, {
     useNewUrlParser: true,
