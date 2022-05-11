@@ -42,13 +42,13 @@ function LoginPage() {
             localStorage.setItem('email', email)
 
             // history.push("/");
-            if (response.data.userType==="patient"){
-              message.success('WELCOME '+response.data.name);
+            if (response.data.userType === "patient") {
+              message.success('WELCOME ' + response.data.name);
               history.push("/Viewdept")
             }
-            if (response.data.userType==="doctor"){
+            if (response.data.userType === "doctor") {
               history.push("/dprofile")
-             
+
             }
           }
           else {
@@ -77,226 +77,227 @@ function LoginPage() {
             <h1 style={{ color: "#176cbb" }}>Login</h1>
 
 
-{login === true && <>
-            <div className={"inputContainer"}>
-              <BsFillEnvelopeFill
-                style={{ height: 20, width: 20, color: "#176cbb" }}
-              />
-              <input
-                className={"input"}
-                type={"text"}
-                placeholder={"Email"}
-                name={"email"}
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-            </div>
+            {login === true && <>
+              <div className={"inputContainer"}>
+                <BsFillEnvelopeFill
+                  style={{ height: 20, width: 20, color: "#176cbb" }}
+                />
+                <input
+                  className={"input"}
+                  type={"email"}
+                  placeholder={"Email"}
+                  name={"email"}
+                  value={email}
+                  required={"true"}
 
-            <div className={"inputContainer1"}>
-              <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
-              <input
-                className={"input1"}
-                type={"password"}
-                placeholder={"Password"}
-                name={"password"}
-                value={password}
-                onChange={e => setPasword(e.target.value)}
-              />
-            </div>
+                  onChange={e => setEmail(e.target.value)}
+                />
+              </div>
 
-            <div className={"forgetPassword"}>
-              <Link style={{ fontStyle: "italic" }} onClick={()=>{setlogin(false)
-                 setforgetpassword(true)}}>Forget Password?</Link>
-            </div>
+              <div className={"inputContainer1"}>
+                <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
+                <input
+                  className={"input1"}
+                  type={"password"}
+                  placeholder={"Password"}
+                  name={"password"}
+                  required={"true"}
+                  value={password}
+                  onChange={e => setPasword(e.target.value)}
+                />
+              </div>
 
-            <button className={"loginButton"} type="submit" onClick={submit}>
-              Login
-            </button>
+              <div className={"forgetPassword"}>
+                <Link style={{ fontStyle: "italic" }} onClick={() => {
+                  setlogin(false)
+                  setforgetpassword(true)
+                }}>Forget Password?</Link>
+              </div>
 
-            <div className={"newUser"}>
-              <p style={{ fontStyle: "italic" }}>Don't have an account? </p>
-              <Link
-                to="/signuppage"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <p className={"signup"}>Sign Up</p>
-              </Link>
-            </div>
+              <button className={"loginButton"} type="submit" onClick={submit}>
+                Login
+              </button>
+
+              <div className={"newUser"}>
+                <p style={{ fontStyle: "italic" }}>Don't have an account? </p>
+                <Link
+                  to="/signuppage"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <p className={"signup"}>Sign Up</p>
+                </Link>
+              </div>
 
             </>}
+{/* for the new password */}
+            {forgetpassword === true && <>
 
-{forgetpassword === true && <>
+              <div className={"inputContainer"}>
+                <BsFillEnvelopeFill
+                  style={{ height: 20, width: 20, color: "#176cbb" }}
+                />
+                <input
+                  className={"input"}
+                  type={"text"}
+                  placeholder={"please enter your Email for OTP"}
+                  name={"email"}
+                  value={emailforotp}
+                  onChange={e => setEmailforotp(e.target.value)}
+                />
+              </div>
 
-  <div className={"inputContainer"}>
-              <BsFillEnvelopeFill
-                style={{ height: 20, width: 20, color: "#176cbb" }}
-              />
-              <input
-                className={"input"}
-                type={"text"}
-                placeholder={"please enter your Email for OTP"}
-                name={"email"}
-               value={emailforotp}
-             onChange={e => setEmailforotp(e.target.value)}
-              />
-            </div>
-
-            <button className={"loginButton"}
-            // type="submit"
-            onClick={(e)=>{
-              
-
-
-                axios.post('http://localhost:5000/user/forgetpassword', {
-                  email: emailforotp,
-                
-                })
-                  .then(function (response){console.log(response.data)
-                  if (response.data === "Request Done"){    
-                    alert("otp has been sent")
-                      setforgetpassword(false)
-                setforgetpasswordemail(true)
-
-                  
-                  }else {
-                    alert("user not found")
-                    setforgetpassword(false)
-                    setlogin(true)
-                  }
-                })
-
-                
-
-              }
-            }
-           >
-              sent OTP
-            </button>
+              <button className={"loginButton"}
+                // type="submit"
+                onClick={(e) => {
 
 
 
-</>}
+                  axios.post('http://localhost:5000/user/forgetpassword', {
+                    email: emailforotp,
 
-{forgetpasswordemail === true && <>
-
-  <div className={"inputContainer"}>
-              <BsFillEnvelopeFill
-                style={{ height: 20, width: 20, color: "#176cbb" }}
-              />
-              <input
-                className={"input"}
-                type={"text"}
-                placeholder={"please enter OPT that has been sent on your email"}
-               // name={"email"}
-               value={OPT}
-               onChange={e => setOTP(e.target.value)}
-              />
-            </div>
-
-            <button className={"loginButton"}
-            // type="submit"
-            onClick={(e)=>{
-               
+                  })
+                    .then(function (response) {
+                      console.log(response.data)
+                      if (response.data === "Request Done") {
+                        alert("otp has been sent")
+                        setforgetpassword(false)
+                        setforgetpasswordemail(true)
 
 
-                axios.post('http://localhost:5000/user/forgetpasswordotp', {
-                  otp: OPT,
-                  email: emailforotp
-                
-                })
-                  .then(function (response){console.log(response.data)
-                  if (response.data === "Request Done"){    
-              
-                    setforgetpasswordemail(false)
-                    setforgetpasswordotp(true)
-  
-                  
-                  }else {
-                    alert("wrong OTP")
-                    setforgetpasswordemail(false)
-                    setlogin(true)
-                  }
-                })
+                      } else {
+                        alert("user not found")
+                        setforgetpassword(false)
+                        setlogin(true)
+                      }
+                    })
 
 
 
-              }
-            }
-           >
-              submit
-            </button>
-
-</>}
-
-{forgetpasswordotp === true && <>
-
-  <div className={"inputContainer1"}>
-              <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
-              <input
-                className={"input1"}
-                type={"password"}
-                placeholder={"enter your new Password"}
-                // name={"password"}
-                value={fpassword}
-                onChange={e => setfPasword(e.target.value)}
-              />
-            </div>
-            <div style={{margin:"5px"}}></div>
-            <div className={"inputContainer1"}>
-              <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
-              <input
-                className={"input1"}
-                type={"password"}
-                placeholder={"confirm Password"}
-                // name={"password"}
-                value={fcpassword}
-                onChange={e => setfcPasword(e.target.value)}
-              />
-            </div>
-            <div style={{margin:"5px"}}></div>
-
-            <button className={"loginButton"}
-            // type="submit"
-            onClick={(e)=>{
-            
-if (fpassword === fcpassword ) {
-
-
-                axios.post('http://localhost:5000/user/forgetpasswordchange', {
-                 password: fcpassword,
-                  email: emailforotp
-                
-                })
-                  .then(function (response){console.log(response.data)
-                  if (response.data === "Request Done"){    
-                    alert("Password has been changed")
-                    setforgetpasswordotp(false)
-                    setlogin(true)
-  
-                  
-                  }else {
-                    alert("something wrong")
-                    setforgetpasswordotp(false)
-                    setlogin(true)
-                  }
-                })
+                }
+                }
+              >
+                sent OTP
+              </button>
 
 
 
-              }else {alert("confirm password is wrong")}
+            </>}
+{/* Enter otp */}
+            {forgetpasswordemail === true && <>
+
+              <div className={"inputContainer"}>
+                <BsFillEnvelopeFill
+                  style={{ height: 20, width: 20, color: "#176cbb" }}
+                />
+                <input
+                  className={"input"}
+                  type={"text"}
+                  placeholder={"please enter OPT that has been sent on your email"}
+                  name={"email"}
+                  value={OPT}
+                  onChange={e => setOTP(e.target.value)}
+                />
+              </div>
+
+              <button className={"loginButton"}
+                // type="submit"
+                onClick={(e) => {
 
 
 
+                  axios.post('http://localhost:5000/user/forgetpasswordotp', {
+                    otp: OPT,
+                    email: emailforotp
+
+                  })
+                    .then(function (response) {
+                      console.log(response.data)
+                      if (response.data === "Request Done") {
+
+                        setforgetpasswordemail(false)
+                        setforgetpasswordotp(true)
+
+
+                      } else {
+                        alert("wrong OTP")
+                        setforgetpasswordemail(false)
+                        setlogin(true)
+                      }
+                    })
 
 
 
-              }
-            }
-           >
-              submit
-            </button>
+                }
+                }
+              >
+                submit
+              </button>
 
-</>}
+            </>}
+{/*  the new password*/}
+            {forgetpasswordotp === true && <>
+
+              <div className={"inputContainer1"}>
+                <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
+                <input
+                  className={"input1"}
+                  type={"password"}
+                  placeholder={"enter your new Password"}
+                  // name={"password"}
+                  value={fpassword}
+                  onChange={e => setfPasword(e.target.value)}
+                />
+              </div>
+              <div style={{ margin: "5px" }}></div>
+              <div className={"inputContainer1"}>
+                <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
+                <input
+                  className={"input1"}
+                  type={"password"}
+                  placeholder={"confirm Password"}
+                  // name={"password"}
+                  value={fcpassword}
+                  onChange={e => setfcPasword(e.target.value)}
+                />
+              </div>
+              <div style={{ margin: "5px" }}></div>
+
+              <button className={"loginButton"}
+                // type="submit"
+                onClick={(e) => {
+
+                  if (fpassword === fcpassword) {
+
+
+                    axios.post('http://localhost:5000/user/forgetpasswordchange', {
+                      password: fcpassword,
+                      email: emailforotp
+
+                    })
+                      .then(function (response) {
+                        console.log(response.data)
+                        if (response.data === "Request Done") {
+                          alert("Password has been changed")
+                          setforgetpasswordotp(false)
+                          setlogin(true)
+
+
+                        } else {
+                          alert("something wrong")
+                          setforgetpasswordotp(false)
+                          setlogin(true)
+                        }
+                      })
+
+                  } else { alert("confirm password is wrong") }
+
+                }
+                }
+              >
+                submit
+              </button>
+
+            </>}
 
 
 
@@ -304,10 +305,10 @@ if (fpassword === fcpassword ) {
           <div className={"loginImage"}>
             <div
               className={"logoImage"}>
-              <img src="https://www.yuvaacademy.in/assets/images/login.png" width={400}/>
+              <img src="https://www.yuvaacademy.in/assets/images/login.png" width={400} />
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

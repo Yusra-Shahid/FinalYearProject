@@ -54,7 +54,7 @@
     height: 80%;
     margin-top: 85px;
     margin-left: 200px;
-    overflow: scroll;
+    overflow:scroll;
     display: grid;
     grid-template-rows: 2;
     gap: 10px;

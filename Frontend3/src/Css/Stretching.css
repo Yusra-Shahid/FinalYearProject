@@ -22,17 +22,22 @@
           height: 3%;
           font-size:x-large;
           font-weight: lighter;
-         margin-top: -240px;
-          background-color: bisque;
+          margin-top: -200px;
+          justify-content: center;
+      }
+     .Main-Context p{
+        font-size:30px;
+        font-weight: bold;
+        align-content: center;
       }
 
       .Stretching-video{
-        width: 65%;
-        height: 30%;
-        margin-top: 40px;
+        width: 85%;
+        height: 36%;
+        margin-top: 20px;
         margin-left: 30px;
-      border-radius: 25px;
-      background-color: black;
+        border-radius: 25px;
+        background-color: black;
         box-shadow: rgba(50, 89, 216, 0.466) 0px 19px 38px, rgba(45, 99, 216, 0.404) 0px 15px 12px;
       }
       video{
@@ -50,7 +55,7 @@
           gap: 50px;
       }
       .card_Container1{
-        width: 970px;
+        width: 990px;
         height: 300px;
         background-color: rgba(188, 188, 214, 0.534);
         flex-direction: row;
@@ -65,7 +70,7 @@
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
     .card_Container2{
-      width: 970px;
+      width: 990px;
       height: 300px;
       background-color: rgba(188, 188, 214, 0.534);
       flex-direction: row;
@@ -73,7 +78,7 @@
       display: flex;
       border-radius: 5px;
       /* margin: 5px; */
-      margin-left: 15px;
+      margin-left: 15px !important;
       margin-right: 5spx;
       padding-top: 12px;
       padding-right: 15px;
@@ -89,7 +94,7 @@
         height: 100%;
         object-fit: cover;
       }
-      
+/*       
       .content {
         position: absolute;
         width: 100%;
@@ -100,7 +105,7 @@
         justify-content: center;
         align-items: center;
         color: white;
-      }
+      } */
       
       .overlay {
         position: absolute;

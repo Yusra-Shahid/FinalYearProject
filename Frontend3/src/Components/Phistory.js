@@ -3,7 +3,7 @@ import { storage } from "../firebase/index";
 import Navbar from './navbar';
 import axios from 'axios';
 import "../Css/Phistory.css";
-import { Image } from "antd";
+//import { Image } from "antd";
 import Footer from './footer';
 import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
 import { BsPersonFill, BsFillEnvelopeFill, BsCameraFill } from "react-icons/bs";

@@ -53,7 +53,7 @@ function Navbar() {
                     
                     <div className={"navigation"}>
                         <Link
-                            to="/Doctors"
+                            to="/exercise"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
                             <p style={{ fontSize: "18px" }}>Exercise</p>
                         </Link>

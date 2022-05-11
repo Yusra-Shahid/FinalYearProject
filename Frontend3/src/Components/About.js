@@ -6,6 +6,7 @@ import Navbar from "./navbar";
 import CustomizedTimeline from "./ButtonComponent/Process"
 import { FcServices, FcFinePrint, FcHome } from "react-icons/fc";
 import { Comment } from "antd";
+//import comments from "../Components/Comment";
 
 import { SiFacebook, SiLinkedin, SiTwitter, SiInstagram } from "react-icons/si";
 
@@ -101,9 +102,10 @@ export class About extends Component {
 
                     <div className="item4">
                         <div className="contimage">
-                            {/* <img src="https://www.datocms-assets.com/53681/1631976983-contact-us-banner.jpeg" /> */}
-                            <Comment/>
+                            <img src="https://www.datocms-assets.com/53681/1631976983-contact-us-banner.jpeg" />
+                            
                             <div className="contactbox">
+                               <comments/>
                                 <h20>Follow Us :</h20>
                                 <SiInstagram style={{ height: 40, width: 40, color: "rgb(228, 81, 62)" }} />
                                 <p>Instagram</p>

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
-import './Commemt.css';
+// import 'antd/dist/antd.css';
+// import './Commemt.css';
+import '../Css/Comment.css'
 import { Comment, Avatar, Form, Button, List, Input } from 'antd';
 import moment from 'moment';
 
@@ -29,7 +30,7 @@ const Editor = ({ onChange, onSubmit, submitting, value }) => (
   </>
 );
 
-class App extends React.Component {
+class comments extends React.Component {
   state = {
     comments: [],
     submitting: false,
@@ -90,4 +91,4 @@ class App extends React.Component {
   }
 }
 
-export default Comment;
+export default comments;

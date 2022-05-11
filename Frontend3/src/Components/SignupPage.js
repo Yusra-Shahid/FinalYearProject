@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 // import logo from '../Images/logo.png';
 import { Form, Row } from 'react-bootstrap';
+import { Alert } from "antd";
 
 function SignupPage() {
   const history = useHistory();
@@ -22,6 +23,7 @@ function SignupPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
+   
     if (name.trim() !== '' && email.trim() !== '' && contact.trim() !== '' && password.trim() !== '') {
       if (spe) {
         axios.post('http://localhost:5000/user/new_Doctor', {
@@ -43,9 +45,9 @@ function SignupPage() {
           })
       }
       else {
-        console.log (name)
+        console.log(name)
         //axios.post('http://localhost:5000/user/new_user'
-        
+
         axios.post('http://localhost:5000/user/new_user', {
           name: name,
           email: email,
@@ -75,7 +77,7 @@ function SignupPage() {
 
   const options = ["Patient", "Doctor"];
   return (
-    <div className={"loginMainContainer"}>
+    <form onSubmit={handleSubmit} className={"loginMainContainer"}>
       <div className={"loginFormContainer"}>
 
         <div className={"loginBox"}>
@@ -89,6 +91,7 @@ function SignupPage() {
               className={"input"}
               type={"text"}
               placeholder={"Name"}
+              required={"true"}
               name={"name"}
               value={name}
               onChange={e => { setName(e.target.value) }}
@@ -100,9 +103,10 @@ function SignupPage() {
             />
             <input
               className={"input"}
-              type={"text"}
+              type={"email"}
               placeholder={"E-mail"}
               name={"email"}
+              required={'true'}
               value={email}
               onChange={e => { setEmail(e.target.value) }}
             />
@@ -112,11 +116,21 @@ function SignupPage() {
             <input
               className={"input"}
               type={"text"}
-              placeholder={"Contact"}
+              placeholder={"Enter your Mobile Number"}
               name={"contact"}
               value={contact}
+              pattern={"[0-9]{11}"}
+              title={"should be 11 numbers, should be like 03xxxxxxxxx"}
+              required={'true'}
+              prefix={"03"}
               onChange={e => { setContact(e.target.value) }}
             />
+            {/* <Input type='text' pattern="(\d).{8,8}" title="should be 11 numbers, should be like 03xxxxxxxxx" name='number'
+              required='true'
+               placeholder='Enter your Mobile Number' 
+               onChange={handleInputs} prefix="03" 
+               /><Marginer direction="vertical" margin={20} /> */}
+
           </div>
           <div className={"inputContainer"}>
             <BsLockFill style={{ height: 20, width: 20, color: "#176cbb" }} />
@@ -126,6 +140,7 @@ function SignupPage() {
               placeholder={"Password"}
               name={"password"}
               value={password}
+              required={'true'}
               onChange={e => { setPassword(e.target.value) }}
             />
           </div>
@@ -134,10 +149,13 @@ function SignupPage() {
             <input
               className={"input"}
               type={"password"}
+              pattern={password}
+              title={"password not match"}
               placeholder={"Confirm Password"}
               name={"c_password"}
-             value={c_password}
-             onChange={e => { setCPassword(e.target.value) }}
+              required={'true'}
+              value={c_password}
+              onChange={e => { setCPassword(e.target.value) }}
             />
           </div>
           <div className={"signupDropdownBox"}>
@@ -161,29 +179,46 @@ function SignupPage() {
             <BsPersonFill
               style={{ height: 20, width: 20, color: "#176cbb" }}
             />
-            <input
+            {/* <input
               className={"input"}
               type={"text"}
               placeholder={"specialist"}
               name={"specialist"}
               value={spe}
               onChange={e => { setSpe(e.target.value) }}
-            />
+            /> */}
+            <Form.Group className="Doc_dropdown-Layout"
+              value={spe}
+              required="true"
+
+              onChange={e => setSpe(e.target.value)}>
+              <Form.Control as="select" defaultValue="--Select--"
+                className="Doc_dropdown-Layout"
+                required={'true'}
+                 placeholder={"Select User Type"}>
+                <option className="placeholder-color">--Select User Speciality--</option>
+                <option>Psychiatriest</option>
+                <option>Dermatogist</option>
+                <option>Chest Specialist</option>
+                <option>Gynaecologiest</option>
+                <option>Orthologist</option>
+              </Form.Control>
+            </Form.Group>
           </div>
           }
-          <button className={"loginButton"} onClick={handleSubmit}>Signup</button>
+          <button className={"loginButton"}>Signup</button>
         </div>
 
 
         <div className={"loginImage"}>
           <div
             className={"logoImage"}>
-            <img src="https://i.pinimg.com/originals/60/a6/24/60a6248d5c2ae495cb8ce2c15f6f0ec2.png" width={450}/>
+            <img src="https://i.pinimg.com/originals/60/a6/24/60a6248d5c2ae495cb8ce2c15f6f0ec2.png" width={450} />
           </div>
         </div>
       </div>
 
-    </div>
+    </form>
   );
 }
 export default SignupPage;

@@ -29,7 +29,7 @@ export class Stretching extends Component {
             <div className={"stretch_ExContainer"}>
 
                 <div className="Main-Context">
-
+<p>your favorite workout</p>
                 </div>
 
                 <div className="Stretching-video">

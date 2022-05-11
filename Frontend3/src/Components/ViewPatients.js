@@ -79,8 +79,8 @@ const ViewPatients = () => {
         </div>
 
         <div className="viewrightpatient">
-        {Appointment.map((data) => ( <div className="viewrightside">
-
+        <div className="viewrightside">
+        {Appointment.map((data) => (
             <div className="viewcard">
 
               <div className="viewPatientName">
@@ -97,7 +97,8 @@ const ViewPatients = () => {
 
             </div>
 
-          </div>))}
+          ))}
+          </div>
         </div>
       </div>
 
