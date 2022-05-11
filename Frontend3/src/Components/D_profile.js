@@ -36,7 +36,7 @@ const D_profile = () => {
 
     const handleChangeimage = async (e) => {
         console.log(e.target.files[0])
-        setImg(e.target.files[0]);
+        await setImg(e.target.files[0]);
 
 
         const imageid = uuid();
@@ -47,7 +47,7 @@ const D_profile = () => {
         const Url = await storage.ref(`dp`).child(imageid).getDownloadURL();
         await setImgurl(Url)
 
-        console.log(Url)
+       await console.log(Url)
 
     }
 

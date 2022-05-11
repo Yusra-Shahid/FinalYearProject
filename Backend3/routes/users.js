@@ -161,32 +161,32 @@ router.post('/forgetpassword', async (req, res) => {
 
 
 
-        // const transporter = nodemailer.createTransport({
-        //     service: "gmail",
-        //     auth: {
-        //         user: "yusrashahid2019@gmail.com",
-        //         pass: "yusrakhan#1"
-        //     }
-        // });
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "imed.care22@gmail.com",
+        pass: "medcare22"
+            }
+        });
 
-        // const data = {
-        //     from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
-        //     to: req.body.email,
-        //     subject: "OTP for I-MEDCARE",
+        const data = {
+            from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+            to: req.body.email,
+            subject: "OTP for I-MEDCARE",
 
-        //     html: `
-        //     <h3>here is your OTP "${otp}" to reset your Password</h3>
-        //     `
-        // }
-        // transporter.sendMail(data, function (error, info) {
-        //     if (error) {
-        //         console.log(error);
+            html: `
+            <h3>here is your OTP "${otp}" to reset your Password</h3>
+            `
+        }
+        transporter.sendMail(data, function (error, info) {
+            if (error) {
+                console.log(error);
 
-        //     } else {
-        //         console.log('Email sent ' + info.response)
-        //         res.send("successfully send")
-        //     }
-        // })
+            } else {
+                console.log('Email sent ' + info.response)
+                res.send("successfully send")
+            }
+        })
 
         res.send('Request Done');
 
@@ -207,32 +207,32 @@ router.post('/forgetpassword', async (req, res) => {
 
 
 
-            // const transporter = nodemailer.createTransport({
-            //     service: "gmail",
-            //     auth: {
-            //         user: "yusrashahid2019@gmail.com",
-            //         pass: "yusrakhan#1"
-            //     }
-            // });
+            const transporter = nodemailer.createTransport({
+                service: "gmail",
+                auth: {
+                    user: "imed.care22@gmail.com",
+                    pass: "medcare22"
+                }
+            });
 
-            // const data = {
-            //     from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
-            //     to: req.body.email,
-            //     subject: "OTP for I-MEDCARE",
+            const data = {
+                from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+                to: req.body.email,
+                subject: "OTP for I-MEDCARE",
 
-            //     html: `
-            //     <h3>here is your OTP "${otp}" to reset your Password</h3>
-            //     `
-            // }
-            // transporter.sendMail(data, function (error, info) {
-            //     if (error) {
-            //         console.log(error);
+                html: `
+                <h3>here is your OTP "${otp}" to reset your Password</h3>
+                `
+            }
+            transporter.sendMail(data, function (error, info) {
+                if (error) {
+                    console.log(error);
 
-            //     } else {
-            //         console.log('Email sent ' + info.response)
-            //         res.send("successfully send")
-            //     }
-            // })
+                } else {
+                    console.log('Email sent ' + info.response)
+                    res.send("successfully send")
+                }
+            })
 
             res.send('Request Done');
 

@@ -4,7 +4,7 @@ import { Header } from "antd/lib/layout/layout";
 import "react-slideshow-image/dist/styles.css";
 import { Link } from "react-router-dom";
 import logo from '../Images/logo.png';
-import { VideoCameraAddOutlined } from '@ant-design/icons';
+//import { VideoCameraAddOutlined } from '@ant-design/icons';
 
 function Navbar() {
     const name = localStorage.getItem('p_name');
@@ -170,7 +170,7 @@ function Navbar() {
                             </Link>
                         </div>
                     }
-                    <div className={"navigation"}>
+                    {/* <div className={"navigation"}>
                         <Link
                             to="/updateprofile"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
@@ -178,7 +178,7 @@ function Navbar() {
                                 <VideoCameraAddOutlined /> </p>
                         </Link>
                     </div>
-                    
+                     */}
                    
                 </div>
             </Header>

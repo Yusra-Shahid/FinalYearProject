@@ -26,20 +26,6 @@ res.send(user)
 
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 router.post('/new_req', async (req, res) => {
 
 console.log(req.body)
@@ -63,8 +49,8 @@ console.log(req.body)
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: "yusrashahid2019@gmail.com",
-                pass: "yusrakhan#1"
+                user: "imed.care22@gmail.com",
+                pass: "medcare22"
             }
         });
 
