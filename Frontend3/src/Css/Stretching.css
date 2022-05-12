@@ -116,3 +116,15 @@
         background-color: rgba(0,0,0,.4);
         /* background-color: #000000cc; */
       } 
+      .stre-text{
+        width: 490px;
+        height: 280px;
+        /* background-color: antiquewhite; */
+        margin-left: 30px;
+        padding-left: 5px;
+      }
+      .stre-text p{
+        font-size: 23px;
+        color:black;
+        font-weight: lighter;
+      }
