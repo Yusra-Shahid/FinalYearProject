@@ -14,7 +14,7 @@ import ViewPatients from "./Components/ViewPatients";
 import exercise from "./Components/exercise";
 import ExMainPage from "./Components/ExMainPage";
 import Payment from "./Components/Payment"
-// import { Comments } from "./Components/Comment";
+import Admin from "./Components/Admin";
 
 import Stretching from "./Components/Stretching";
 import Areobic from "./Components/Areobic";
@@ -43,6 +43,7 @@ function App() {
         <Route exact path="/Stretching" component={Stretching} />
         <Route exact path="/Areobic" component={Areobic} />
         <Route exact path= "/comments" component={comments}/>
+        <Route exact path= "/Admin" component={Admin}/>
       
     
 
