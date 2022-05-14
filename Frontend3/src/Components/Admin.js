@@ -8,7 +8,7 @@ import { HiUserGroup } from "react-icons/hi";
 import MuiVirtualizedTable from "./ButtonComponent/Table"
 import { MdOutlinePersonSearch } from "react-icons/md";
 import Grapy from "./ButtonComponent/Graph";
-import  Carousel   from "react-elastic-carousel";
+import Carousel from "react-elastic-carousel";
 
 const breakPoints = [
 
@@ -17,7 +17,7 @@ const breakPoints = [
     { width: 500, itemsToShow: 3 },
     { width: 600, itemsToShow: 4 },
     { width: 950, itemsToShow: 5 },
-  ];
+];
 
 export class Admin extends Component {
     render() {
@@ -80,7 +80,7 @@ export class Admin extends Component {
                 <div className="Admin_Container2">
                     <div className="Table-side">
                         <div className="table-text">
-                            <p>Patients</p>
+                            <p>Doctors</p>
                             <div className="search-field">
                                 <div className="search-icon">
                                     <MdOutlinePersonSearch style={{ height: 40, width: 40, color: "#176cbb" }} />
@@ -88,7 +88,7 @@ export class Admin extends Component {
                                 <hr />
                                 <div className="search-text">
                                     <input
-                                        placeholder={"Search Paitents"} />
+                                        placeholder={"Search by Name"} />
                                 </div>
                             </div>
                         </div>
@@ -98,6 +98,7 @@ export class Admin extends Component {
                             <MuiVirtualizedTable />
                         </div></div>
                     <div className="graph-side">
+                        <p>Departments</p>
                         <Grapy />
                     </div>
 
@@ -106,10 +107,10 @@ export class Admin extends Component {
                 <div className="Admin_Container3">
 
 
-                <Carousel breakPoints={breakPoints} justify-content='center' align-items='center'>
-            <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="bmw" />   </div>
-            <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="toyota" /> </div>
-            {/* <Item> <img src={Ferrari} width="100%" height="100%" alt="ferrari" /> </Item>
+                    <Carousel breakPoints={breakPoints} justify-content='center' align-items='center'>
+                        <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="bmw" />   </div>
+                        <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="toyota" /> </div>
+                        {/* <Item> <img src={Ferrari} width="100%" height="100%" alt="ferrari" /> </Item>
             <Item> <img src={Suzuki} width="100%" height="100%" alt="suzuki" /> </Item>
             <Item> <img src={Honda} width="100%" height="100%" alt="Honda" /> </Item>
             <Item> <img src={Audi} width="100%" height="100%" alt="Audi" /> </Item>
@@ -117,18 +118,42 @@ export class Admin extends Component {
             <Item> <img src={Jaguar} width="100%" height="100%" alt="Jaguar" /> </Item>
             <Item> <img src={LandRover} width="100%" height="100%" alt="Land Rover" /> </Item>
             <Item> <img src={Nissan} width="100%" height="100%" alt="Nissan" /> </Item> */}
-          </Carousel>
+                    </Carousel>
 
 
 
                 </div>
                 <div className="Admin_Container4">
                     <div className="right-side">
-<div className="admin-profile"></div>
+                        <div className="profile-text">
+                            <p> Doctor's approval </p>
+                        </div>
+                        <div className="admin-profile">
+                            <div className="Dr-data">
+                                <h4>Doctor name: dr.Raza</h4>
+                                <p>Email:dr.raza@gmail.com
+                                    <br/>
+                                contact number:09877654
+                                <br/>
+                                speciality:dentist
+                                </p>
+                                <div className="approval-btn">
+                                <button>Approve</button>
+                                <button>Reject</button>
+                                </div>
+                            </div>
+                            <div className="Dr-data"></div>
+                            
+                        </div>
                     </div>
+
+
+
+
+
                     <div className="lift-side">
                         <div className="table-text">
-                            <p>Doctors</p>
+                            <p>Appointments</p>
                             <div className="search-field">
                                 <div className="search-icon">
                                     <MdOutlinePersonSearch style={{ height: 40, width: 40, color: "#176cbb" }} />

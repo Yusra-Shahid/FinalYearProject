@@ -238,7 +238,11 @@ box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.2
 
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-
+.Admin_Container3 Carousel {
+    width: 50%;
+height: 50%;
+background-color: #176cbb;    
+}
 
 .Admin_Container3{
     width: 1450px;
@@ -256,6 +260,8 @@ box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.2
     padding-left: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+
+
 .lift-side{
     width: 48%;
     height: 98%;
@@ -292,15 +298,16 @@ gap: 10px;
 .right-side{
     width: 48%;
     height: 98%;
-    background-color: rgb(232, 232, 235); 
+    /* background-color: rgb(232, 232, 235);  */
     flex-direction: column;
     justify-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin-top: -15px;
+   
 gap: 10px;
 }
+
 .Admin_Container4{
     width: 1450px;
     height: 600px;
@@ -371,4 +378,66 @@ padding-right: 10px;
     margin-left: 730px;
     display: flex;
     margin-bottom: 10px;
+}
+.admin-profile{
+    width: 99%;
+    height: 79%;
+    position:relative;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    border-radius: 5px;
+  scroll-margin:2px !important;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  gap: 15px;
+  background-color:white;
+ 
+}
+.Dr-data{
+    width: 90%;
+    height: 40%;
+    background-color:#b7cee3;
+    margin-top: 20px;
+    display: flex;
+    align-content:center;
+    justify-items:center;
+    flex-direction: column;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+.Dr-data p{
+    margin-top: -15px;
+}
+.approval-btn{
+    width: 250px;
+    height: 100px;
+    /* background-color: bisque; */
+    margin-left: 170px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.approval-btn button{
+    height: 40px;
+  width: 150px;
+  border-radius: 20px;
+font-weight: bold;
+  border: #176cbb;
+  box-shadow: rgba(73, 73, 219, 0.589) 0px 13px 27px -5px, rgba(20, 92, 224, 0.863) 0px 8px 16px -8px;
+}
+
+.profile-text{
+    width: 200px;
+    height: 80px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+.profile-text p{
+    font-size: larger;
+    font-weight: bolder;
+    align-content: center;
 }
