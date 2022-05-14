@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../Css/Admin.css";
-import { Layout } from "antd";
+import { Layout, Table } from "antd";
 import { Footer } from "antd/lib/layout/layout";
 import { Line, Pie } from "react-chartjs-2";
 import Navbar from "./navbar";
@@ -8,9 +8,16 @@ import { HiUserGroup } from "react-icons/hi";
 import MuiVirtualizedTable from "./ButtonComponent/Table"
 import { MdOutlinePersonSearch } from "react-icons/md";
 import Grapy from "./ButtonComponent/Graph";
+import  Carousel   from "react-elastic-carousel";
 
+const breakPoints = [
 
-
+    { width: 1, itemsToShow: 1 },
+    { width: 350, itemsToShow: 2 },
+    { width: 500, itemsToShow: 3 },
+    { width: 600, itemsToShow: 4 },
+    { width: 950, itemsToShow: 5 },
+  ];
 
 export class Admin extends Component {
     render() {
@@ -71,57 +78,75 @@ export class Admin extends Component {
 
                 </div>
                 <div className="Admin_Container2">
-                <div className="Table-side"> 
-                <div className="table-text">
-                        <p>Patient</p>
-                        <div className="search-field">
-                            <div className="search-icon">
-                                <MdOutlinePersonSearch style={{ height: 40, width: 40, color: "#176cbb" }} />
-                            </div>
-                            <hr />
-                            <div className="search-text">
-                                <input
-                                    placeholder={"Password"} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className=" Pt-table">
-
-                        <MuiVirtualizedTable />
-                    </div></div>
-                    <div className="graph-side"> 
-                    <Grapy/>
-                    </div>
-                    {/* <div className="table-text">
-                        <p>Patient</p>
-                        <div className="search-field">
-                            <div className="search-icon">
-                                <MdOutlinePersonSearch style={{ height: 40, width: 40, color: "#176cbb" }} />
-                            </div>
-                            <hr />
-                            <div className="search-text">
-                                <input
-                                    placeholder={"Password"} />
+                    <div className="Table-side">
+                        <div className="table-text">
+                            <p>Patients</p>
+                            <div className="search-field">
+                                <div className="search-icon">
+                                    <MdOutlinePersonSearch style={{ height: 40, width: 40, color: "#176cbb" }} />
+                                </div>
+                                <hr />
+                                <div className="search-text">
+                                    <input
+                                        placeholder={"Search Paitents"} />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className=" Pt-table">
+                        <div className=" Pt-table">
 
-                        <MuiVirtualizedTable />
+
+                            <MuiVirtualizedTable />
+                        </div></div>
+                    <div className="graph-side">
+                        <Grapy />
                     </div>
-                   */}
+
 
                 </div>
                 <div className="Admin_Container3">
-                   
+
+
+                <Carousel breakPoints={breakPoints} justify-content='center' align-items='center'>
+            <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="bmw" />   </div>
+            <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="toyota" /> </div>
+            {/* <Item> <img src={Ferrari} width="100%" height="100%" alt="ferrari" /> </Item>
+            <Item> <img src={Suzuki} width="100%" height="100%" alt="suzuki" /> </Item>
+            <Item> <img src={Honda} width="100%" height="100%" alt="Honda" /> </Item>
+            <Item> <img src={Audi} width="100%" height="100%" alt="Audi" /> </Item>
+            <Item> <img src={Hyundai} width="100%" height="100%" alt="Hyundai" /> </Item>
+            <Item> <img src={Jaguar} width="100%" height="100%" alt="Jaguar" /> </Item>
+            <Item> <img src={LandRover} width="100%" height="100%" alt="Land Rover" /> </Item>
+            <Item> <img src={Nissan} width="100%" height="100%" alt="Nissan" /> </Item> */}
+          </Carousel>
+
+
+
                 </div>
                 <div className="Admin_Container4">
-                <div className="right-side"> </div>
-                    <div className="lift-side"> 
-                    
+                    <div className="right-side">
+<div className="admin-profile"></div>
+                    </div>
+                    <div className="lift-side">
+                        <div className="table-text">
+                            <p>Doctors</p>
+                            <div className="search-field">
+                                <div className="search-icon">
+                                    <MdOutlinePersonSearch style={{ height: 40, width: 40, color: "#176cbb" }} />
+                                </div>
+                                <hr />
+                                <div className="search-text">
+                                    <input
+                                        placeholder={"Search Paitents"} />
+                                </div>
+                            </div>
+                        </div>
+                        <div className=" Pt-table">
+
+                            <MuiVirtualizedTable />
+                        </div>
                     </div>
                 </div>
-                
+
             </div>
 
 

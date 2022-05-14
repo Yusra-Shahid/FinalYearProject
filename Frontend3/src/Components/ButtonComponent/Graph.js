@@ -15,6 +15,13 @@ class Grapy extends Component {
        
             categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
         }
+        // xaxis: {
+        //   labels: {
+        //     formatter: function (value, timestamp) {
+        //       return new Date(timestamp) // The formatter function overrides format property
+        //     }, 
+        //   }
+        // }
       },
       series: [
         {

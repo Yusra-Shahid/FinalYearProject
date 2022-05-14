@@ -259,11 +259,12 @@ box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.2
 .lift-side{
     width: 48%;
     height: 98%;
-    background-color: rgb(232, 232, 235);
+   
     justify-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+margin-top: -15px;
 gap: 10px;
 }
 .graph-side{
@@ -291,7 +292,7 @@ gap: 10px;
 .right-side{
     width: 48%;
     height: 98%;
-    /* background-color: rgb(232, 232, 235); */
+    background-color: rgb(232, 232, 235); 
     flex-direction: column;
     justify-items: center;
     justify-content: center;
@@ -360,6 +361,7 @@ width: 300px;
 height: 57px;
 background-color:transparent;
 border: 0;
+border-radius: 30px;
 padding-right: 10px;
 }
 .web-performce{
