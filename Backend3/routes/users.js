@@ -1,5 +1,7 @@
 const { User } = require('../models/User');
 const { Doctor } = require('../models/doctor');
+const { doctorapproval } = require('../models/doctorapproval');
+
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
@@ -58,7 +60,7 @@ router.post('/new_Doctor', async (req, res) => {
         return res.status(400).send('user already register');
     }
 
-    user = new Doctor({
+    user = new doctorapproval({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
@@ -71,6 +73,15 @@ router.post('/new_Doctor', async (req, res) => {
     try {
         user.password = await bcrypt.hash(user.password, salt);
         result = await user.save();
+
+
+
+
+
+
+
+
+        
         return res.status(200).send('Doctor register')
 
     } catch (error) {
