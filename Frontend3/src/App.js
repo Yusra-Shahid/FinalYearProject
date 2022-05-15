@@ -15,10 +15,11 @@ import exercise from "./Components/exercise";
 import ExMainPage from "./Components/ExMainPage";
 import Payment from "./Components/Payment"
 import Admin from "./Components/Admin";
-
+import Lab from "./Components/Lab";
 import Stretching from "./Components/Stretching";
 import Areobic from "./Components/Areobic";
 import comments from "./Components/Comment";
+
 
 //import Logout from './Components/logout';
 
@@ -44,6 +45,9 @@ function App() {
         <Route exact path="/Areobic" component={Areobic} />
         <Route exact path= "/comments" component={comments}/>
         <Route exact path= "/Admin" component={Admin}/>
+        <Route exact path= "/Lab" component={Lab}/>
+       
+        
       
     
 

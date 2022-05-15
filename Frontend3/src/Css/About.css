@@ -112,7 +112,7 @@
   .pupose-txt{
     width: 650px;
     height: 500px;
-  
+    animation:pupose-txt 6s ease-out 1s;
     font-size: larger;}
   .about-pic{
     width: 650px;

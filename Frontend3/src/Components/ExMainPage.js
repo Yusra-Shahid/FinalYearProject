@@ -13,9 +13,23 @@ export class ExMainPage extends Component {
             <Navbar />
             <div className="fazul"></div>
             <div className={"ExSECContainer"}>
-            <div className="MainPageContext">THE I-MedCare Web
+            <div className="MainPageContext">
+                {/* THE I-MedCare
                 <br></br>
-                    Find your new favorite workout</div>
+                    Find your new favorite workout */}
+                    
+
+                    <h1>
+  <span>The</span>
+  <span>I-MedCare</span>
+  <span>Find</span>
+  <span>your</span>
+  <span>new</span>
+  <span>favorite </span>
+  <span>workout</span>
+ 
+</h1>
+                    </div>
                 
                 
                 

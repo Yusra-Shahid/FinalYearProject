@@ -78,7 +78,7 @@ function Navbar() {
                     
                     <div className={"navigation"}>
                         <Link
-                            to="/Phistory"
+                            to="/Lab"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
                             <p style={{ fontSize: "18px" }}>Laboratory</p>
                            

@@ -3,7 +3,7 @@ import { storage } from "../firebase/index";
 import Navbar from './navbar';
 import axios from 'axios';
 import "../Css/Phistory.css";
-//import { Image } from "antd";
+import { Image } from "antd";
 import Footer from './footer';
 import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
 import { BsPersonFill, BsFillEnvelopeFill, BsCameraFill } from "react-icons/bs";
@@ -28,7 +28,7 @@ function Phistory() {
 
 
     const handleChangeimage = async (e) => {
-
+        
 
     }
 
@@ -71,28 +71,28 @@ function Phistory() {
                 <div className="profileupdate" >
 
 
-                    <input type="file" required='true' name='photo' id="photo" accept="image/*" onChange={async (e) => {
-                        console.log(e.target.files[0])
-                        await setImg(e.target.files[0]);
-
-
-                        const imageid = uuid();
-
-                        await storage.ref(`dp/${imageid}`).put(Img);
-
-
-                        const Url = await storage.ref(`dp`).child(imageid).getDownloadURL();
-                        await setImgurl(Url);
-
-                        await console.log(Url)
-                    }} />
+                <input type="file" required='true' name='photo' id="photo" accept="image/*" onChange={async (e)=>{
+                    console.log(e.target.files[0])
+                    await setImg(e.target.files[0]);
+            
+            
+                    const imageid = uuid();
+            
+                    await storage.ref(`dp/${imageid}`).put(Img);
+            
+            
+                    const Url = await storage.ref(`dp`).child(imageid).getDownloadURL();
+                    await setImgurl(Url);
+            
+                   await  console.log(Url)
+                }} />
                     <img src={Imgurl} className="profileimage" />
 
 
 
 
 
-
+                  
 
 
                     <div>
@@ -150,9 +150,9 @@ function Phistory() {
                                             onChange={e => { setContact(e.target.value) }} />
                                     </div>
 
+                                   
 
-
-                                    <button onClick={() => { alert("your details are updated") }}>update</button>
+                                    <button onClick={()=>{alert("your details are updated")}}>update</button>
                                 </div>
 
                             </div>
