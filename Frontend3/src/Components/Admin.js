@@ -106,20 +106,64 @@ export class Admin extends Component {
                 </div>
                 <div className="Admin_Container3">
 
+                    <div className="reg-dr">
+                        <Carousel breakPoints={breakPoints} justify-content='center' align-items='center' color='#176cbb'>
+                            <div className="dr-1">
+                                <div className="dr-inner-img">
+                                    {/* <image src="http://themeatelier.net/site-templates/clinica/img/doctors/detail-doctor.jpg"/> */}
+                                </div>
+                                <div className="dr-inner-content">
+                                    <p>Dr.sysla j smith
+                                        <br />
+                                        Doctor
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="dr-1">  <div className="dr-inner-img"></div>
+                                <div className="dr-inner-content">
 
-                    <Carousel breakPoints={breakPoints} justify-content='center' align-items='center'>
-                        <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="bmw" />   </div>
-                        <div>  <img src={"https://www.seekpng.com/png/full/62-623840_doctor-symbol-clipart-community-medicine-hospital.png"} width="100%" height="100%" alt="toyota" /> </div>
-                        {/* <Item> <img src={Ferrari} width="100%" height="100%" alt="ferrari" /> </Item>
-            <Item> <img src={Suzuki} width="100%" height="100%" alt="suzuki" /> </Item>
-            <Item> <img src={Honda} width="100%" height="100%" alt="Honda" /> </Item>
-            <Item> <img src={Audi} width="100%" height="100%" alt="Audi" /> </Item>
-            <Item> <img src={Hyundai} width="100%" height="100%" alt="Hyundai" /> </Item>
-            <Item> <img src={Jaguar} width="100%" height="100%" alt="Jaguar" /> </Item>
-            <Item> <img src={LandRover} width="100%" height="100%" alt="Land Rover" /> </Item>
-            <Item> <img src={Nissan} width="100%" height="100%" alt="Nissan" /> </Item> */}
-                    </Carousel>
+                                    <p>Dr.sysla j smith
+                                        <br />
+                                        Doctor
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="dr-1">   <div className="dr-inner-img"></div>
+                                <div className="dr-inner-content">
 
+                                    <p>Dr.sysla j smith
+                                        <br />
+                                        Doctor
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div className="dr-1">   <div className="dr-inner-img"></div>
+                                <div className="dr-inner-content">
+                                    <p>Dr.sysla j smith
+                                        <br />
+                                        Doctor
+                                    </p></div>
+                            </div>
+                            <div className="dr-1">   <div className="dr-inner-img"></div>
+                                <div className="dr-inner-content">
+                                    <p>Dr.sysla j smith
+                                        <br />
+                                        Doctor
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="dr-1">   <div className="dr-inner-img"></div>
+                                <div className="dr-inner-content">
+                                    <p>Dr.sysla j smith
+                                        <br />
+                                        Doctor
+                                    </p>
+                                </div>
+                            </div>
+
+                        </Carousel>
+                    </div>
 
 
                 </div>
@@ -132,18 +176,18 @@ export class Admin extends Component {
                             <div className="Dr-data">
                                 <h4>Doctor name: dr.Raza</h4>
                                 <p>Email:dr.raza@gmail.com
-                                    <br/>
-                                contact number:09877654
-                                <br/>
-                                speciality:dentist
+                                    <br />
+                                    contact number:09877654
+                                    <br />
+                                    speciality:dentist
                                 </p>
                                 <div className="approval-btn">
-                                <button>Approve</button>
-                                <button>Reject</button>
+                                    <button>Approve</button>
+                                    <button>Reject</button>
                                 </div>
                             </div>
                             <div className="Dr-data"></div>
-                            
+
                         </div>
                     </div>
 
