@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "../Css/Admin.css";
-import { Layout, Table } from "antd";
+import { Alert, Layout, Table } from "antd";
 import { Footer } from "antd/lib/layout/layout";
 import { Line, Pie } from "react-chartjs-2";
 import Navbar from "./navbar";
@@ -9,6 +9,8 @@ import MuiVirtualizedTable from "./ButtonComponent/Table"
 import { MdOutlinePersonSearch } from "react-icons/md";
 import Grapy from "./ButtonComponent/Graph";
 import Carousel from "react-elastic-carousel";
+import axios from 'axios';
+
 
 const breakPoints = [
 
@@ -19,8 +21,35 @@ const breakPoints = [
     { width: 950, itemsToShow: 5 },
 ];
 
-export class Admin extends Component {
-    render() {
+
+
+
+export default function Admin() {
+
+    const [docApproval, setdocApproval] = useState([]);
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/user/getApproval`)
+            .then((Response) => {
+                setdocApproval(Response.data)
+                console.log(Response.data);
+                // if (Response.data.length === 0) {
+                //     alert("No doctor avaliable please visit later");
+                //     history.push("/");
+                // }
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }, []);
+
+
+
+
+
+
+
+    {
         return (<Layout>
             <Navbar />
             <div className="AdminMainContainer">
@@ -173,20 +202,75 @@ export class Admin extends Component {
                             <p> Doctor's approval </p>
                         </div>
                         <div className="admin-profile">
-                            <div className="Dr-data">
-                                <h4>Doctor name: dr.Raza</h4>
-                                <p>Email:dr.raza@gmail.com
-                                    <br />
-                                    contact number:09877654
-                                    <br />
-                                    speciality:dentist
-                                </p>
-                                <div className="approval-btn">
-                                    <button>Approve</button>
-                                    <button>Reject</button>
+
+                            {docApproval.map((data) => (
+                                <div className="Dr-data">
+
+                                    <h4>Doctor name: {data.name}</h4>
+                                    <p>Email: {data.email}
+                                        <br />
+                                        contact number: {data.contact}
+                                        <br />
+                                        speciality:{data.specaility}
+                                    </p>
+
+                                    <div className="approval-btn">
+                                        <button onClick={() => {
+
+                                            axios.post('http://localhost:5000/user/accept', {
+                                                name: data.name,
+                                                email: data.email,
+                                                password: data.password,
+                                                contact: data.contact,
+                                                userType: data.usertype,
+                                                specaility: data.spe,
+                                            })
+                                                .then(function (response) {
+                                                    console.log(response);
+                                                    
+                                                })
+                                                .catch(function (error) {
+
+                                                    alert(error)
+
+                                                })
+
+
+                                        }}>Approve</button>
+                                        <button onClick={() => {
+
+                                            axios.post('http://localhost:5000/user/rejectApproval', {
+
+                                                email: data.email,
+
+                                            })
+                                                .then(function (response) {
+                                                    Alert(response);
+
+                                                })
+                                                .catch(function (error) {
+
+                                                })
+
+                                            axios.get(`http://localhost:5000/user/getApproval`)
+                                                .then((Response) => {
+                                                    setdocApproval(Response.data)
+                                                    console.log(Response.data);
+                                                    // if (Response.data.length === 0) {
+                                                    //     alert("No doctor avaliable please visit later");
+                                                    //     history.push("/");
+                                                    // }
+                                                })
+                                                .catch((error) => {
+                                                    console.log(error)
+                                                })
+
+
+                                        }}>Reject</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="Dr-data"></div>
+                            )
+                            )}
 
                         </div>
                     </div>
@@ -229,4 +313,4 @@ export class Admin extends Component {
 
     }
 }
-export default Admin;
+// export default Admin;

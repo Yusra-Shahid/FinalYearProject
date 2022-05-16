@@ -51,6 +51,86 @@ router.post('/new_user', async (req, res) => {
     }
 
 })
+router.get('/getApproval', async (req, res) => {
+    
+    let doc = await doctorapproval.find()
+    await console.log(doc)
+     res.send(doc)
+})
+
+router.post('/rejectApproval', async( req,res)=>{
+    console.log("kuch bhi")
+    console.log(req.body)
+
+    const user= await doctorapproval.deleteOne(req.body)
+    res.send("Request deny")
+})
+
+
+router.post('/accept', async (req, res) => {
+    console.log(req);
+    let user = await Doctor.findOne({ email: req.body.email });
+    if (user) {
+        return res.status(400).send('user already register');
+    }
+
+    user = new doctorapproval({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        contact: req.body.contact,
+        userType: req.body.userType,
+        specaility: req.body.specaility,
+
+    });
+   
+    try {
+        result = await user.save();
+
+        const user= await doctorapproval.deleteOne(req.body)
+
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "imed.care22@gmail.com",
+                pass: "medcare22"
+            }
+        });
+
+        const data = {
+            from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+            to: req.body.email,
+            subject: "Request for Documents",
+
+            html: `
+            <h3> your request accepted</h3>
+            `
+        }
+        transporter.sendMail(data, function (error, info) {
+            if (error) {
+                console.log(error);
+
+            } else {
+                console.log('Email sent ' + info.response)
+                res.send("successfully send")
+            }
+        })
+
+
+
+
+        
+        return res.status(200).send('Doctor register')
+
+    } catch (error) {
+        return res.status(400).send('Doctor NOT register');
+
+    }
+
+
+
+})
+
 
 // create new doctor 
 router.post('/new_Doctor', async (req, res) => {
@@ -76,7 +156,32 @@ router.post('/new_Doctor', async (req, res) => {
 
 
 
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "imed.care22@gmail.com",
+                pass: "medcare22"
+            }
+        });
 
+        const data = {
+            from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+            to: req.body.email,
+            subject: "Request for Documents",
+
+            html: `
+            <h3> Thank you  </h3>
+            `
+        }
+        transporter.sendMail(data, function (error, info) {
+            if (error) {
+                console.log(error);
+
+            } else {
+                console.log('Email sent ' + info.response)
+                res.send("successfully send")
+            }
+        })
 
 
 
