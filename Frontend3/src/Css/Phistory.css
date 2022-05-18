@@ -289,4 +289,18 @@ background-color: aliceblue;
   .cardEX:hover > .backEX{
     transform: perspective(600px) rotateY(0deg);
   }
-  
+  .usercard button{
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+font-weight: bold;
+  border: #176cbb;
+  margin-top: 30px;
+  box-shadow: rgba(73, 73, 219, 0.589) 0px 13px 27px -5px, rgba(20, 92, 224, 0.863) 0px 8px 16px -8px;
+}
+.usercard button:hover{
+  background-color: #377adf;
+  color: aliceblue;
+  font-weight:bolder;
+  box-shadow: rgba(50, 50, 93, 0.726) 0px 13px 27px -5px, rgba(0, 0, 0, 0.479) 0px 8px 16px -8px;
+}

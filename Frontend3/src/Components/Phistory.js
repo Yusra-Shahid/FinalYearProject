@@ -147,6 +147,7 @@ function Phistory() {
                                         <FaPhoneAlt style={{ height: 20, width: 20, color: "#176cbb" }} />
                                         <input className="Imginput" style={{ width: 30, height: 30, color: "black" }}
                                             defaultValue={data.Contact}
+                                            placeholder={"Contact Number"}
                                             onChange={e => { setContact(e.target.value) }} />
                                     </div>
 
