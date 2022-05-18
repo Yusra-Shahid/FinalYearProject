@@ -14,12 +14,13 @@ export class ExMainPage extends Component {
             <div className="fazul"></div>
             <div className={"ExSECContainer"}>
             <div className="MainPageContext">
-                {/* THE I-MedCare
+                
+                THE I-MedCare
                 <br></br>
-                    Find your new favorite workout */}
+                    Find your new favorite workout
                     
-
-                    <h1>
+{/* 
+                    <h12>
   <span>The</span>
   <span>I-MedCare</span>
   <span>Find</span>
@@ -28,7 +29,7 @@ export class ExMainPage extends Component {
   <span>favorite </span>
   <span>workout</span>
  
-</h1>
+</h12> */}
                     </div>
                 
                 

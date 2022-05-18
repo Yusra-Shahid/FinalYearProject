@@ -14,7 +14,14 @@ export class Lab extends Component {
 
             <div className="lab-head">
                 <div className=" lab-img-1">
-                <div className=" lab-img-2"></div>
+                <div className=" lab-img-2">
+               <h21>Medical Laboratory</h21>
+<p>We are a full-service clinical and anatomical pathology laboratory serving Maryland, New Jersey,
+     New York, Virginia, Washington DC, and West Virginia.</p>
+                </div>
+
+                <div className=" lab-img-3">
+                    </div>
                 </div>
                
             </div>

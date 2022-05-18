@@ -27,11 +27,59 @@ const breakPoints = [
 export default function Admin() {
 
     const [docApproval, setdocApproval] = useState([]);
+    const [patient, setpatient] = useState([]);
+    const [doctors, setdocdoctors] = useState([]);
+    const [App, setdocApp] = useState([]);
+
+    const docc = doctors.length;
+    const patt = patient.length;
 
     useEffect(() => {
         axios.get(`http://localhost:5000/user/getApproval`)
             .then((Response) => {
                 setdocApproval(Response.data)
+                console.log(Response.data);
+                // if (Response.data.length === 0) {
+                //     alert("No doctor avaliable please visit later");
+                //     history.push("/");
+                // }
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+            axios.get(`http://localhost:5000/user/getpatient`)
+            .then((Response) => {
+                setpatient(Response.data)
+                console.log(Response.data);
+                // if (Response.data.length === 0) {
+                //     alert("No doctor avaliable please visit later");
+                //     history.push("/");
+                // }
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+
+            axios.get(`http://localhost:5000/user/getdoctors`)
+            .then((Response) => {
+                setdocdoctors(Response.data)
+                console.log(Response.data);
+                // if (Response.data.length === 0) {
+                //     alert("No doctor avaliable please visit later");
+                //     history.push("/");
+                // }
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+
+
+            axios.get(`http://localhost:5000/user/getappp`)
+            .then((Response) => {
+                setdocApp(Response.data)
                 console.log(Response.data);
                 // if (Response.data.length === 0) {
                 //     alert("No doctor avaliable please visit later");
@@ -63,7 +111,7 @@ export default function Admin() {
                             <p>------------------------</p>
                         </div>
                         <div className="dr-countor">
-                            <p>541</p>
+                            <p>{docc}</p>
                         </div>
                     </div>
                     <div className="sub-categies2">
@@ -75,7 +123,7 @@ export default function Admin() {
                             <p>------------------------</p>
                         </div>
                         <div className="pt-countor">
-                            <p>435</p>
+                            <p>{patt}</p>
                         </div>
                     </div>
 
@@ -121,11 +169,65 @@ export default function Admin() {
                                 </div>
                             </div>
                         </div>
-                        <div className=" Pt-table">
+                        
+                            <div className=" Pt-table">
+
+                                <div className="header-part" >
+                                    <div>
+                                        <p>Doctor Name</p>
+                                    </div>
+                                    <div><p>Email address</p>
+                                    </div>
+
+                                    <div><p>Contact Number</p>
+                                    </div>
+
+                                    <div><p>Age</p>
+                                    </div>
+
+                                    <div><p>Speciality</p>
+                                    </div>
+
+                                    <div><p>Exprience</p>
+                                    </div>
+
+                                    <div><p>Fee / appointment</p>
+                                    </div>
+
+                                </div>
+                                {doctors.map((data) => (
+                                <div className="table-row">
+
+<div>
+                                        <p>{data.name}</p>
+                                    </div>
+                                    <div><p>{data.email}</p>
+                                    </div>
+
+                                    <div><p>{data.contact}</p>
+                                    </div>
+
+                                    <div><p>{data.age} years</p>
+                                    </div>
+
+                                    <div><p>{data.specaility}</p>
+                                    </div>
+
+                                    <div><p>{data.exprience} years</p>
+                                    </div>
+
+                                    <div><p>Rs. {data.fee}</p>
+                                    </div>
+                                    </div>
+                                    
+                                    
+                                    ) )}
+                            </div>
+                                
 
 
-                            <MuiVirtualizedTable />
-                        </div></div>
+
+                        </div>
                     <div className="graph-side">
                         <p>Departments</p>
                         <Grapy />
@@ -137,60 +239,19 @@ export default function Admin() {
 
                     <div className="reg-dr">
                         <Carousel breakPoints={breakPoints} justify-content='center' align-items='center' color='#176cbb'>
+                        {doctors.map((data) => (
                             <div className="dr-1">
-                                <div className="dr-inner-img">
-                                    {/* <image src="http://themeatelier.net/site-templates/clinica/img/doctors/detail-doctor.jpg"/> */}
+                                <div >
+                                    <img className="dr-inner-img" width="100%" src={data.imgurl}/>
                                 </div>
                                 <div className="dr-inner-content">
-                                    <p>Dr.sysla j smith
-                                        <br />
-                                        Doctor
+                                    <p>Dr. {data.name}
+                                     
                                     </p>
                                 </div>
                             </div>
-                            <div className="dr-1">  <div className="dr-inner-img"></div>
-                                <div className="dr-inner-content">
-
-                                    <p>Dr.sysla j smith
-                                        <br />
-                                        Doctor
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="dr-1">   <div className="dr-inner-img"></div>
-                                <div className="dr-inner-content">
-
-                                    <p>Dr.sysla j smith
-                                        <br />
-                                        Doctor
-                                    </p>
-
-                                </div>
-                            </div>
-                            <div className="dr-1">   <div className="dr-inner-img"></div>
-                                <div className="dr-inner-content">
-                                    <p>Dr.sysla j smith
-                                        <br />
-                                        Doctor
-                                    </p></div>
-                            </div>
-                            <div className="dr-1">   <div className="dr-inner-img"></div>
-                                <div className="dr-inner-content">
-                                    <p>Dr.sysla j smith
-                                        <br />
-                                        Doctor
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="dr-1">   <div className="dr-inner-img"></div>
-                                <div className="dr-inner-content">
-                                    <p>Dr.sysla j smith
-                                        <br />
-                                        Doctor
-                                    </p>
-                                </div>
-                            </div>
-
+                        ))}
+                         
                         </Carousel>
                     </div>
 
@@ -215,24 +276,36 @@ export default function Admin() {
                                     </p>
 
                                     <div className="approval-btn">
-                                        <button onClick={() => {
+                                        <button onClick={async () => {
 
-                                            axios.post('http://localhost:5000/user/accept', {
+                                            await axios.post('http://localhost:5000/user/accept', {
                                                 name: data.name,
                                                 email: data.email,
                                                 password: data.password,
                                                 contact: data.contact,
-                                                userType: data.usertype,
-                                                specaility: data.spe,
+                                                userType: data.userType,
+                                                specaility: data.specaility,
                                             })
                                                 .then(function (response) {
                                                     console.log(response);
-                                                    
+
                                                 })
                                                 .catch(function (error) {
 
-                                                    alert(error)
 
+                                                })
+
+                                            await axios.get(`http://localhost:5000/user/getApproval`)
+                                                .then((Response) => {
+                                                    setdocApproval(Response.data)
+                                                    console.log(Response.data);
+                                                    // if (Response.data.length === 0) {
+                                                    //     alert("No doctor avaliable please visit later");
+                                                    //     history.push("/");
+                                                    // }
+                                                })
+                                                .catch((error) => {
+                                                    console.log(error)
                                                 })
 
 
@@ -295,7 +368,37 @@ export default function Admin() {
                         </div>
                         <div className=" Pt-table">
 
-                            <MuiVirtualizedTable />
+                            <div className="header-part" >
+                                <div>
+                                    <p>Patient Name</p>
+                                </div>
+                                <div><p>Docotr Name</p>
+                                </div>
+
+                                <div><p>Appointment date</p>
+                                </div>
+
+                                <div><p>Appointment timing</p>
+                                </div>
+
+                               
+
+                            </div>
+                            {App.map((data) => (     <div className="table-row">
+
+                                <div>
+                                    <p>{data. patient}</p>
+                                </div>
+                                <div><p>Dr.{data.doctor}</p>
+                                </div>
+
+                                <div><p>{data.Date}</p>
+                                </div>
+
+                                <div><p>{data.Time}</p>
+                                </div>
+
+                                </div>))}
                         </div>
                     </div>
                 </div>

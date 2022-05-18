@@ -1,6 +1,7 @@
 const { User } = require('../models/User');
 const { Doctor } = require('../models/doctor');
 const { doctorapproval } = require('../models/doctorapproval');
+const { Request } = require("../models/request");
 
 const express = require('express');
 const router = express.Router();
@@ -58,6 +59,31 @@ router.get('/getApproval', async (req, res) => {
      res.send(doc)
 })
 
+
+
+router.get('/getdoctors', async (req, res) => {
+    
+    let doc = await Doctor.find()
+    await console.log(doc)
+     res.send(doc)
+})
+
+router.get('/getpatient', async (req, res) => {
+    
+    let doc = await User.find()
+    await console.log(doc)
+     res.send(doc)
+})
+
+router.get('/getappp', async (req, res) => {
+    
+    let doc = await Request.find()
+    await console.log(doc)
+     res.send(doc)
+})
+
+
+
 router.post('/rejectApproval', async( req,res)=>{
     console.log("kuch bhi")
     console.log(req.body)
@@ -67,14 +93,17 @@ router.post('/rejectApproval', async( req,res)=>{
 })
 
 
-router.post('/accept', async (req, res) => {
-    console.log(req);
-    let user = await Doctor.findOne({ email: req.body.email });
-    if (user) {
-        return res.status(400).send('user already register');
-    }
 
-    user = new doctorapproval({
+
+
+router.post('/accept', async (req, res) => {
+    // console.log(req.body);
+
+
+    let user = req.body;
+ 
+console.log(user)
+    user = new Doctor({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
@@ -87,8 +116,8 @@ router.post('/accept', async (req, res) => {
     try {
         result = await user.save();
 
-        const user= await doctorapproval.deleteOne(req.body)
-
+        const users = await doctorapproval.deleteOne({email: req.body.email})
+          console.log(users)
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
@@ -100,7 +129,7 @@ router.post('/accept', async (req, res) => {
         const data = {
             from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
             to: req.body.email,
-            subject: "Request for Documents",
+            subject: "Request Accepted",
 
             html: `
             <h3> your request accepted</h3>
@@ -119,7 +148,7 @@ router.post('/accept', async (req, res) => {
 
 
 
-        
+        console.log("shdiush")
         return res.status(200).send('Doctor register')
 
     } catch (error) {

@@ -38,9 +38,19 @@ gap: 30px;
 }
 .lab-img-2{
     width: 300px;
-    height: 300px;
+    height: 200px;
     margin-left: 400px !important;
     margin-top: 45% !important;
-    background-color: rgb(179, 138, 84);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(250, 248, 246);
    
+}
+.lab-img-2 h21{
+    font-size: larger;
+    font-weight: bold;
+    color:cornflowerblue;
 }
