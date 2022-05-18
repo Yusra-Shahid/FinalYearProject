@@ -223,6 +223,12 @@ video{
   display: flex;
   padding-top: 75px;
 }
+.FcDisclaimer{
+  /* background-color: #176cbb; */
+  margin-top: 100px !important;
+}
+
+
 .writingleftbox{
   background-color: aliceblue;
   width: 50vh;
@@ -242,6 +248,10 @@ video{
   margin-top: 30px;
   margin-left: 45px;
   
+}
+.writingleftbox p{
+  font-size: large;
+    font: weight 100px;;
 }
 
 .leftbox{
@@ -264,6 +274,8 @@ video{
 font-weight: bolder;
 font-size: x-large;
 }
+
+
 .writingrightbox h18{
   font-weight: bolder;
   font-size: x-large;
@@ -271,7 +283,7 @@ font-size: x-large;
   }
   .writingrightbox p{
     font-size: large;
-    font-weight:lighter;
+    font: weight 100px;;
   }
 .centerbox{
   width: 55vh;

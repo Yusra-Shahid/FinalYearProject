@@ -43,8 +43,13 @@ function LoginPage() {
 
             // history.push("/");
             if (response.data.userType === "patient") {
-              message.success('WELCOME ' + response.data.name);
-              history.push("/Viewdept")
+              if (email === "imed.care22@gmail.com") {
+                history.push("/Admin")
+              }
+              else {
+                message.success('WELCOME ' + response.data.name);
+                history.push("/Viewdept")
+              }
             }
             if (response.data.userType === "doctor") {
               history.push("/dprofile")
@@ -129,7 +134,7 @@ function LoginPage() {
               </div>
 
             </>}
-{/* for the new password */}
+            {/* for the new password */}
             {forgetpassword === true && <>
 
               <div className={"inputContainer"}>
@@ -182,7 +187,7 @@ function LoginPage() {
 
 
             </>}
-{/* Enter otp */}
+            {/* Enter otp */}
             {forgetpasswordemail === true && <>
 
               <div className={"inputContainer"}>
@@ -234,7 +239,7 @@ function LoginPage() {
               </button>
 
             </>}
-{/*  the new password*/}
+            {/*  the new password*/}
             {forgetpasswordotp === true && <>
 
               <div className={"inputContainer1"}>

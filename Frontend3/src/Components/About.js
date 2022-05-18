@@ -4,7 +4,7 @@ import { Layout } from "antd";
 import { Footer } from "antd/lib/layout/layout";
 import Navbar from "./navbar";
 import CustomizedTimeline from "./ButtonComponent/Process"
-import { FcServices, FcFinePrint, FcHome } from "react-icons/fc";
+import { FcServices, FcFinePrint, FcHome,FcDisclaimer } from "react-icons/fc";
 import { Comment } from "antd";
 //import comments from "../Components/Comment";
 
@@ -70,11 +70,23 @@ export class About extends Component {
                                 <div className="writingleftbox">
                                     <div className="FChomeicon">
                                         <FcHome style={{ height: 60, width: 60 }} />
+                                        <h19>Stay Home Stay Fit</h19>
                                     </div>
 
-                                    <h19>Stay Home Stay Fit</h19>
+                                    
                                     <br />
                                     <p> Our site hepls you to make yourself fit by provide Fitness tips and exercises </p>
+
+
+                                    <div className="FcDisclaimer">
+                                        <FcDisclaimer style={{ height: 60, width: 60 }} />
+                                        <h19>No Limitation</h19>
+                                    </div>
+
+                                
+                                    <br />
+                                    <p>no Limitation boundary, as we can reach out almost every doctor easily no need to travell city to city, country to country. 
+easy access to the professionals. Get the exact service as prescribed no need to rush. </p>
                                 </div>
                             </div>
                             <div className="leftbox">

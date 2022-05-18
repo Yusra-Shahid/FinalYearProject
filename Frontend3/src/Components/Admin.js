@@ -31,6 +31,8 @@ export default function Admin() {
     const [doctors, setdocdoctors] = useState([]);
     const [App, setdocApp] = useState([]);
 
+    const [Admin, setAdmin] = useState(localStorage.getItem("email"));
+
     const docc = doctors.length;
     const patt = patient.length;
 
@@ -100,6 +102,7 @@ export default function Admin() {
     {
         return (<Layout>
             <Navbar />
+            {Admin === 'imed.care22@gmail.com' && <>
             <div className="AdminMainContainer">
                 <div className="Admin_Container1">
                     <div className="sub-categies1">
@@ -409,6 +412,7 @@ export default function Admin() {
             <Footer>
                 <p>Copyright © 2021 I-MedCare. All Rights Reserved</p>
             </Footer>
+            </>}
         </Layout>
 
 
