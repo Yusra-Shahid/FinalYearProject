@@ -238,6 +238,7 @@ video{
   /* background-color: transparent; */
   align-content: center;
   padding-left: 40px;
+ 
 
 }
 .writingleftbox { 
@@ -259,7 +260,7 @@ video{
 .leftbox{
   width: 70vh;
   height: 100%;
-  margin-top: -83vh;
+  margin-top: -64vh;
   /* background-color: slateblue; */
   justify-content: center;
   align-items: center;
@@ -306,7 +307,7 @@ font-size: x-large;
   display: flex; 
   grid-column-gap: 10px;
   padding: 10px;
-  height: 600px;
+  height: 650px;
   width: 95%;
   margin-left: 25px;
 }
@@ -321,8 +322,9 @@ font-size: x-large;
   border-radius: 20px;
   display: flex;
   gap: 40px;;
-  padding-top: 20px;
+  padding-top: 10px;
   justify-content: center;
+  margin-top: 5.5px;
 }
 .contactbox h20{
   font-size: 30px;

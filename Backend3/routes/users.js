@@ -85,7 +85,7 @@ router.get('/getappp', async (req, res) => {
 
 
 router.post('/rejectApproval', async( req,res)=>{
-    console.log("kuch bhi")
+    console.log("rejection is painfull")
     console.log(req.body)
 
     const user= await doctorapproval.deleteOne(req.body)
@@ -132,7 +132,7 @@ console.log(user)
             subject: "Request Accepted",
 
             html: `
-            <h3> your request accepted</h3>
+            <h3> Hello Life Saver, your documents are verified. Thank you for providing us the details. We are happy to have you on bored with us.</h3>
             `
         }
         transporter.sendMail(data, function (error, info) {
@@ -199,7 +199,7 @@ router.post('/new_Doctor', async (req, res) => {
             subject: "Request for Documents",
 
             html: `
-            <h3> Thank you  </h3>
+            <h3> Thank you life saver for having an intreset in our organization, we are pleasure to have you on bored with us but before this we need your documents for the vefication. Could you please provide us your identity of Doctor  </h3>
             `
         }
         transporter.sendMail(data, function (error, info) {
