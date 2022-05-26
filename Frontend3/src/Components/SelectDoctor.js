@@ -26,14 +26,14 @@ const SelectDoctor = (props) => {
     const [date, setDate] = useState('');
     const [req, setReq] = useState('');
     const [btnn, setbtnn] = useState(true);
- 
+
     const history = useHistory();
     const patient = localStorage.getItem('p_name');
     const email = localStorage.getItem('email');
 
-    
+
     const Handleclick = (name) => {
-        console.log("dscs" + name )
+        console.log("dscs" + name)
         // console.log("name " +name )
 
         setDname(name); setActive("True");
@@ -45,30 +45,72 @@ const SelectDoctor = (props) => {
     }
     const hanldeSubmit = () => {
         // alert("in")
-       
-        setbtnn(false)
+
+        // setbtnn(false)
         if (value !== '' && date !== '' && patient !== '') {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 2).padStart(2, '0');
+            var yyyy = today.getFullYear();
 
-            axios.post('http://localhost:5000/request/new_req', {
 
-                patient: patient,
-                doctor: dname,
-                doctoremail:demail,
-                date: date,
-                time: value,
-                status: "pending",
-                email: email,
-            })
-                .then(function (response) {
-                    console.log(response);
-                    alert("Your request is submited you will soon got email of confirmation");
-                   
+            // var dd = 17 ;
+            // var mm = 08;
+            // var yyyy = 2021 ;
+
+            const Todayis = yyyy + '-' + mm + '-' + dd;
+
+
+
+            console.log(Todayis)
+            console.log(date)
+            if ( date == Todayis){
+
+                axios.post('http://localhost:5000/request/new_req', {
+
+                    patient: patient,
+                    doctor: dname,
+                    doctoremail:demail,
+                    date: date,
+                    time: value,
+                    status: "pending",
+                    email: email,
+                    Todayis:Todayis,
                 })
-                .catch(function (error) {
+                    .then(function (response) {
+                        console.log(response);
+                        alert("Your request is submited you will soon got email of confirmation");
 
-                    alert(error)
+                    })
+                    .catch(function (error) {
 
-                })
+                        alert(error)
+
+                    })
+            }
+            else{alert("select upcoming date")}
+
+
+            // axios.post('http://localhost:5000/request/new_req', {
+
+            //     patient: patient,
+            //     doctor: dname,
+            //     doctoremail:demail,
+            //     date: date,
+            //     time: value,
+            //     status: "pending",
+            //     email: email,
+            // })
+            //     .then(function (response) {
+            //         console.log(response);
+            //         alert("Your request is submited you will soon got email of confirmation");
+
+            //     })
+            //     .catch(function (error) {
+
+            //         alert(error)
+
+            //     })
         }
 
 
@@ -83,7 +125,7 @@ const SelectDoctor = (props) => {
 
     // console.log(location.state.name);
     const spe = props.location.state.state.name;
-    
+
     useEffect(() => {
         axios.get(`http://localhost:5000/doctor/getspecialist/${spe}`)
             .then((Response) => {
@@ -157,11 +199,12 @@ const SelectDoctor = (props) => {
                                 </Radio.Group>
 
                             </div>
-                                 {btnn === true && <> <div className="Con_btn">
+                            {btnn === true && <> <div className="Con_btn">
                                 <button onClick={hanldeSubmit}>confirm</button>
-                                       </div></>}
+                            </div></>}
+                            
                             {btnn === false && <>
-                                <div style={{margin:"5px"}}  className="pay_btn">
+                                <div style={{ margin: "5px" }} className="pay_btn">
                                     <Payment />
                                 </div></>}
                         </div>
@@ -201,12 +244,12 @@ const SelectDoctor = (props) => {
 
                             <div className="btn">
                                 <Button size="small" onClick={() => {
-                                 setDname(data.name)
+                                    setDname(data.name)
                                     setDemail(data.email)
                                     setActive("True")
-                                } }
-                                    
-                                    >CONFIRMED DOCTOR</Button>
+                                }}
+
+                                >CONFIRMED DOCTOR</Button>
 
                             </div>
                         </div>

@@ -3,7 +3,7 @@ import Dashboard from "./Components/Dashboard";
 import LoginPage from "./Components/LoginPage";
 import SignupPage from "./Components/SignupPage";
 import Viewdept from "./Components/Viewdept";
-
+import 'antd/dist/antd.css';
 import SelectDoctor from "./Components/SelectDoctor";
 import updateProfile from "./Components/updateProfile";
 import About from "./Components/About";

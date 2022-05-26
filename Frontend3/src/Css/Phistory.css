@@ -293,7 +293,7 @@ background-color: aliceblue;
   height: 40px;
   width: 120px;
   border-radius: 20px;
-font-weight: bold;
+font-size: 17px;
   border: #176cbb;
   margin-top: 30px;
   box-shadow: rgba(73, 73, 219, 0.589) 0px 13px 27px -5px, rgba(20, 92, 224, 0.863) 0px 8px 16px -8px;
@@ -301,6 +301,6 @@ font-weight: bold;
 .usercard button:hover{
   background-color: #377adf;
   color: aliceblue;
-  font-weight:bolder;
+  font-weight:lighter;
   box-shadow: rgba(50, 50, 93, 0.726) 0px 13px 27px -5px, rgba(0, 0, 0, 0.479) 0px 8px 16px -8px;
 }

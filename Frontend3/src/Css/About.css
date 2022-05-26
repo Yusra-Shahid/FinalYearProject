@@ -90,7 +90,7 @@
   display: flex; 
   grid-column-gap: 10px;
   padding: 10px;
-  height: 560px !important;
+  height: 620px !important;
   width: 95%;
   margin-left: 25px;
   }
@@ -98,22 +98,24 @@
     width: 300px;
     height: 50px;
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 70px;
     border-radius: 10Px;
-    padding-bottom: 10px;
+   
     background-color: rgb(61, 144, 221);
   }
   .our-purpose h1{
     font-style:italic;
     color: white;
     margin-left: 30px;
-    
+   padding-top: 5px;
   }
   .pupose-txt{
     width: 650px;
     height: 500px;
     animation:pupose-txt 6s ease-out 1s;
-    font-size: larger;}
+    margin-top: 50px;
+    font-size: larger;
+  }
   .about-pic{
     width: 650px;
     height: 565px;
@@ -132,7 +134,7 @@
     display: flex; 
     grid-column-gap: 10px;
     padding: 10px;
-    height: 600px;
+    height: 620px;
     width: 95%;
     margin-left: 25px;
 }
@@ -196,7 +198,7 @@ video{
     display: flex; 
     grid-column-gap: 10px;
     padding: 10px;
-    height: 600px;
+    height: 620px;
     width: 95%;
     margin-left: 25px;
  }

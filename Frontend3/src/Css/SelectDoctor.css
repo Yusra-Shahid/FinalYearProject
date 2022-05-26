@@ -38,8 +38,8 @@
     position: relative;
     margin-left: 10vh;
     margin-top: 15vh;
-    width: 280px;
-    height: 187px;
+    width: 371px;
+    height: 291px;
     border-radius: 10px;
    background-color: rgb(103, 169, 223);
    padding: 30px 50px;
@@ -62,7 +62,7 @@
    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .cardcontainer1:hover {
-    height: 500px;
+    height: 5290px;
 }
 .cardcontainer1:hover > .content{
     opacity: 1;
@@ -92,7 +92,7 @@
 }
 
 .cardcontainer:hover {
-    height: 300px;
+    height: 380px;
 }
 .cardcontainer:hover > .content{
     opacity: 1;
@@ -107,9 +107,9 @@
 }
 
 .docimg{ 
-   margin-left: 12px;
-    width: 90%;
-    height: 84%;
+   margin-left: 9px;
+    width: 91%;
+    height: 81%;
     position: relative;
     transform: translateY(-80px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -126,6 +126,8 @@ border-radius: 10px;
     transform: translateY(-340spx);
     opacity: 0;
     transition: 0.3s;
+    margin-top: 27px;
+
 }
 .content p{
  color: rgb(253, 253, 253);

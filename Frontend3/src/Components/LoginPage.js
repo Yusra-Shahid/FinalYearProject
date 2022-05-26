@@ -57,7 +57,7 @@ function LoginPage() {
             }
           }
           else {
-            alert("you enter Wrong password")
+            message.error("you enter Wrong password")
           }
 
         })

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Chart from "react-apexcharts";
 
 class Grapy extends Component {
+  
   constructor(props) {
     super(props);
 
@@ -13,7 +14,7 @@ class Grapy extends Component {
         },
         xaxis: {
        
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+            categories: ["Orthopaedics","Gynaecology and Obstetrics", "Chest and Vascular", "Dermatology", "Psychiatry"]
         }
         // xaxis: {
         //   labels: {
@@ -26,11 +27,32 @@ class Grapy extends Component {
       series: [
         {
           name: "series-1",
-          data: [30, 40, 45, 50, 49, 60, 70, 91]
+          data: [30, 40, 45, 50,67]
         }
       ]
     };
   }
+
+
+  // useEffect(() => { 
+
+
+  //   axios.get(`http://localhost:5000/user/getdoctors`)
+  //   .then((Response) => {
+  //       setdocdoctors(Response.data)
+  //       console.log(Response.data);
+  //       // if (Response.data.length === 0) {
+  //       //     alert("No doctor avaliable please visit later");
+  //       //     history.push("/");
+  //       // }
+  //   })
+  //   .catch((error) => {
+  //       console.log(error)
+  //   })
+
+
+  //   }, []);
+
 
   render() {
     return (

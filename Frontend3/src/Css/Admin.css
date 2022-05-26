@@ -86,7 +86,8 @@ gap: 10px;
 .dr-icon p {
     font-weight: lighter;
     padding-left: 13px;
-    font-size: larger;
+    font-size: 25px;
+    padding-top: 10px;
 
 }
 
@@ -110,6 +111,7 @@ gap: 10px;
     height: 20px;
     justify-content: center;
     display: flex;
+    margin-top: 12px;
 }
 .Pt-icon{
     width: 100%;
@@ -122,6 +124,7 @@ gap: 10px;
     
     width: 100%;
     height: 20px;
+    margin-top: 12px;
     justify-content: center;
     display: flex;
 }
@@ -134,9 +137,12 @@ gap: 10px;
     padding-bottom: 60px;
 }
 .Pt-icon p {
+ 
     font-weight: lighter;
     padding-left: 13px;
-    font-size: larger;
+    font-size: 25px;
+    padding-top: 10px;
+
 }
 .pt-countor p {
 
@@ -201,6 +207,7 @@ box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.2
     width: 100%;
     height: 20px;
     justify-content: center;
+    margin-top: 12px;
     display: flex;
 }
 .exer-countor {
@@ -214,7 +221,8 @@ box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.2
 .exer-icon p {
     font-weight: lighter;
     padding-left: 13px;
-    font-size: larger;
+    font-size: 25px;
+    padding-top: 0px;
 }
 .exer-countor p {
 
@@ -288,7 +296,7 @@ background-color: #176cbb;
 }
 .dr-inner-img{
     width: 90%;
-    height: 60%;
+    height: 70%;
     background-color: #b7cee3;
     justify-content:center;
     display: flex;
@@ -301,18 +309,22 @@ background-color: #176cbb;
 }
 .dr-inner-content{
     width: 90%;
-    height: 28%;
+    height: 15%;
     background-color:transparent;
     justify-content:center;
+    margin-top: -60px;
     display: flex;
     margin-left: 12px;
-    margin-top: 12px;
+
+
 }
 .dr-inner-content p{
     font-weight: bolder;
     justify-content: center;
 display: flex;
 align-content: center;
+padding-top: 6px;
+font-size: 18px;
 }
 
 .lift-side{
@@ -380,7 +392,7 @@ gap: 10px;
 .Pt-table{
     width: 700px;
     height: 510px;
-    background-color: aliceblue;
+    background-color: rgb(144, 171, 195);
     flex-direction:column;
     display: flex;
     overflow-y: scroll;
@@ -405,6 +417,8 @@ gap: 10px;
  margin-left: 15px;
  font-weight: bold;
  margin-right: 15px;
+
+ padding-top: 15px;
 }
 .table-row{
     width: fit-content;
@@ -419,6 +433,7 @@ gap: 10px;
 .table-row p{
     margin-left: 15px;
     
+    padding-top: 15px;
     margin-right: 15px;
    }
    .table-row div{
@@ -436,7 +451,8 @@ padding-left: 30px;
 .table-text p{
     font-style: normal;
     font-weight: bolder;
-    font-size: larger;
+    font-size: 20px;
+    margin-top: 30px;
 }
 .search-field{
     width: 500px;

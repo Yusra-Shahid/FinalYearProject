@@ -9,8 +9,8 @@ const router = express.Router();
 router.post('/appp', async (req, res) => {
 
     console.log(req.body)
-    let user = await Request.find({ email : req.body.email });
-res.send(user)
+    let user = await Request.find({ email: req.body.email });
+    res.send(user)
 
 
 })
@@ -20,19 +20,22 @@ router.post('/dappp', async (req, res) => {
 
     console.log(req.body)
 
-    let user = await Request.find({ doctoremail : req.body.email });
-res.send(user)
+    let user = await Request.find({ doctoremail: req.body.email });
+    res.send(user)
 
 
 })
 
 router.post('/new_req', async (req, res) => {
 
-console.log(req.body)
-    let user = await Request.findOne({doctoremail: req.body.doctoremail, patient: req.body.patient, doctor: req.body.doctor, Date: req.body.date, Time: req.body.time, statu: "pending" , email : req.body.email });
+    console.log(req.body)
+    let user = await Request.findOne({ doctoremail: req.body.doctoremail, doctor: req.body.doctor, Date: req.body.date, Time: req.body.time, statu: "pending", email: req.body.email });
     if (user) {
-        return res.status(400).send('Request Already Done');
-    }
+        return res.status(400).send('slot not avaiable');
+    }else {
+
+
+
 
     user = new Request({
         patient: req.body.patient,
@@ -80,7 +83,7 @@ console.log(req.body)
     }
     else {
         return res.status(400).send('Request Not Done');
-    }
+    }}
 
 })
 

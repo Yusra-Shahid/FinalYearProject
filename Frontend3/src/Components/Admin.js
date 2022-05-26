@@ -10,6 +10,7 @@ import { MdOutlinePersonSearch } from "react-icons/md";
 import Grapy from "./ButtonComponent/Graph";
 import Carousel from "react-elastic-carousel";
 import axios from 'axios';
+import { FaBriefcaseMedical,FaVials } from "react-icons/fa";
 
 
 const breakPoints = [
@@ -132,11 +133,11 @@ export default function Admin() {
 
                     <div className="sub-categies3">
                         <div className="Pt-icon">
-                            <HiUserGroup style={{ height: 50, width: 50, color: "#176cbb" }} />
+                            <FaBriefcaseMedical style={{ height: 45, width: 45, color: "#176cbb" }} />
                             <p>Phymacies</p>
                         </div>
                         <div className="dash-Line">
-                            <p>------------------------</p>
+                            <p>-------------------------------</p>
                         </div>
                         <div className="pt-countor">
                             <p>435</p>
@@ -145,11 +146,11 @@ export default function Admin() {
 
                     <div className="sub-categies4">
                         <div className="exer-icon">
-                            <HiUserGroup style={{ height: 50, width: 50, color: "#176cbb" }} />
-                            <p>Exercise Trainers</p>
+                            <FaVials style={{ height: 50, width: 50, color: "#176cbb" }} />
+                            <p>Laboratory</p>
                         </div>
                         <div className="exer-Line">
-                            <p>------------------------</p>
+                            <p>---------------------------------</p>
                         </div>
                         <div className="exer-countor">
                             <p>435</p>
@@ -245,7 +246,9 @@ export default function Admin() {
                         {doctors.map((data) => (
                             <div className="dr-1">
                                 <div >
-                                    <img className="dr-inner-img" width="100%" src={data.imgurl}/>
+                                    <img className="dr-inner-img" width="100%"  src="http://themeatelier.net/site-templates/clinica/img/doctors/detail-doctor.jpg"
+                                    // src={data.imgurl}
+                                    />
                                 </div>
                                 <div className="dr-inner-content">
                                     <p>Dr. {data.name}

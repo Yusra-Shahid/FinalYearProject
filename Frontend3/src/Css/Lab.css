@@ -17,8 +17,9 @@ gap: 30px;
     height: 600px;
     background-color: rgba(188, 188, 214, 0.534);
     flex-direction: row;
-    background-image: url("https://www.randoxbiosciences.com/wp-content/uploads/2018/11/Left-Clinical-Laboratory.gif");
-    /* background-size: cover; */
+    /* background-image: url("https://www.randoxbiosciences.com/wp-content/uploads/2018/11/Left-Clinical-Laboratory.gif"); */
+    background-size: cover;
+    background-image: url("https://media.istockphoto.com/photos/abstract-blue-cyan-background-picture-id995719694?k=20&m=995719694&s=612x612&w=0&h=zI2SFqWdZallvqgVphnq5T8ZWYK0TBIkKdyYP60JAI8=");
     justify-content: center;
     display: flex;
     gap: 30px;
@@ -40,9 +41,9 @@ gap: 30px;
 }
 .lab-img-2{
     width: 300px;
-    height: 200px;
+    height: 260px;
     margin-left: 400px !important;
-    margin-top: 45% !important;
+    margin-top: 43% !important;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -52,15 +53,19 @@ gap: 30px;
    
 }
 .lab-img-2 h21{
-    font-size: larger;
+    font-size: 20px;
     font-weight: bold;
     color:cornflowerblue;
+    padding-top: 25px;
+}
+.lab-img-2 p{
+font-size: 17px;
 }
 .lab-img-3{
     width: 400px;
     height: 220px;
     background-color: aqua;  
-   margin-top: 100px;
+   margin-top: 90px;
 display: flex;
 margin-right: 20px;
 justify-content: center;
@@ -68,5 +73,46 @@ background-image: url("https://i.pinimg.com/originals/c2/90/97/c29097087f7feb46e
 background-size:cover ;
 }
 
+.age-lab-content{
+    width: 45%;
+    height: 95%;
+   
+    margin-top: 10px;
+    padding-top: 90px;
+}
+.age-lab-content p{
+    font-size: 18px;
+   
+}
+.age-lab-content h23{
+    font-size: 22px;
+    font-weight: bolder;
+    font-style: italic;
+ 
+}
+.age-lab-content input{
+    width: 140px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    color:black;
+    background-color:#91bfeb;
+    box-shadow: 0 8px 8px -4px rgb(59, 87, 185);
+}
+.age-lab-content input:hover{
+    background-color:#176cbb;
+color: white;
+box-shadow: 0 8px 6px -6px black;
+}
+.age-lab-image{
+    width: 45%;
+    height: 90%;
+    margin-top: 10px;
+    padding-right: 20px;
+   /* image-rendering: pixelated; */
+}
+.age-lab-image img{
+    margin-top: 50px;
+}
 
 

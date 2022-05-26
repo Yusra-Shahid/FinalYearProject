@@ -54,6 +54,9 @@ const userSchema = new mongoose.Schema({
     },
     otp:{
         type: String,
+    },
+    online:{
+        type: String,
     }
     // m_time: {
     //     type: String,
