@@ -49,15 +49,16 @@
     margin-bottom: 3vh;
   }
   .logo {
-      height:12vh;
+      height:7vh;
       width:16%;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 5px;
   }
   .logo img{
-      height:10vh;
-      width:80%;
+      height:6vh;
+      width: 78%;
   }
   .menu{
     height:10vh;

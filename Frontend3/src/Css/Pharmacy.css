@@ -1,0 +1,68 @@
+.pharmacy-head{
+    width: 1450px;
+    height: 600px;
+    background-color: rgba(188, 188, 214, 0.534);
+    flex-direction: row;
+    /* background-image: url("https://www.randoxbiosciences.com/wp-content/uploads/2018/11/Left-Clinical-Laboratory.gif"); */
+    background-size: cover;
+    background-image: url("https://media.istockphoto.com/photos/abstract-blue-cyan-background-picture-id995719694?k=20&m=995719694&s=612x612&w=0&h=zI2SFqWdZallvqgVphnq5T8ZWYK0TBIkKdyYP60JAI8=");
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    border-radius: 5px;
+    /* margin: 5px; */
+    margin-left: 15px;
+    margin-right: 5spx;
+    padding-top: 12px;
+    padding-left: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.phar-head{
+    width: 35%;
+    height: 80%;
+    /* background-color: rgba(150, 226, 236, 0.677); */
+    margin-top: 3%;
+    /* border-radius: 10% 30% 50% 70%; */
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+}
+.phar-head h23{
+font-size:xX-large;
+color: black;
+font-weight: bolder;
+/* padding-top: 100px; */
+animation-duration: 3s;
+animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+.phar-head-para{
+    width: 500px;
+    height: 100px;
+    /* background-color: antiquewhite; */
+    font-weight:bold;
+    font-size: large;
+}
+.phar-head-para p{
+    color: rgb(60, 154, 226);
+}
+.phar-head-img{
+    width: 45%;
+    height: 80%;
+    /* background-color: rgb(189, 227, 249); */
+    margin-top: 3%;
+
+   
+}

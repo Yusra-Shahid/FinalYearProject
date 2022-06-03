@@ -19,6 +19,7 @@ import Lab from "./Components/Lab";
 import Stretching from "./Components/Stretching";
 import Areobic from "./Components/Areobic";
 import comments from "./Components/Comment";
+import Pharmacy from "./Components/Pharmcy";
 
 
 //import Logout from './Components/logout';
@@ -46,7 +47,7 @@ function App() {
         <Route exact path= "/comments" component={comments}/>
         <Route exact path= "/Admin" component={Admin}/>
         <Route exact path= "/Lab" component={Lab}/>
-       
+        <Route exact path= "/Pharmacy" component={Pharmacy}/>
         
       
     

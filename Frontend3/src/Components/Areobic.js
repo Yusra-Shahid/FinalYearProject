@@ -10,19 +10,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ExMainPage from "./ExMainPage";
 import ImgMediaCard from "./ButtonComponent/View";
- import Aero1 from "../Images/Aero1.mp4";
-  import areo2 from "../Images/areo2.mp4";
- import videoBg from "../Images/videoBg.mp4";
-
-
+import Aero1 from "../Images/Aero1.mp4";
+import areo2 from "../Images/areo2.mp4";
+import videoBg from "../Images/videoBg.mp4";
 
     const Videosrc0= videoBg
     const Videosrc1 = Aero1;
     const Videosrc2 = areo2;
 
 export class Areobic extends Component {
-
-    
 
     render() {
         return (<><Layout>
@@ -72,7 +68,7 @@ export class Areobic extends Component {
                                     </div>
                                
 
-                            </Card>
+                            </Card>z
                         </div>
                         </div>
                     </div>

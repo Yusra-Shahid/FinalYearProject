@@ -49,14 +49,27 @@ gap: 30px;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: rgb(185, 198, 236);
-   
+    background-color: rgba(146, 180, 222, 0.911);
+    border-radius: 50% 20% / 10% 40%;
 }
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 .lab-img-2 h21{
     font-size: 20px;
     font-weight: bold;
-    color:cornflowerblue;
+    color:white;
     padding-top: 25px;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 .lab-img-2 p{
 font-size: 17px;

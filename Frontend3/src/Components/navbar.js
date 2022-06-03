@@ -74,6 +74,20 @@ function Navbar() {
                     
                     
                     </>}
+
+                    {usertype == "patient" && <>
+                    
+                    <div className={"navigation"}>
+                        <Link
+                            to="/Pharmacy"
+                            style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
+                            <p style={{ fontSize: "18px" }}>Pharmacy</p>
+                        </Link>
+                    </div>
+                    
+                    
+                    </>}
+
                     {usertype == "patient" && <>
                     
                     <div className={"navigation"}>

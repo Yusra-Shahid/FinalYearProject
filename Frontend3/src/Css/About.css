@@ -24,15 +24,16 @@
     margin:0 auto;
   }
   .logo {
-    height:10vh;
-    width:16%;
+    height:9vh;
+    width:15%;
     display: flex;
     align-items: center;
     justify-content: center;
+  
 }
 .logo img{
-    height:18vh;
-    width:83%;
+    height:9vh;
+    width:78%;
 }
 .menuAbout{
   height:10vh;
