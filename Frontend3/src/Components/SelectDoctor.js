@@ -150,6 +150,7 @@ const SelectDoctor = (props) => {
         <>  <Navbar />
             {active === "True" &&
                 <div className="popup">
+
                     <div className="popinfo">
 
                         <div className="popdays">
@@ -199,6 +200,18 @@ const SelectDoctor = (props) => {
                                 </Radio.Group>
 
                             </div>
+                            <div className="afternoon">
+                                <p>evening timing</p>
+                                <Radio.Group onChange={onChange} value={value}>
+                                    <Radio value={"4:00PM"}>4:00 PM</Radio>
+                                    <Radio value={"4:30PM"}>4:30 PM</Radio>
+                                    <Radio value={"5:00AM"}>5:00 PM</Radio>
+                                    <Radio value={"5:30AM"}>5:30 PM</Radio>
+                                </Radio.Group>
+
+                            </div>
+                       
+
                             {btnn === true && <> <div className="Con_btn">
                                 <button onClick={hanldeSubmit}>confirm</button>
                             </div></>}

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Css/Pharmacy.css";
 import { Layout } from "antd";
 import { Footer } from "antd/lib/layout/layout";
-
+import store1 from '../Images/store1.JPG';
 import Navbar from "./navbar";
 
 import Button from '@mui/material/Button';
@@ -29,9 +29,20 @@ You can easily order your medicines online. Be a part of this project and explor
                     <img src="https://www.vyrazu.com/wp-content/uploads/2021/10/Banner-for-Pharmacy-1-1.svg"/>
                 </div>
             </div>
-            <div className="lab-head"></div>
-            <div className="lab-head"></div>
-            <div className="lab-head"></div>
+            <div className="pharmacy-head">
+                <div className="Pharma-1">
+                    <h24>Medicalstore</h24>
+                    <p>Online Medical Store Pakistan is committed to deliver its customers the very best prices on the best brands and original medicines in Karachi, Pakistan. We are committed to provide the best pharmacy service online. Like Online Medical Store no other online pharmacy in Pakistan can match our level of customer service, and industry-only policies including medicine request for non-available products, free delivery on orders above 3000 and price guarantee</p>
+                    <form action="https://medicalstore.com.pk/">
+                            <input type="submit" value="Browse pharmacy" />
+                        </form>
+                </div>
+                <div className="Pharma-2">
+                <img src={store1} />
+                </div>
+            </div>
+            <div className="pharmacy-head"></div>
+            <div className="pharmacy-head"></div>
             
     
             </div>

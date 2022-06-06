@@ -196,7 +196,7 @@ color: aliceblue;
 }
 .leftcard-scroll{
   width: 99%;
-  height: 80%;
+  height: 83%;
   border-bottom-left-radius: 50px;
   position:relative;
   align-items: center;
@@ -211,7 +211,7 @@ background-color: aliceblue;
 }
 .appDetails{
     width: 90%;
-    height: 100px;
+    height: 120px;
     background-color:#a2bfdb;
     margin-top: 20px;
     display: flex;
@@ -220,7 +220,42 @@ background-color: aliceblue;
     border-top-right-radius:150px ;
     border-bottom-right-radius:150px ;
     
-}
+    }
+    .appDetails:hover{
+      -webkit-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    } 
+    @-webkit-keyframes shadow-drop-2-center {
+      0% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+      100% {
+        -webkit-transform: translateZ(50px);
+                transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+      }
+    }
+    @keyframes shadow-drop-2-center {
+      0% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+      100% {
+        -webkit-transform: translateZ(50px);
+                transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+      }
+    }
+    
+    
 .appDetails a{
     font-size: medium;
     color: black;

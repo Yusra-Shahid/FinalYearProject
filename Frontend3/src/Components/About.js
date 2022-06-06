@@ -98,9 +98,9 @@ easy access to the professionals. Get the exact service as prescribed no need to
                                     <br />
                                     <p>We are provide multiple field online consultation that are </p>
                                     <br />
-                                    <br />
-                                    <br />
-                                    <br />
+                                   
+                                    
+                                    
                                     <FcFinePrint style={{ height: 60, width: 60 }} />
                                     <h18>Career </h18>
                                     <p>In pakistan 77% women doesn't able to continue their practices in medical after the married this is the platform where everyone can practice </p>
