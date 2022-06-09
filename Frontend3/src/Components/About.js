@@ -6,14 +6,13 @@ import Navbar from "./navbar";
 import CustomizedTimeline from "./ButtonComponent/Process"
 import { FcServices, FcFinePrint, FcHome,FcDisclaimer } from "react-icons/fc";
 import { Comment } from "antd";
+import Chatbot from '../Components/Chatbot';
+import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 //import comments from "../Components/Comment";
 
 import { SiFacebook, SiLinkedin, SiTwitter, SiInstagram } from "react-icons/si";
 
-// import { red } from "@mui/material/colors";
-// import FullWidthTabs from "./ButtonComponent/Abouthai.js"
-// import { AiFillFacebook , AiFillTwitterCircle , AiFillInstagram} from "react-icons/ai";
-// import CloseButton from 'react-bootstrap/CloseButton'
 
 export class About extends Component {
     render() {
@@ -127,6 +126,10 @@ easy access to the professionals. Get the exact service as prescribed no need to
                                 <p>Twitter </p>
                                 <SiFacebook style={{ height: 40, width: 40, color: "rgb(52, 91, 218)" }} />
                                 <p>Facebook</p>
+                                <Link to="/Chatbot">
+                        <Button onclick="contained">BROWSE VIDEOS</Button>
+                    </Link>
+               
                             </div>
                         </div>
                     </div>
