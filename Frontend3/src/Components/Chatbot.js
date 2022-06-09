@@ -186,8 +186,9 @@ function Chatbot() {
                 </div>
                 <div className="btn_chat">
                   <button onClick={handleInput_chat}>
-                    <i className="FaPaperPlane"></i>
-                    Send
+                    <FaPaperPlane />
+          
+                    -Send
                   </button>
                 </div>
             </div>
