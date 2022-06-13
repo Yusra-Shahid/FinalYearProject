@@ -127,7 +127,7 @@ console.log(user)
         });
 
         const data = {
-            from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+            from: '"I-MEDCARE"<yusrashahid2019@gmail.com>',
             to: req.body.email,
             subject: "Request Accepted",
 

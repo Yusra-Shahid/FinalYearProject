@@ -2,6 +2,8 @@ import bot from '../Images/bot.jpg';
 import '../Css/Chatbot.css';
 import { FaPaperPlane } from "react-icons/fa";
 import { useState} from 'react';
+import { DatePicker } from "antd";
+
 
 function Chatbot() {
   const date = new Date();
@@ -12,11 +14,14 @@ function Chatbot() {
   const month = date.getMonth();
   const year = date.getFullYear();
 
+
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const [time, setTime] = useState(`${hours}:${minutes}:${seconds}`); //using the useState hook to get the data from the local time and set it to the time variable
   const [dateTime, setDateTime] = useState(`${days[day]}, ${day} ${months[month]} ${year}`); //using the useState hook to get the data from the local date and set it to the dateTime variable
   // console.log(dateTime);
+
+
 
   const checkStatus = (e) => {
     let isActive = true;
@@ -35,6 +40,7 @@ function Chatbot() {
   const handleInput_chat = () => {
     const botMessage = document.querySelector('#message1_chat');
     const humanMessage = document.querySelector('#message2_chat');
+    
     
     let badwords = ['fuck|bad|stupid|useless|bitch|crazy|nonsense'] //adding the bad words
     let words = new RegExp(badwords);
@@ -160,11 +166,13 @@ function Chatbot() {
   }
   return (
     <div className="Chatbot" onLoad={checkStatus}>
+    
       <div className="wrapper">
         <div className="content_chat">
           <div className="header_chat">
             <div className="img_chat">
-              <img src={bot} alt="" />
+              {/* <img src={bot} alt="" /> */}
+              <img src="https://assets.materialup.com/uploads/9ef4bffd-1148-4183-bed4-8e37f7bf96eb/preview.gif"/>
             </div>
             <div className="right_chat">
               <div className="name_chat">I-MedCare</div>

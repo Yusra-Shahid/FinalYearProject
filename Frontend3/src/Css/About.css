@@ -384,7 +384,11 @@ video{
  .servicesbox{
    margin-top: 10vh;
    margin-left: 10vh;
+
+    
  }
+
+ 
  .servicesbox img{
    range:cover;
  }

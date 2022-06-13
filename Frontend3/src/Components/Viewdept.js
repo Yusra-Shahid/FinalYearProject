@@ -18,7 +18,8 @@ const Viewdept = () => {
     }
     return (
 
-        <>  <Navbar />
+        <> 
+         <Navbar />
             <div className="deptpage">
                 <div className="margin"></div>
                 <div className=" cardContainer ">
