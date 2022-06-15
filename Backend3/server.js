@@ -4,12 +4,15 @@ const mongoose = require("mongoose");
 const appointment = require('./routes/appointments');
 const doctor = require('./routes/doctors');
 const user = require("./routes/users");
-
+const app = require("express")();
+const server = require("http").createServer(app);
 const cors = require('cors');//intergation not found
 const request = require("./routes/requests");
 const fileupload = require("express-fileupload");
+// const app = require("express")();
 const multer = require('multer');
-const app = express();
+const { Server } = require("socket.io");
+// const app = express();
 app.use(express.json());
 app.options('*', cors());
 app.use(cors());
@@ -56,5 +59,29 @@ app.use('/request', request)
 app.get('/', (req, res) => {
     res.send("welcome")
 })
-const port = 5000;
-app.listen(port, () => console.log(`listening port ${port}`));
+
+const io = require("socket.io")(Server, {
+	cors: {
+		origin: "*",
+		methods: [ "GET", "POST" ]
+	}
+});
+// io.on("connection", (socket) => {
+// 	socket.emit("me", socket.id);
+
+// 	socket.on("disconnect", () => {
+// 		socket.broadcast.emit("callEnded")
+// 	});
+
+// 	socket.on("callUser", ({ userToCall, signalData, from, name }) => {
+// 		io.to(userToCall).emit("callUser", { signal: signalData, from, name });
+// 	});
+
+// 	socket.on("answerCall", (data) => {
+// 		io.to(data.to).emit("callAccepted", data.signal)
+// 	});
+// });
+// const PORT = 5000;
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+// server.listen(port, () => console.log(`listening port ${port}`));
