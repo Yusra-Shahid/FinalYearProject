@@ -75,10 +75,10 @@
     width: 98%;
     margin-bottom: 15px;
     height: 180px;
-    /* background-color: whitesmoke; */
+    background-color: rgba(49, 133, 235, 0.937);
     border-top-left-radius: 30px; 
     border-bottom-right-radius: 30px;
-    box-shadow: rgba(32, 28, 238, 0.548) 6px 2px 16px 0px, rgba(128, 125, 125, 0.486) -6px -2px 16px 0px;
+    box-shadow: rgba(125, 124, 188, 0.548) 6px 2px 16px 0px, rgba(128, 125, 125, 0.486) -6px -2px 16px 0px;
 }
 .viewPatientName{
     width: 800px;

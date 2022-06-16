@@ -25,7 +25,7 @@ function Navbar() {
                         <Link
                             to="/"
                             style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                            <p style={{ fontSize: "18px" }}>HOME</p>
+                            <p style={{ fontSize: "18px" }}>Home</p>
                         </Link>
                     </div>
                     </>}
@@ -168,7 +168,7 @@ function Navbar() {
                             <Link
                                 to="/signuppage"
                                 style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                                <p style={{ fontSize: "18px" }}>SIGNUP</p>
+                                <p style={{ fontSize: "18px" }}>Signup</p>
                             </Link>
                         </div>
                     }
@@ -180,7 +180,7 @@ function Navbar() {
                             <Link
                                 to="/loginpage"
                                 style={{ textDecoration: "none", color: "rgb(247, 242, 242)" }}>
-                                <p style={{ fontSize: "18px" }}>LOGIN</p>
+                                <p style={{ fontSize: "18px" }}>Login</p>
                             </Link>
                         </div>
                     }
