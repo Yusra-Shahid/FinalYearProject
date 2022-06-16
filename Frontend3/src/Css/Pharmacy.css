@@ -157,6 +157,6 @@ box-shadow: 0 8px 6px -6px black;
 .Pharma-2{
     width: 45%;
     height: 50%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin-top: 7%;
 }
