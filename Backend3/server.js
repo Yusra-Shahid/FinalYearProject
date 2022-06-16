@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
     res.send("welcome")
 })
 
-const io = require("socket.io")(Server, {
+const io = require("socket.io")(server, {
 	cors: {
 		origin: "*",
 		methods: [ "GET", "POST" ]

@@ -34,14 +34,14 @@ function App() {
 
     <Router>
       <div className="chat_bot_space"><FaCommentDots onClick={Handleclick}
-        style={{ height: 50, width: 50, color: "#176cbb",zIndex: "100", position: "fixed", marginTop: "600", marginLeft: "1550" }} /></div>
+        style={{ height: 50, width: 50, color: "#176cbb",zIndex: "100", position: "fixed", marginTop: "660px", marginLeft: "1400px" }} /></div>
       {active === true && <> <div className="char_box_open"
-        style={{ zIndex: "50", position: "fixed", top: "200px", left: "1100px", display: "flex" }}>
+        style={{ zIndex: "50", position: "fixed", top: "250px", left: "950px", display: "flex" }}>
         <Chatbot />
-        {/* <div className="chat_close">
+        <div className="chat_close">
           <AiOutlineClose onClick={() => (setActive("false"))}
             style={{ height: 20, width: 20, color: "#176cbb)" }} />
-        </div> */}
+        </div>
       </div>  </>}
 
       <Switch>

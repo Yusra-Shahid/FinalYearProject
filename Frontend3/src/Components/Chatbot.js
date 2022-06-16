@@ -128,7 +128,7 @@ function Chatbot() {
     if(words8.test(document.querySelector('#input_chat').value)){
       botMessage.innerHTML = 'Typing...';
       setTimeout(() => {
-        botMessage.innerHTML = 'My name is Bot';
+        botMessage.innerHTML = 'I am asistant of I-MedCare..! how i help you? ';
         document.querySelector('#input_chat').value = '';
       }, 2000);
     }

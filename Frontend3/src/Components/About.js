@@ -4,7 +4,7 @@ import { Layout } from "antd";
 import { Footer } from "antd/lib/layout/layout";
 import Navbar from "./navbar";
 import CustomizedTimeline from "./ButtonComponent/Process"
-import { FcServices, FcFinePrint, FcHome,FcDisclaimer } from "react-icons/fc";
+import { FcServices, FcFinePrint, FcHome, FcDisclaimer } from "react-icons/fc";
 import { Comment } from "antd";
 import Chatbot from '../Components/Chatbot';
 import Button from '@mui/material/Button';
@@ -72,9 +72,9 @@ export class About extends Component {
                                         <h19>Stay Home Stay Fit</h19>
                                     </div>
 
-                                    
+
                                     <br />
-                                    <p> Our site hepls you to make yourself fit by provide Fitness tips and exercises </p>
+                                    <p> This platform hepls you to make yourself fit by providing Fitness and exercises tips as per needs.  </p>
 
 
                                     <div className="FcDisclaimer">
@@ -82,10 +82,10 @@ export class About extends Component {
                                         <h19>No Limitation</h19>
                                     </div>
 
-                                
+
                                     <br />
-                                    <p>no Limitation boundary, as we can reach out almost every doctor easily no need to travell city to city, country to country. 
-easy access to the professionals. Get the exact service as prescribed no need to rush. </p>
+                                    <p>no Limitation boundary, as we can reach out almost every doctor easily no need to travell city to city, country to country.
+                                        easy access to the professionals. Get the exact service as prescribed no need to rush. </p>
                                 </div>
                             </div>
                             <div className="leftbox">
@@ -95,14 +95,15 @@ easy access to the professionals. Get the exact service as prescribed no need to
 
                                     <h17>Services</h17>
                                     <br />
-                                    <p>We are provide multiple field online consultation that are </p>
+                                    <p>We provide multiple fields in online
+                                        consultation related to doctors as well as medicine. </p>
                                     <br />
-                                   
-                                    
-                                    
+
+
+
                                     <FcFinePrint style={{ height: 60, width: 60 }} />
                                     <h18>Career </h18>
-                                    <p>In pakistan 77% women doesn't able to continue their practices in medical after the married this is the platform where everyone can practice </p>
+                                    <p>Specifically focusing: In pakistan 77% women are not able to continue their practice in medical after they get married this platform provides the ease of practice in their desired Discipline/field. </p>
                                 </div>
                             </div>
                             <div className="centerbox">
@@ -114,9 +115,9 @@ easy access to the professionals. Get the exact service as prescribed no need to
                     <div className="item4">
                         <div className="contimage">
                             <img src="https://www.datocms-assets.com/53681/1631976983-contact-us-banner.jpeg" />
-                            
+
                             <div className="contactbox">
-                               <comments/>
+                                <comments />
                                 <h20>Follow Us :</h20>
                                 <SiInstagram style={{ height: 40, width: 40, color: "rgb(228, 81, 62)" }} />
                                 <p>Instagram</p>
@@ -126,10 +127,8 @@ easy access to the professionals. Get the exact service as prescribed no need to
                                 <p>Twitter </p>
                                 <SiFacebook style={{ height: 40, width: 40, color: "rgb(52, 91, 218)" }} />
                                 <p>Facebook</p>
-                                <Link to="/Chatbot">
-                        <Button onclick="contained">BROWSE VIDEOS</Button>
-                    </Link>
-               
+
+
                             </div>
                         </div>
                     </div>
