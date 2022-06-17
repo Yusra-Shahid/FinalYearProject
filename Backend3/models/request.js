@@ -28,10 +28,14 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    doctoremail:{
+    doctoremail: {
         type: String,
         require: true
     },
+    videocallID: {
+        type: String,
+    }
+
 
 })
 

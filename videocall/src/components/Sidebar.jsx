@@ -3,7 +3,8 @@ import { Button, TextField, Grid, Typography, Container, Paper } from '@material
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
-import axios from "axios"
+import axios from 'axios';
+
 import { SocketContext } from '../Context';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,17 +42,10 @@ const Sidebar = ({ children }) => {
   const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
-  const handleclick = async () => {
-    axios.post('http://localhost:5000/request/videocall', {
-      email: name,
-    }).then(function (response) {
-      console.log(response.data);
-      console.log(response.status);
-      console.log(response.statusText);
-      console.log(response.headers);
-      console.log(response.config);
-    })
-}
+  const handleclick = async () => { axios.post('http://localhost:5000/request/videocall', { email: name, videocallID: me }).then(function (value)
+  {
+    console.log(value);
+  }); };
   return (
     <Container className={classes.container}>
       <Paper elevation={10} className={classes.paper}>
