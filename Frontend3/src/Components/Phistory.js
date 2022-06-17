@@ -13,8 +13,7 @@ import { v4 as uuid } from 'uuid';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import Button from '@mui/material/Button';
 import { FaPhoneAlt } from "react-icons/fa";
-
-
+import { FcVideoCall } from "react-icons/fc";
 
 function Phistory() {
     const [profileupdate, setprofileupdate] = useState('false');
@@ -204,7 +203,10 @@ function Phistory() {
                                 <div>
                                     <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
                                     <DisabledByDefaultIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
-
+                                   <a href="http://localhost:3001/">
+                                   <FcVideoCall style={{ height: 30, width: 30 }} />
+                                   </a>
+                                   
                                 </div>
 
 

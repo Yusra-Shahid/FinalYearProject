@@ -8,7 +8,7 @@ import Footer from './footer';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-
+import { Link } from "react-router-dom";
 
 const ViewPatients = () => {
   const name = localStorage.getItem('p_name')
@@ -88,7 +88,12 @@ const ViewPatients = () => {
                 <p>appointment date :  {data.Date}<br></br>
                 appointment timing : {data.Time}</p>
               </div>
-              <Button className="contained">Call Patient</Button>
+          
+              <Button className="contained">
+              <a href="http://localhost:3001/">Call Patient</a>
+              </Button>
+             
+              
               <Button variant="contained">appointment done</Button>
               {/* <div className="viewcross">
                   <AiOutlineCloseCircle onClick
