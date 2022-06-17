@@ -22,7 +22,7 @@ import Areobic from "./Components/Areobic";
 import comments from "./Components/Comment";
 import Pharmacy from "./Components/Pharmcy";
 import Chatbot from "./Components/Chatbot";
-import Videocall from "./Components/Videocall";
+
 import { FaCommentDots } from 'react-icons/fa';
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -68,7 +68,7 @@ function App() {
         <Route exact path="/Lab" component={Lab} />
         <Route exact path="/Pharmacy" component={Pharmacy} />
         <Route exact path="/Chatbot" component={Chatbot} />
-        <Route exact path="/Videocall" component={Videocall} />
+      
 
 
         {/* <div className="chat_bot_space"><FaCommentDots style={{ height: 100, width: 100, color: "red",zIndex:"50",position:"fixed"}}/></div> */}
