@@ -3,7 +3,7 @@ import { Button, TextField, Grid, Typography, Container, Paper } from '@material
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
-import axios from 'axios';
+import fetch from 'fetch';
 
 import { SocketContext } from '../Context';
 
@@ -43,7 +43,7 @@ const Sidebar = ({ children }) => {
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
   const handleclick = async () => {
-    axios.post('http://localhost:5000/request/videocall', { appointID: name, videocallID: me }).then(function (value) {
+    fetch.post('http://localhost:5000/request/videocall', { appointID: name, videocallID: me }).then(function (value) {
       console.log(value);
     });
   };
