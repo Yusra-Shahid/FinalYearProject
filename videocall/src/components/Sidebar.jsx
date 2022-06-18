@@ -3,9 +3,9 @@ import { Button, TextField, Grid, Typography, Container, Paper } from '@material
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
-import fetch from 'fetch';
-
+import axios from 'axios';
 import { SocketContext } from '../Context';
+import './sidebar.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px 20px',
     border: '2px solid black',
   },
+  // patient_info: {
+  //   width: '30px',
+  //   height: '500px',
+  //   backgroundColor: 'red',
+  // },
 }));
 
 const Sidebar = ({ children }) => {
@@ -43,13 +48,8 @@ const Sidebar = ({ children }) => {
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
   const handleclick = async () => {
-<<<<<<< HEAD
-    fetch.post('http://localhost:5000/request/videocall', { appointID: name, videocallID: me }).then(function (value) {
-      console.log(value);
-=======
     axios.post('http://localhost:5000/request/videocall', { appointID: name, videocallID: me }).then((acc) => {
       console.log(acc);
->>>>>>> 149428a7e65240a3b06fd74ff892305e52d5a8d1
     });
   };
   return (
@@ -60,11 +60,21 @@ const Sidebar = ({ children }) => {
             <Grid item xs={12} md={6} className={classes.padding}>
               <Typography gutterBottom variant="h6">Account Info</Typography>
               <TextField label="enter your calling id" type="email" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
+              <div className="ask"> are you patient?<input type="radio" /> are you doctor? <input type="radio" /></div>
               <CopyToClipboard text={me} className={classes.margin}>
                 <Button onClick={handleclick} variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
                   Request for call
                 </Button>
+                {/* <div>kuch bhi</div> */}
               </CopyToClipboard>
+
+              <div className="patient_info">
+                <div className="Patient_details">
+                  <h12> Patient Name :</h12><br /><br />
+                  <h13> Appointment Time:2-4</h13><br /><br />
+                  <h14> Appointmet Date: 3-8-2022</h14><br /><br />
+                </div>
+              </div>
             </Grid>
             <Grid item xs={12} md={6} className={classes.padding}>
               <Typography gutterBottom variant="h6">Make a call</Typography>

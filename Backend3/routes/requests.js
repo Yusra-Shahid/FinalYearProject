@@ -22,10 +22,11 @@ router.post('/videocall', async (req, res) => {
         appointID, videocallID
     } = req.body
 
-    const User = await Request.updateMany({ "appointID": appointID }, { $set: { videocallID: videocallID } });
-   
+    const User = await Request.updateOne({ "appointID": appointID }, { $set: { videocallID: videocallID } });
+    const conference = await Request.findOne({  "appointID": appointID  });
+    console.log(conference);
     // let user = await Request.updateOne({ email: req.body.email });
-    // res.send("user")
+     res.send(conference)
 
 
 })
