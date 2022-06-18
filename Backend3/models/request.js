@@ -34,6 +34,10 @@ const userSchema = new mongoose.Schema({
     },
     videocallID: {
         type: String,
+    },
+    appointID:{
+        type: String,
+        
     }
 
 

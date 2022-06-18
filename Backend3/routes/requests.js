@@ -19,14 +19,11 @@ router.post('/videocall', async (req, res) => {
 
     console.log(req.body)
     const {
-        email, videocallID
+        appointID, videocallID
     } = req.body
 
-    const User = await Request.updateMany({ "email": email }, { $set: { videocallID: videocallID } });
-    if (!User) {
-        const videoID = await req.findOne({ doctoremail: email })
-        res.send(videoID.videocallID)
-    }
+    const User = await Request.updateMany({ "appointID": appointID }, { $set: { videocallID: videocallID } });
+   
     // let user = await Request.updateOne({ email: req.body.email });
     // res.send("user")
 
@@ -52,7 +49,7 @@ router.post('/new_req', async (req, res) => {
         return res.status(400).send('slot not avaiable');
     } else {
 
-
+        var appointID = Math.floor(Math.random() * 100000) + 1;
 
 
         user = new Request({
@@ -62,7 +59,8 @@ router.post('/new_req', async (req, res) => {
             Date: req.body.date,
             Time: req.body.time,
             status: "pending",
-            email: req.body.email
+            email: req.body.email,
+            appointID:appointID
         });
 
         result = await user.save();

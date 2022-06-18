@@ -86,7 +86,8 @@ const ViewPatients = () => {
               <div className="viewPatientName">
                 <h12> Patient Name : {data.patient}</h12>
                 <p>appointment date :  {data.Date}<br></br>
-                appointment timing : {data.Time}</p>
+                appointment timing : {data.Time}<br></br>
+                Your Calling ID:{data.appointID}</p>
               </div>
           
               <Button className="contained">

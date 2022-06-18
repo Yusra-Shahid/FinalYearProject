@@ -42,10 +42,11 @@ const Sidebar = ({ children }) => {
   const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
-  const handleclick = async () => { axios.post('http://localhost:5000/request/videocall', { email: name, videocallID: me }).then(function (value)
-  {
-    console.log(value);
-  }); };
+  const handleclick = async () => {
+    axios.post('http://localhost:5000/request/videocall', { appointID: name, videocallID: me }).then(function (value) {
+      console.log(value);
+    });
+  };
   return (
     <Container className={classes.container}>
       <Paper elevation={10} className={classes.paper}>
@@ -53,7 +54,7 @@ const Sidebar = ({ children }) => {
           <Grid container className={classes.gridContainer}>
             <Grid item xs={12} md={6} className={classes.padding}>
               <Typography gutterBottom variant="h6">Account Info</Typography>
-              <TextField label="enter your email" type="email" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
+              <TextField label="enter your calling id" type="email" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
               <CopyToClipboard text={me} className={classes.margin}>
                 <Button onClick={handleclick} variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
                   Request for call
