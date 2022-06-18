@@ -43,8 +43,8 @@ const Sidebar = ({ children }) => {
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
   const handleclick = async () => {
-    axios.post('http://localhost:5000/request/videocall', { appointID: name, videocallID: me }).then(function (value) {
-      console.log(value);
+    axios.post('http://localhost:5000/request/videocall', { appointID: name, videocallID: me }).then((acc) => {
+      console.log(acc);
     });
   };
   return (
