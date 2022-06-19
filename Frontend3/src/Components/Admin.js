@@ -38,7 +38,7 @@ export default function Admin() {
     const patt = patient.length;
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/user/getApproval`)
+        axios.get(`https://imedcare.herokuapp.com/user/getApproval`)
             .then((Response) => {
                 setdocApproval(Response.data)
                 console.log(Response.data);
@@ -51,7 +51,7 @@ export default function Admin() {
                 console.log(error)
             })
 
-        axios.get(`http://localhost:5000/user/getpatient`)
+        axios.get(`https://imedcare.herokuapp.com/user/getpatient`)
             .then((Response) => {
                 setpatient(Response.data)
                 console.log(Response.data);
@@ -65,7 +65,7 @@ export default function Admin() {
             })
 
 
-        axios.get(`http://localhost:5000/user/getdoctors`)
+        axios.get(`https://imedcare.herokuapp.com/user/getdoctors`)
             .then((Response) => {
                 setdocdoctors(Response.data)
                 console.log(Response.data);
@@ -80,7 +80,7 @@ export default function Admin() {
 
 
 
-        axios.get(`http://localhost:5000/user/getappp`)
+        axios.get(`https://imedcare.herokuapp.com/user/getappp`)
             .then((Response) => {
                 setdocApp(Response.data)
                 console.log(Response.data);
@@ -284,7 +284,7 @@ export default function Admin() {
                                         <div className="approval-btn">
                                             <button onClick={async () => {
 
-                                                await axios.post('http://localhost:5000/user/accept', {
+                                                await axios.post('https://imedcare.herokuapp.com/user/accept', {
                                                     name: data.name,
                                                     email: data.email,
                                                     password: data.password,
@@ -301,7 +301,7 @@ export default function Admin() {
 
                                                     })
 
-                                                await axios.get(`http://localhost:5000/user/getApproval`)
+                                                await axios.get(`https://imedcare.herokuapp.com/user/getApproval`)
                                                     .then((Response) => {
                                                         setdocApproval(Response.data)
                                                         console.log(Response.data);
@@ -318,7 +318,7 @@ export default function Admin() {
                                             }}>Approve</button>
                                             <button onClick={() => {
 
-                                                axios.post('http://localhost:5000/user/rejectApproval', {
+                                                axios.post('https://imedcare.herokuapp.com/user/rejectApproval', {
 
                                                     email: data.email,
 
@@ -331,7 +331,7 @@ export default function Admin() {
 
                                                     })
 
-                                                axios.get(`http://localhost:5000/user/getApproval`)
+                                                axios.get(`https://imedcare.herokuapp.com/user/getApproval`)
                                                     .then((Response) => {
                                                         setdocApproval(Response.data)
                                                         console.log(Response.data);

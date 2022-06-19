@@ -26,7 +26,7 @@ function SignupPage() {
    
     if (name.trim() !== '' && email.trim() !== '' && contact.trim() !== '' && password.trim() !== '') {
       if (spe) {
-        axios.post('http://localhost:5000/user/new_Doctor', {
+        axios.post('https://imedcare.herokuapp.com/user/new_Doctor', {
           name: name,
           email: email,
           password: password,
@@ -48,7 +48,7 @@ function SignupPage() {
         console.log(name)
         //axios.post('http://localhost:5000/user/new_user'
 
-        axios.post('http://localhost:5000/user/new_user', {
+        axios.post('https://imedcare.herokuapp.com/user/new_user', {
           name: name,
           email: email,
           password: password,

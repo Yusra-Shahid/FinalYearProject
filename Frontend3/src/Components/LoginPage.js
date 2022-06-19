@@ -29,7 +29,7 @@ function LoginPage() {
     console.log(email, password)
     if (email.trim() !== '' && password.trim() !== '') {
 
-      axios.post('http://localhost:5000/user/login', {
+      axios.post('https://imedcare.herokuapp.com/user/login', {
         email: email,
         password: password,
       })
@@ -157,7 +157,7 @@ function LoginPage() {
 
 
 
-                  axios.post('http://localhost:5000/user/forgetpassword', {
+                  axios.post('https://imedcare.herokuapp.com/user/forgetpassword', {
                     email: emailforotp,
 
                   })
@@ -210,7 +210,7 @@ function LoginPage() {
 
 
 
-                  axios.post('http://localhost:5000/user/forgetpasswordotp', {
+                  axios.post('https://imedcare.herokuapp.com/user/forgetpasswordotp', {
                     otp: OPT,
                     email: emailforotp
 
@@ -274,7 +274,7 @@ function LoginPage() {
                   if (fpassword === fcpassword) {
 
 
-                    axios.post('http://localhost:5000/user/forgetpasswordchange', {
+                    axios.post('https://imedcare.herokuapp.com/user/forgetpasswordchange', {
                       password: fcpassword,
                       email: emailforotp
 

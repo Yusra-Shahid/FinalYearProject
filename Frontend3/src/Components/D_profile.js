@@ -60,7 +60,7 @@ const D_profile = () => {
         event.preventDefault()
 
         console.log(name, age, timeslote, data._id);
-        axios.put("http://localhost:5000/doctor/update_doctor", {
+        axios.put("https://imedcare.herokuapp.com/doctor/update_doctor", {
             _id: data._id,
             name: name || data.name,
             email: emails || data.email,
@@ -88,7 +88,7 @@ const D_profile = () => {
 
     const email = localStorage.getItem('email');
     useEffect(() => {
-        axios.get(`http://localhost:5000/doctor/getDoctor/${email}`)
+        axios.get(`https://imedcare.herokuapp.com/doctor/getDoctor/${email}`)
             .then((Response) => {
                 setData(Response.data)
                 if (Response.data.length === 0) {

@@ -66,7 +66,7 @@ const SelectDoctor = (props) => {
             console.log(date)
             if ( date == Todayis){
 
-                axios.post('http://localhost:5000/request/new_req', {
+                axios.post('https://imedcare.herokuapp.com/request/new_req', {
 
                     patient: patient,
                     doctor: dname,
@@ -127,7 +127,7 @@ const SelectDoctor = (props) => {
     const spe = props.location.state.state.name;
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/doctor/getspecialist/${spe}`)
+        axios.get(`https://imedcare.herokuapp.com/doctor/getspecialist/${spe}`)
             .then((Response) => {
                 setData(Response.data)
                 console.log(Response.data);

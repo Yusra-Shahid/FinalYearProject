@@ -33,7 +33,7 @@ const ViewPatients = () => {
 
   useEffect(async () => {
 
-    await axios.post('http://localhost:5000/request/dappp', {
+    await axios.post('https://imedcare.herokuapp.com/request/dappp', {
 
       email: localStorage.getItem("email"),
 
@@ -96,17 +96,17 @@ const ViewPatients = () => {
                   </div>
                   <br />
                   <Button className="contained">
-                    <a href="http://localhost:3001/" style={{ color: "#176cbb", backgroundColor: "whitesmoke", marginLeft:"10px",width:"180px",height:"30px",borderRadius:"5px"}}>Call Patient</a>
+                    <a href="https://yusra-shahid.github.io/IMedCarevideoCall/" style={{ color: "#176cbb", backgroundColor: "whitesmoke", marginLeft:"10px",width:"180px",height:"30px",borderRadius:"5px"}}>Call Patient</a>
                   </Button>
 
 
                   <Button variant="contained" onClick={async () => {
-                    axios.post('http://localhost:5000/request/appdone', { id: data._id }).then((acc) => {
+                    axios.post('https://imedcare.herokuapp.com/request/appdone', { id: data._id }).then((acc) => {
                       console.log(acc);
 
                     })
 
-                    await axios.post('http://localhost:5000/request/dappp', {
+                    await axios.post('https://imedcare.herokuapp.com/request/dappp', {
 
                       email: localStorage.getItem("email"),
 

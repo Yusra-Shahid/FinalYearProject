@@ -18,7 +18,7 @@ export default function ControlledAccordions() {
 
   useEffect(async () => {
 
-    axios.post('http://localhost:5000/request/appp', {
+    axios.post('https://imedcare.herokuapp.com/request/appp', {
 
         email: localStorage.getItem("email"),
 

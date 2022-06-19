@@ -54,7 +54,7 @@ const Sidebar = ({ children }) => {
   const [active2, setactive2] = useState('');
   const classes = useStyles();
   const handleclick = async () => {
-    axios.post('http://localhost:5000/request/videocall', { appointID: appid, videocallID: me }).then((acc) => {
+    axios.post('https://imedcare.herokuapp.com/request/videocall', { appointID: appid, videocallID: me }).then((acc) => {
       console.log(acc);
       setName(acc.data.patient);
       setactive('true');
@@ -65,7 +65,7 @@ const Sidebar = ({ children }) => {
     });
   };
   const handleclick2 = async () => {
-    axios.post('http://localhost:5000/request/videocallbydoc', { appointID: idToCall }).then((acc) => {
+    axios.post('https://imedcare.herokuapp.com/request/videocallbydoc', { appointID: idToCall }).then((acc) => {
       console.log(acc);
       setName(acc.data.doctor);
       callUser(acc.data.videocallID);

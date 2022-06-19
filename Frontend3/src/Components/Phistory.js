@@ -34,7 +34,7 @@ function Phistory() {
 
     useEffect(async () => {
 
-        axios.post('http://localhost:5000/request/appp', {
+        axios.post('https://imedcare.herokuapp.com/request/appp', {
 
             email: localStorage.getItem("email"),
 
@@ -199,7 +199,7 @@ function Phistory() {
                                     <div>
                                         {/* <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} /> */}
                                         <DisabledByDefaultIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
-                                        <a href="http://localhost:3001/">
+                                        <a href="https://yusra-shahid.github.io/IMedCarevideoCall/">
                                             <FcVideoCall style={{ height: 30, width: 30 }} />
                                         </a>
 
