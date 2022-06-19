@@ -251,7 +251,7 @@ const SelectDoctor = (props) => {
 
                         <div className=" content">
                             <h2>{data.name}</h2>
-                            <p>{data.contact}<br />{data.email}
+                            <p>{data.contact}<br />{data.email}<br />fee: RS{data.fee}
                             </p>
                             {/* <p>{data.email}</p> */}
 
@@ -260,6 +260,7 @@ const SelectDoctor = (props) => {
                                     setDname(data.name)
                                     setDemail(data.email)
                                     setActive("True")
+                                    localStorage.setItem("payment",data.fee)
                                 }}
 
                                 >CONFIRMED DOCTOR</Button>

@@ -40,7 +40,6 @@ const userSchema = new mongoose.Schema({
     fee: {
         type: Number,
 
-
     },
     account: {
         type: String
