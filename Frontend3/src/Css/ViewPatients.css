@@ -41,12 +41,11 @@
     text-align: center;
     font-size: 30px;
    
-    
 }
 .viewrightpatient{
     width: 95.5%;
     height: 580px;
-    margin-left: 60px;
+    margin-left: -60px;
     border-radius: 25px;
     justify-content: center;
     display: flex;
@@ -72,10 +71,10 @@
     /* background-color: slategray; */
 }
 .viewcard{
-    width: 98%;
+    width: 53%;
     margin-bottom: 15px;
     height: 180px;
-    background-color: rgba(49, 133, 235, 0.937);
+    background-color: rgba(130, 175, 230, 0.867);
     border-top-left-radius: 30px; 
     border-bottom-right-radius: 30px;
     box-shadow: rgba(125, 124, 188, 0.548) 6px 2px 16px 0px, rgba(128, 125, 125, 0.486) -6px -2px 16px 0px;
@@ -104,3 +103,4 @@
 margin-top: -37px;
 margin-left: 430px;
 }
+

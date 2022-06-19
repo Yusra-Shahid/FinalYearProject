@@ -66,7 +66,7 @@ const ViewPatients = () => {
       <div className="Viewsection"></div>
 
       <div className="view_patient">
-        <div className="viewleftside">
+        {/* <div className="viewleftside">
           <div className="viewDays">
             <div className="viewWeekofday">
               <p> Days of Week</p>
@@ -79,7 +79,7 @@ const ViewPatients = () => {
             </RadioGroup>
 
           </div>
-        </div>
+        </div> */}
 
         <div className="viewrightpatient">
           <div className="viewrightside">
@@ -94,9 +94,9 @@ const ViewPatients = () => {
                       appointment timing : {data.Time}<br></br>
                       Your Calling ID:{data.appointID}</p>
                   </div>
-
+                  <br />
                   <Button className="contained">
-                    <a href="http://localhost:3001/">Call Patient</a>
+                    <a href="http://localhost:3001/" style={{ color: "#176cbb", backgroundColor: "whitesmoke", marginLeft:"10px",width:"180px",height:"30px",borderRadius:"5px"}}>Call Patient</a>
                   </Button>
 
 
@@ -147,11 +147,11 @@ const ViewPatients = () => {
                     <h12> Patient Name : {data.patient}</h12>
                     <p>appointment date :  {data.Date}<br></br>
                       appointment timing : {data.Time}<br></br>
-                   </p>
+                    </p>
                   </div>
 
-               
-                 
+
+
 
                 </div>
               </>}
