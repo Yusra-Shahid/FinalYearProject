@@ -141,7 +141,7 @@ useEffect(() => {
                         required="true"
                         type="email"
                         className={"upd-input"}
-                        type={"text"}
+                        // type={"text"}
                         placeholder={"E-mail"}
                         name={"email"}
                         defaultValue={data.email}
@@ -190,7 +190,7 @@ useEffect(() => {
                           //required="true"
                          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                        pattern={password} 
+                        // pattern={password} 
                             
                         defaultValue={password}
                         onChange={e => {setPassword(e.target.value)}}

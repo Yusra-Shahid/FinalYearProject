@@ -127,7 +127,7 @@ console.log(user)
         });
 
         const data = {
-            from: '"I-MEDCARE"<yusrashahid2019@gmail.com>',
+            from: '"I-MEDCARE"<imed.care22@gmail.com>',
             to: req.body.email,
             subject: "Request Accepted",
 
@@ -194,7 +194,7 @@ router.post('/new_Doctor', async (req, res) => {
         });
 
         const data = {
-            from: '"I-MEDICARE"<yusrashahid2019@gmail.com>',
+            from: '"I-MEDICARE"<imed.care22@gmail.com>',
             to: req.body.email,
             subject: "Request for Documents",
 

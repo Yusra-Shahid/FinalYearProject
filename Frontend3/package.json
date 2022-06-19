@@ -46,6 +46,7 @@
     "reactstrap": "^9.0.2",
     "simple-peer": "^9.11.1",
     "socket.io-client": "^4.5.1",
+    "start": "^5.1.0",
     "uuidv4": "^6.2.12",
     "web-vitals": "^1.1.2"
   },
