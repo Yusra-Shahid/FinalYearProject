@@ -174,7 +174,7 @@ padding-top: 25px;
 }
 .leftcard{
     width: 61vh;
-    height: 65vh;
+    height: 69vh;
     background-color:#176cbb;
     margin-left:140vh;
  margin-top: 150px;
@@ -196,7 +196,7 @@ color: aliceblue;
 }
 .leftcard-scroll{
   width: 99%;
-  height: 83%;
+  height: 85%;
   border-bottom-left-radius: 50px;
   position:relative;
   align-items: center;
@@ -211,7 +211,7 @@ background-color: aliceblue;
 }
 .appDetails{
     width: 90%;
-    height: 120px;
+    height: 140px;
     background-color:#a2bfdb;
     margin-top: 20px;
     display: flex;
