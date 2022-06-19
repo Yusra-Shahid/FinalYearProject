@@ -22,14 +22,14 @@ export default function ControlledAccordions() {
           id="panel1bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Doctor name
+            Doctor name:
           </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>Appointment date that was done </Typography>
+          <Typography sx={{ color: 'text.secondary' }}>manish</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
             doctor email:
-            prescription in document form that can be open
+           yusrashahid2019@gmail
             <Button
             variant="contained"
             component="label"
@@ -40,6 +40,12 @@ export default function ControlledAccordions() {
               hidden
             />
           </Button>
+          </Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0, marginLeft:'10%' }}>
+            Appointment Time: 3:45
+          </Typography>
+          <Typography sx={{ width: '45%', flexShrink: 0 ,marginLeft:'10%'}}>
+            Appointment Date: 3-6-2022
           </Typography>
         </AccordionDetails>
       </Accordion>
