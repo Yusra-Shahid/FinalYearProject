@@ -46,7 +46,7 @@ const SelectDoctor = (props) => {
     const hanldeSubmit = () => {
         // alert("in")
 
-        // setbtnn(false)
+        setbtnn(false)
         if (value !== '' && date !== '' && patient !== '') {
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');

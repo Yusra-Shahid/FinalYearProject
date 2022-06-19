@@ -32,6 +32,21 @@ router.post('/videocall', async (req, res) => {
 })
 
 
+router.post('/videocallbydoc', async (req, res) => {
+
+    console.log(req.body)
+    const {
+        appointID
+    } = req.body
+    const conference = await Request.findOne({  "appointID": appointID  });
+    console.log(conference);
+    // let user = await Request.updateOne({ email: req.body.email });
+     res.send(conference)
+
+
+})
+
+
 router.post('/dappp', async (req, res) => {
 
     console.log(req.body)

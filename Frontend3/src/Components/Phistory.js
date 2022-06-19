@@ -204,7 +204,7 @@ function Phistory() {
                                     Your Calling ID:{data.appointID}
                                 </a>
                                 <div>
-                                    <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
+                                    {/* <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} /> */}
                                     <DisabledByDefaultIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
                                    <a href="http://localhost:3001/">
                                    <FcVideoCall style={{ height: 30, width: 30 }} />
