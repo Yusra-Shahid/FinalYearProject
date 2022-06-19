@@ -23,12 +23,12 @@ function Phistory() {
     const [email, setEmail] = useState('')
     const [contact, setContact] = useState('')
     const [data, setData] = useState('');
-    const [tracker,settracker] = useState('');
+    const [tracker, settracker] = useState('');
     const [Imgurl, setImgurl] = useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png")
 
 
     const handleChangeimage = async (e) => {
-        
+
 
     }
 
@@ -71,28 +71,28 @@ function Phistory() {
                 <div className="profileupdate" >
 
 
-                <input type="file" required='true' name='photo' id="photo" accept="image/*" onChange={async (e)=>{
-                    console.log(e.target.files[0])
-                    await setImg(e.target.files[0]);
-            
-            
-                    const imageid = uuid();
-            
-                    await storage.ref(`dp/${imageid}`).put(Img);
-            
-            
-                    const Url = await storage.ref(`dp`).child(imageid).getDownloadURL();
-                    await setImgurl(Url);
-            
-                   await  console.log(Url)
-                }} />
+                    <input type="file" required='true' name='photo' id="photo" accept="image/*" onChange={async (e) => {
+                        console.log(e.target.files[0])
+                        await setImg(e.target.files[0]);
+
+
+                        const imageid = uuid();
+
+                        await storage.ref(`dp/${imageid}`).put(Img);
+
+
+                        const Url = await storage.ref(`dp`).child(imageid).getDownloadURL();
+                        await setImgurl(Url);
+
+                        await console.log(Url)
+                    }} />
                     <img src={Imgurl} className="profileimage" />
 
 
 
 
 
-                  
+
 
 
                     <div>
@@ -151,9 +151,9 @@ function Phistory() {
                                             onChange={e => { setContact(e.target.value) }} />
                                     </div>
 
-                                   
 
-                                    <button onClick={()=>{alert("your details are updated")}}>update</button>
+
+                                    <button onClick={() => { alert("your details are updated") }}>update</button>
                                 </div>
 
                             </div>
@@ -191,30 +191,30 @@ function Phistory() {
                     <div className="leftcard-scroll">
 
 
-                        {Appointment.map((data) => (
+                        {Appointment.map((data) => (<>
+                            {data.status === "pending" && <>
+                                <div className="appDetails">
+                                    <a>
+                                        Doctor Name: {data.doctor}
+                                        <br></br>
+                                        Date: {data.Date}
+                                        <br></br>
+                                        timing: {data.Time}
+                                        <br></br>
+                                        Your Calling ID:{data.appointID}
+                                    </a>
+                                    <div>
+                                        {/* <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} /> */}
+                                        <DisabledByDefaultIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
+                                        <a href="http://localhost:3001/">
+                                            <FcVideoCall style={{ height: 30, width: 30 }} />
+                                        </a>
 
-                            <div className="appDetails">
-                                <a>
-                                    Doctor Name: {data.doctor}
-                                    <br></br>
-                                    Date: {data.Date}
-                                    <br></br>
-                                    timing: {data.Time}
-                                    <br></br>
-                                    Your Calling ID:{data.appointID}
-                                </a>
-                                <div>
-                                    {/* <AutorenewIcon style={{ height: 30, width: 30, color: "#176cbb" }} /> */}
-                                    <DisabledByDefaultIcon style={{ height: 30, width: 30, color: "#176cbb" }} />
-                                   <a href="http://localhost:3001/">
-                                   <FcVideoCall style={{ height: 30, width: 30 }} />
-                                   </a>
-                                   
-                                </div>
+                                    </div>
 
 
 
-                            </div>
+                                </div></>}</>
                         ))}
                     </div>
                 </div>

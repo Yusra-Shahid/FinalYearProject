@@ -3,7 +3,7 @@ const express = require('express');
 const { Router, request } = require("express");
 const nodemailer = require('nodemailer');
 const router = express.Router();
-
+const ObjectId = require('mongodb').ObjectID;
 
 
 router.post('/appp', async (req, res) => {
@@ -27,6 +27,20 @@ router.post('/videocall', async (req, res) => {
     console.log(conference);
     // let user = await Request.updateOne({ email: req.body.email });
      res.send(conference)
+
+
+})
+
+router.post('/appdone', async (req, res) => {
+
+    console.log(req.body)
+    const {
+        id
+    } = req.body
+    // const conference = await Request.findOne({  _id: ObjectId(id)  });
+    const User = await Request.updateOne({ _id: ObjectId(id) }, { $set: { status: "done" } });
+    
+     console.log(User)
 
 
 })

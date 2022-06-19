@@ -39,7 +39,7 @@ const ViewPatients = () => {
 
     }).then(function (response) {
       setAppointment(response.data);
-
+      console.log(response.data)
 
     })
 
@@ -54,6 +54,9 @@ const ViewPatients = () => {
 
 
   }, 10000000)
+
+
+
 
   console.log(data);
   return (
@@ -79,31 +82,81 @@ const ViewPatients = () => {
         </div>
 
         <div className="viewrightpatient">
-        <div className="viewrightside">
-        {Appointment.map((data) => (
-            <div className="viewcard">
+          <div className="viewrightside">
+            {Appointment.map((data) => (<>
 
-              <div className="viewPatientName">
-                <h12> Patient Name : {data.patient}</h12>
-                <p>appointment date :  {data.Date}<br></br>
-                appointment timing : {data.Time}<br></br>
-                Your Calling ID:{data.appointID}</p>
-              </div>
-          
-              <Button className="contained">
-              <a href="http://localhost:3001/">Call Patient</a>
-              </Button>
-             
-              
-              <Button variant="contained">appointment done</Button>
-              {/* <div className="viewcross">
+              {data.status === "pending" && <>
+                <div className="viewcard">
+
+                  <div className="viewPatientName">
+                    <h12> Patient Name : {data.patient}</h12>
+                    <p>appointment date :  {data.Date}<br></br>
+                      appointment timing : {data.Time}<br></br>
+                      Your Calling ID:{data.appointID}</p>
+                  </div>
+
+                  <Button className="contained">
+                    <a href="http://localhost:3001/">Call Patient</a>
+                  </Button>
+
+
+                  <Button variant="contained" onClick={async () => {
+                    axios.post('http://localhost:5000/request/appdone', { id: data._id }).then((acc) => {
+                      console.log(acc);
+
+                    })
+
+                    await axios.post('http://localhost:5000/request/dappp', {
+
+                      email: localStorage.getItem("email"),
+
+                    }).then(function (response) {
+                      setAppointment(response.data);
+                      console.log(response.data)
+
+                    })
+
+                    //     .then(res => res.json()
+                    //     // console.log(res)
+                    //   )
+                    //   .then(result => setMessegee(result))
+
+                    //   .catch(error => console.log('error', error));
+
+                    await console.log(Appointment)
+                  }}>    appointment done</Button>
+                  {/* <div className="viewcross">
                   <AiOutlineCloseCircle onClick
                     style={{ height: 40, width: 40, color: "red" }} />
                 </div> */}
 
-            </div>
+                </div>
+              </>}
 
-          ))}
+            </>))}
+          </div>
+
+
+          <div className="viewrightside">
+            {Appointment.map((data) => (<>
+
+              {data.status === "done" && <>
+                <div className="viewcard">
+
+                  <div className="viewPatientName">
+                    <h12> Patient Name : {data.patient}</h12>
+                    <p>appointment date :  {data.Date}<br></br>
+                      appointment timing : {data.Time}<br></br>
+                   </p>
+                  </div>
+
+               
+                 
+
+                </div>
+              </>}
+
+            </>))}
           </div>
         </div>
       </div>
