@@ -88,13 +88,6 @@ function Phistory() {
                     }} />
                     <img src={Imgurl} className="profileimage" />
 
-
-
-
-
-
-
-
                     <div>
 
                         <button onClick={() => { setprofileupdate("falses") }}>cancle</button>
@@ -125,7 +118,7 @@ function Phistory() {
 
                     <div class="cardEX physical">
                         <div class="frontEX">
-                            <img src="https://cdn5.vectorstock.com/i/1000x1000/20/74/woman-avatar-profile-vector-21372074.jpg" />
+                            <img src="https://as1.ftcdn.net/v2/jpg/01/83/55/76/1000_F_183557656_DRcvOesmfDl5BIyhPKrcWANFKy2964i9.jpg" />
                         </div>
                         <div class="backEX">
                             <div class="backEX-content physical">
