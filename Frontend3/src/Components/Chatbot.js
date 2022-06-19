@@ -58,7 +58,7 @@ function Chatbot() {
       const status_chat = document.querySelector('.status_chat');
       botMessage.innerHTML = 'Typing...';
       setTimeout(() => {
-        botMessage.innerHTML = 'Hello There how are you doing today?';
+        botMessage.innerHTML = 'Hello Their hope you are doing? How can i help you';
         status_chat.innerHTML = 'Active';
         status_chat.style.color = 'green';
         document.querySelector('#input_chat').value = '';
@@ -138,7 +138,7 @@ function Chatbot() {
     if(words9.test(document.querySelector('#input_chat').value)){
       botMessage.innerHTML = 'Typing...';
       setTimeout(() => {
-        botMessage.innerHTML = 'The owner of this bot is Treasure';
+        botMessage.innerHTML = 'The owner of this bot ';
         document.querySelector('#input_chat').value = '';
       }, 2000);
     }
@@ -148,20 +148,21 @@ function Chatbot() {
     if(words10.test(document.querySelector('#input_chat').value)){
       botMessage.innerHTML = 'Typing...';
       setTimeout(() => {
-        botMessage.innerHTML = 'Treasure is a programmer based on ReactJS and NodeJS he is the owner of a youtube channel called Creative Tutorials';
+        botMessage.innerHTML = 'Treasure is a programmer team of I-MedCare';
         document.querySelector('#input_chat').value = '';
       }, 2000);
     }
 
-    let ageAsk = ["What's your age|what's your age|What is your age|what is your age|How old are you|how old are you"] //adding the age-question
+    let ageAsk = ["how can i select my doctor|what is the process of Appointment|how can i book my appointment|how can i working here as doctor|how can i be a part of system"] //adding the age-question
     let words11 = new RegExp(ageAsk);
     if(words11.test(document.querySelector('#input_chat').value)){ // if the input contains some question
       botMessage.innerHTML = 'Typing...';
       setTimeout(() => {
-        botMessage.innerHTML = 'I am 1 year old';
+        botMessage.innerHTML = 'Firstly you have to login as Patient or Doctor as per your requirement then the System will guide you further';
         document.querySelector('#input_chat').value = '';
       }, 2000);
     }
+
     humanMessage.innerHTML = document.querySelector('#input_chat').value; // display the input
   }
   return (

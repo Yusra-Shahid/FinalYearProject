@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div className={classes.wrapper}>
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography variant="h3" align="center">Video Conference</Typography>
+        <Typography variant="h3" align="center">Virtual Room</Typography>
       </AppBar>
       <VideoPlayer />
       <Sidebar>
