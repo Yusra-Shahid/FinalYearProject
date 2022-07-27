@@ -43,13 +43,6 @@ const ViewPatients = () => {
 
     })
 
-    //     .then(res => res.json()
-    //     // console.log(res)
-    //   )
-    //   .then(result => setMessegee(result))
-
-    //   .catch(error => console.log('error', error));
-
     await console.log(Appointment)
 
 
@@ -82,7 +75,9 @@ const ViewPatients = () => {
         </div> */}
 
         <div className="viewrightpatient">
+         
           <div className="viewrightside">
+          <p>Patient Appointment</p>
             {Appointment.map((data) => (<>
 
               {data.status === "pending" && <>
@@ -138,6 +133,7 @@ const ViewPatients = () => {
 
 
           <div className="viewrightside">
+            <p>Appointment history</p>
             {Appointment.map((data) => (<>
 
               {data.status === "done" && <>

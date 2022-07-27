@@ -61,9 +61,12 @@
     grid-template-rows: 2;
     gap: 10px;
     padding-left: 30px;
-    padding-top: 15px;
+    /* padding-top: 15px; */
     border: 0.5vh solid rgba(109, 150, 228, 0.815);
     /* padding-bottom: 15px; */
+}
+.viewrightside p{
+    font-size: x-large;
 }
 .viewrightpatienttext{
     width: 120px;
