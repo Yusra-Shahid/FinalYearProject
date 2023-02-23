@@ -27,4 +27,10 @@ providing a virtual healthcare system.
 For the front end we will be using bootstrap, React.js and for the back end will be 
 comprising on node.js and manogoDb for the database.
 
+# diagrams
+System Sequence Diagram
+![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/ss.JPG)
+ 
+Er Diagram 
+![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/ERD.JPG)
 
