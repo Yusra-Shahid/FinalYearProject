@@ -28,9 +28,7 @@ For the front end we will be using bootstrap, React.js and for the back end will
 comprising on node.js and manogoDb for the database.
 
 # User interface
-System Sequence Diagram
-![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/MAIN.JPG)
- 
+![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/MAIN.JPG) 
 ![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/ADMIN.JPG)
 ![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/UI.JPG)
 ![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/DR.JPG)
