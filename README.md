@@ -29,8 +29,8 @@ comprising on node.js and manogoDb for the database.
 
 # diagrams
 System Sequence Diagram
-![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/ss.JPG)
+![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/MAIN.JPG)
  
 Er Diagram 
-![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/ERD.JPG)
+![alt text](https://github.com/Yusra-Shahid/FinalYearProject/blob/main/Frontend3/src/Images/ADMIN.JPG)
 
